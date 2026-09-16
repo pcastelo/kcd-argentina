@@ -2,6 +2,9 @@
   "app": {
     "name": "KCD Argentina 2026"
   },
+  "common": {
+    "comingSoon": "Coming soon"
+  },
   "nav": {
     "ariaLabel": "Main navigation",
     "home": "Home",
@@ -15,14 +18,19 @@
     "contact": "Contact",
     "social": "Social",
     "cncf": "CNCF Supported Event",
+    "organizers": "Organizers",
+    "conduct": "Code of Conduct",
     "copyright": "© 2026 KCD Argentina"
   },
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
     "heroSubtitle": "The Cloud Native community meets in Buenos Aires",
+    "eventMetaLabel": "Event details",
     "ctaTickets": "Get your tickets",
+    "ctaAgenda": "View agenda",
     "ctaTicketsAriaLabel": "Buy tickets on Eventbrite (opens in new tab)",
+    "quickNavLabel": "Explore the event",
     "countdown": {
       "days": "days",
       "hours": "hours",
@@ -36,6 +44,100 @@
       "becomeSponsor": "Become a sponsor",
       "emptyState": "Want to be part of it? Check out our sponsorship plans."
     }
+  },
+  "sponsors": {
+    "eyebrow": "// Sponsors",
+    "title": "Sponsors",
+    "subtitle": "Thank you to everyone making KCD Argentina possible",
+    "becomeSponsor": "Become a sponsor",
+    "emptyTier": "Open slot — join us as a sponsor",
+    "tiers": {
+      "diamond": "Diamond",
+      "platinum": "Platinum",
+      "gold": "Gold",
+      "light": "Light",
+      "silver": "Silver",
+      "community": "Community",
+      "venue": "Venue"
+    }
+  },
+  "agenda": {
+    "eyebrow": "// Agenda",
+    "title": "Agenda",
+    "subtitle": "A full day of talks, workshops, and keynotes at Plaza Galicia",
+    "draftNotice": "Preliminary schedule — subject to change before the event.",
+    "sessionAriaLabel": "{{title}} in {{room}}",
+    "workshopContinuation": "{{title}} (continued)",
+    "filterLabel": "Filter schedule by room",
+    "emptyFilter": "No sessions in this room.",
+    "durationMinutes": "{{count}} min",
+    "filters": {
+      "all": "All"
+    },
+    "types": {
+      "reception": "Reception",
+      "keynote": "Keynote",
+      "talk": "Talk",
+      "workshop": "Workshop",
+      "break": "Break",
+      "lunch": "Lunch",
+      "transition": "Transition",
+      "margin": "Margin",
+      "continuation": "Continued"
+    },
+    "rooms": {
+      "plenario": "Plenary",
+      "sala-1": "Main Room",
+      "sala-2": "Room 2",
+      "sala-3": "Room 3 (Workshops)"
+    },
+    "roomsShort": {
+      "plenario": "Plenary",
+      "sala-1": "Main Room",
+      "sala-2": "Room 2",
+      "sala-3": "Workshops"
+    }
+  },
+  "speakers": {
+    "eyebrow": "// Speakers",
+    "title": "Speakers",
+    "subtitle": "Meet the people sharing their experience at KCD Argentina 2026",
+    "count": "{{count}} speakers",
+    "profileAriaLabel": "View {{name}}'s LinkedIn profile (opens in new tab)"
+  },
+  "organizers": {
+    "eyebrow": "// Organizers",
+    "title": "Organizers",
+    "subtitle": "The team behind KCD Argentina 2026",
+    "profileAriaLabel": "View {{name}}'s LinkedIn profile (opens in new tab)",
+    "pendingName": "To be announced",
+    "pendingRole": "Organizing committee",
+    "pendingAvatar": "?"
+  },
+  "conduct": {
+    "eyebrow": "// Community",
+    "title": "Code of Conduct",
+    "reportIntro": "To report an incident, contact us at"
+  },
+  "location": {
+    "title": "Location",
+    "subtitle": "Join us at Plaza Galicia, in the heart of Buenos Aires",
+    "when": "Date",
+    "hours": "Hours",
+    "area": "Area",
+    "neighborhood": "Chacarita, Buenos Aires",
+    "venueImageAlt": "{{venue}} building in Buenos Aires",
+    "photoCredit": "Photo: Gabwt2020 / CC BY-SA 4.0 (Wikimedia Commons)",
+    "mapTitle": "Plaza Galicia map on Google Maps",
+    "address": "Address",
+    "howToGetThere": "How to Get There",
+    "transportHint": "Get there by public transit — the venue is well connected by subway and bus.",
+    "subte": "Subway (Subte)",
+    "subteDetails": "Line D — José Hernández Station (~15 min walk)",
+    "bus": "Bus (Colectivo)",
+    "busDetails": "Routes 15, 29, 64, 68, 152 via Av. Cabildo / Av. Congreso",
+    "openInMaps": "Open in Google Maps",
+    "openInMapsAriaLabel": "Open Plaza Galicia in Google Maps (opens in new tab)"
   },
   "languageSwitcher": {
     "label": "Switch language",

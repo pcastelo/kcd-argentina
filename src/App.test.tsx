@@ -10,7 +10,10 @@ describe('App', () => {
     await waitFor(() => {
       expect(screen.getByRole('main')).toBeInTheDocument()
       expect(
-        screen.getByText(/Kubernetes Community Days Argentina/i),
+        screen.getByText(/Kubernetes Community Days Argentina — Buenos Aires/i),
+      ).toBeInTheDocument()
+      expect(
+        screen.getByRole('heading', { name: 'Organizadores', level: 2 }),
       ).toBeInTheDocument()
     })
   })

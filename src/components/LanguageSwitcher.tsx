@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
       type="button"
       className={`min-h-11 min-w-11 border border-border px-3 text-sm text-text hover:text-primary ${focusRingClasses}`}
       aria-label={t('languageSwitcher.label')}
-      onClick={() => navigate(alternatePath)}
+      onClick={() => navigate(`${alternatePath}${location.hash}`)}
     >
       {t('languageSwitcher.switchTo')}
     </button>

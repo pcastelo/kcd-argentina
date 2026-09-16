@@ -52,21 +52,20 @@ export function Countdown({
     <div
       role="timer"
       aria-live="polite"
-      className={`grid grid-cols-2 gap-4 sm:grid-cols-4${className ? ` ${className}` : ''}`}
+      className={`rounded-lg border border-border bg-surface/80 px-4 py-5 sm:px-6${className ? ` ${className}` : ''}`}
     >
-      {UNITS.map((unit) => (
-        <div
-          key={unit}
-          className="rounded-md border border-border bg-surface/80 px-3 py-4"
-        >
-          <span className="block text-3xl font-bold tabular-nums text-text">
-            {values[unit]}
-          </span>
-          <span className="mt-1 block text-sm text-text-muted">
-            {t(`home.countdown.${unit}`)}
-          </span>
-        </div>
-      ))}
+      <div className="grid grid-cols-4 divide-x divide-border">
+        {UNITS.map((unit) => (
+          <div key={unit} className="flex flex-col items-center px-2 sm:px-4">
+            <span className="text-2xl font-bold tabular-nums text-text sm:text-3xl">
+              {values[unit]}
+            </span>
+            <span className="mt-1 text-xs text-text-muted sm:text-sm">
+              {t(`home.countdown.${unit}`)}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

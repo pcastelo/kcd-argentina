@@ -14,6 +14,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "validate:data": "vitest run src/lib/validateData.test.ts",
+    "import:agenda": "node scripts/import-agenda.mjs",
+    "import:sessionize": "node scripts/import-sessionize.mjs",
+    "import:data": "node scripts/import-agenda.mjs && node scripts/import-sessionize.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -37,6 +40,7 @@
     "tailwindcss": "^4.2.1",
     "typescript": "~6.0.2",
     "vite": "^8.3.0",
-    "vitest": "^4.1.0"
+    "vitest": "^4.1.0",
+    "xlsx": "^0.18.5"
   }
 }

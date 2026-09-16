@@ -20,6 +20,12 @@ describe('sortSponsors', () => {
         order: 1,
       },
       {
+        slug: 'diamond-a',
+        name: 'Alpha Diamond',
+        tier: 'diamond',
+        logo: '/sponsors/diamond-a.png',
+      },
+      {
         slug: 'platinum-a',
         name: 'Alpha Platinum',
         tier: 'platinum',
@@ -28,6 +34,7 @@ describe('sortSponsors', () => {
     ]
 
     expect(sortSponsors(sponsors).map((sponsor) => sponsor.slug)).toEqual([
+      'diamond-a',
       'platinum-a',
       'gold-a',
       'silver-b',

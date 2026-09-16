@@ -15,7 +15,7 @@ describe('HomePage', () => {
     )
 
     expect(
-      screen.getByRole('heading', { name: 'KCD Argentina 2026' }),
+      screen.getByRole('heading', { name: 'KCD Argentina 2026', hidden: true }),
     ).toBeInTheDocument()
     expect(
       screen.getByText(i18n.t('home.heroSubtitle')),
@@ -29,9 +29,14 @@ describe('HomePage', () => {
       'href',
       'https://www.eventbrite.com/e/kcd-argentina-2026-tickets-1999811690600',
     )
-    expect(screen.getByText(/Plaza Galicia/i)).toBeInTheDocument()
+    const eventMeta = screen.getByLabelText('Detalles del evento')
+    expect(eventMeta).toHaveTextContent('Plaza Galicia')
+    expect(eventMeta).toHaveTextContent(/3 de octubre de 2026/i)
     expect(
-      screen.getByRole('link', { name: i18n.t('home.sponsors.becomeSponsor') }),
+      screen.getByRole('heading', { name: 'Plaza Galicia', level: 2 }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', { name: i18n.t('sponsors.becomeSponsor') }),
     ).toBeInTheDocument()
   })
 
@@ -53,7 +58,7 @@ describe('HomePage', () => {
       }),
     ).toBeInTheDocument()
     expect(
-      screen.getByRole('link', { name: i18n.t('home.sponsors.becomeSponsor') }),
+      screen.getByRole('link', { name: i18n.t('sponsors.becomeSponsor') }),
     ).toBeInTheDocument()
   })
 })

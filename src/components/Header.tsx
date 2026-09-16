@@ -2,14 +2,15 @@ import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 import { Container } from '@/components/Container'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
+import { getBrandIconSrc } from '@/lib/brand'
 import { DEFAULT_LOCALE, isValidLocale, localePath } from '@/lib/locale'
 
 const navItems = [
-  { key: 'nav.home', segment: undefined },
-  { key: 'nav.agenda', segment: 'agenda' },
-  { key: 'nav.speakers', segment: 'speakers' },
-  { key: 'nav.sponsors', segment: 'sponsors' },
-  { key: 'nav.location', segment: 'location' },
+  { key: 'nav.home', hash: undefined },
+  { key: 'nav.agenda', hash: 'agenda' },
+  { key: 'nav.speakers', hash: 'speakers' },
+  { key: 'nav.sponsors', hash: 'sponsors' },
+  { key: 'nav.location', hash: 'local' },
 ] as const
 
 const focusRingClasses =
@@ -27,7 +28,7 @@ export function Header() {
       <Container className="flex flex-wrap items-center gap-4 py-4">
         <Link to={localePath(locale)} className={focusRingClasses}>
           <img
-            src="/logo.png"
+            src={getBrandIconSrc()}
             alt="KCD Argentina 2026"
             className="h-10 w-10"
             width={40}
@@ -41,7 +42,7 @@ export function Header() {
           {navItems.map((item) => (
             <Link
               key={item.key}
-              to={localePath(locale, item.segment)}
+              to={localePath(locale, undefined, item.hash)}
               className={linkClasses}
             >
               {t(item.key)}

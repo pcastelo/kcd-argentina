@@ -1,1 +1,68 @@
-[]
+[
+  {
+    "slug": "eduardo-spotti",
+    "name": "Eduardo Spotti",
+    "role": "Cloud & Dev(sec)Ops architect",
+    "company": "Crubyt & AWS",
+    "photo": "/organizers/eduardo-spotti.png",
+    "linkedin": "https://www.linkedin.com/in/eduardo-spotti/"
+  },
+  {
+    "slug": "leandra-ducos",
+    "name": "Leandra Ducos",
+    "role": "L\u00edder de Infraestructura",
+    "company": "EY",
+    "photo": "/organizers/leandra-ducos.png",
+    "linkedin": "https://www.linkedin.com/in/marialeandraducos/"
+  },
+  {
+    "slug": "matias-mospan",
+    "name": "Matias Mospan",
+    "role": "DevOps & Platform Specialist",
+    "company": "Sofis Solutions",
+    "photo": "/organizers/matias-mospan.png",
+    "linkedin": "https://www.linkedin.com/in/matiasmospan/"
+  },
+  {
+    "slug": "pablo-castelo",
+    "name": "Pablo Castelo",
+    "role": "Senior Architect",
+    "company": "Red Hat",
+    "photo": "/organizers/pablo-castelo.png",
+    "linkedin": "https://www.linkedin.com/in/pablocastelo/"
+  },
+  {
+    "slug": "rodrigo-elissamburu",
+    "name": "Rodrigo Elissamburu",
+    "role": "Arquitecto de Soluciones",
+    "company": "Banco Galicia",
+    "photo": "/organizers/rodrigo-elissamburu.png",
+    "linkedin": "https://www.linkedin.com/in/rodrigo-elissamburu/"
+  },
+  {
+    "slug": "axel-labruna",
+    "name": "Axel Labruna",
+    "role": "Solution Architect",
+    "company": "Nubiral",
+    "photo": "/organizers/axel-labruna.png",
+    "linkedin": "https://www.linkedin.com/in/axelglabruna/"
+  },
+  {
+    "slug": "organizer-pending-2",
+    "name": "Por confirmar",
+    "role": "Comité organizador",
+    "placeholder": true
+  },
+  {
+    "slug": "organizer-pending-3",
+    "name": "Por confirmar",
+    "role": "Comité organizador",
+    "placeholder": true
+  },
+  {
+    "slug": "organizer-pending-4",
+    "name": "Por confirmar",
+    "role": "Comité organizador",
+    "placeholder": true
+  }
+]

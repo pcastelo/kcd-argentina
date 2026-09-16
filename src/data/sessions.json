@@ -1,1 +1,505 @@
-[]
+[
+  {
+    "id": "2026-10-03-0900-plenario-recepcion-y-acreditacion",
+    "slug": "recepcion-y-acreditacion",
+    "title": "Recepción y Acreditación",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T09:00:00-03:00",
+    "endTime": "2026-10-03T10:00:00-03:00",
+    "durationMinutes": 60,
+    "type": "reception",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1000-plenario-keynote-de-apertura",
+    "slug": "keynote-de-apertura",
+    "title": "Keynote de Apertura",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T10:00:00-03:00",
+    "endTime": "2026-10-03T10:30:00-03:00",
+    "durationMinutes": 30,
+    "type": "keynote",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1030-sala-1-slot-1",
+    "slug": "slot-1",
+    "title": "Slot 1",
+    "speakerSlugs": [],
+    "room": "sala-1",
+    "startTime": "2026-10-03T10:30:00-03:00",
+    "endTime": "2026-10-03T11:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1030-sala-2-control-plane-data-plane-gobernanza-de-ia-al-estilo-cloud-native",
+    "slug": "control-plane-data-plane-gobernanza-de-ia-al-estilo-cloud-native",
+    "title": "Control Plane, Data Plane: Gobernanza de IA al estilo cloud-native",
+    "speakerSlugs": [
+      "matias-mospan"
+    ],
+    "speakerNames": [
+      "Matias Mospan"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T10:30:00-03:00",
+    "endTime": "2026-10-03T11:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "La presentación se centrará en la presentación de un framework de gobernanza IA pensado para Pymes. \nNos enfocaremos en mostrar los 3 pilares del framework: Herramientas, Personas y Procesos.\nSe comentará sobre las 4 Funciones del framework (Gobernar, Mapear, Medir, Gestionar) y como evaluar el grado de madurez actual de tu empresa (Niveles 0 a 3)\nHabrá comentarios de casos de uso, maneras de implementarlo, posibles mejoras y riesgos.",
+    "track": "AI/GenAI/ML"
+  },
+  {
+    "id": "2026-10-03-1030-sala-3-workshop-1",
+    "slug": "workshop-1",
+    "title": "Workshop 1",
+    "speakerSlugs": [],
+    "room": "sala-3",
+    "startTime": "2026-10-03T10:30:00-03:00",
+    "endTime": "2026-10-03T11:30:00-03:00",
+    "durationMinutes": 60,
+    "type": "workshop",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1100-sala-1-norte-sur-este-oeste-e-hibrido-ha-y-failover-con-gateway-api-linkerd-y-skupper",
+    "slug": "norte-sur-este-oeste-e-hibrido-ha-y-failover-con-gateway-api-linkerd-y-skupper",
+    "title": "Norte-sur, este-oeste e híbrido: HA y failover con Gateway API, Linkerd y Skupper",
+    "speakerSlugs": [
+      "francisco-meneses",
+      "sergio-canales"
+    ],
+    "speakerNames": [
+      "Francisco Meneses",
+      "Sergio Canales"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T11:00:00-03:00",
+    "endTime": "2026-10-03T11:30:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Cuando una app vive en más de un cluster —o parte del workload ni siquiera está en Kubernetes— la pregunta ya no es “¿qué Ingress uso?”. Es: ¿cómo entra el tráfico, cómo se hablan los servicios entre sí, y cómo sobrevive el sistema cuando algo se cae?\n\nEn esta charla de 30 minutos recorremos esos tres planos de conectividad con una demo en vivo, toda en la laptop: sin VPN mágica ni cuenta cloud. Vas a ver alta disponibilidad y failover de punta a punta, y —sobre todo— un criterio claro para elegir la pieza correcta en cada capa, en lugar de forzar una sola herramienta a resolverlo todo.\n\nTe llevás un mapa mental aplicable a plataformas reales y una demo reproducible para seguir explorando después del evento.",
+    "track": "Operaciones+Rendimiento"
+  },
+  {
+    "id": "2026-10-03-1100-sala-2-agentops-el-futuro-que-ya-llego",
+    "slug": "agentops-el-futuro-que-ya-llego",
+    "title": "AgentOps: el futuro que ya llegó",
+    "speakerSlugs": [
+      "axel-labruna",
+      "maika-esteves"
+    ],
+    "speakerNames": [
+      "Axel Labruna",
+      "Maika Esteves"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T11:00:00-03:00",
+    "endTime": "2026-10-03T11:30:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "¿Y si el próximo salto de eficiencia en DevSecOps no viniera de más herramientas, sino de agentes capaces de razonar, coordinarse y ejecutar por nosotros?\nLa inteligencia artificial agéntica dejó de ser una promesa futurista: ya está cambiando la forma en que diseñamos, automatizamos y escalamos flujos de ingeniería. En esta charla exploraremos cómo AgentOps permite llevar los agentes de IA desde una demo interesante hasta arquitecturas reales, gobernables y orientadas a impacto.\n\nPresentaremos arquitecturas agénticas aplicadas a escenarios de DevSecOps, mostrando cómo diseñar agentes con responsabilidades claras, contratos explícitos, trazabilidad y mecanismos de colaboración. También revisaremos patrones de diseño para construir soluciones más robustas, reutilizables y seguras. \nA través de ejemplos prácticos y demos basadas en desarrollos reales, veremos cómo estos enfoques pueden acelerar actividades como análisis, generación de artefactos, validaciones, revisión de código, documentación, seguridad y automatización de pipelines, reduciendo esfuerzo operativo, tiempos de entrega y costos.\nLa audiencia se llevará una visión concreta de qué es AgentOps, cómo empezar a diseñar arquitecturas agénticas útiles, qué patrones aplicar y cómo convertir esta tendencia en una ventaja real para equipos de tecnología, producto y negocio.",
+    "track": "App Development"
+  },
+  {
+    "id": "2026-10-03-1130-plenario-coffee-break",
+    "slug": "coffee-break",
+    "title": "Coffee Break",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T11:30:00-03:00",
+    "endTime": "2026-10-03T12:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "break",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1200-sala-1-como-platform-engineering-habilita-velocidad-compliance-y-self-service",
+    "slug": "como-platform-engineering-habilita-velocidad-compliance-y-self-service",
+    "title": "Cómo Platform Engineering habilita velocidad, compliance y self-service",
+    "speakerSlugs": [
+      "josua-castro"
+    ],
+    "speakerNames": [
+      "Josua Castro"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T12:00:00-03:00",
+    "endTime": "2026-10-03T12:30:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "DevOps aceleró la entrega de software y DevSecOps incorporó la seguridad al ciclo de desarrollo. Sin embargo, en organizaciones altamente reguladas, el principal desafío ya no es la adopción de herramientas, sino la complejidad de operar plataformas seguras, escalables y gobernadas.\n\nEn esta charla exploraremos cómo Platform Engineering está emergiendo como la evolución natural de DevOps, permitiendo construir plataformas internas que ofrecen autoservicio seguro, estandarización y una mejor experiencia para los desarrolladores.\n\nA través de experiencias reales del sector financiero, veremos cómo implementar Golden Paths para reducir la complejidad, utilizar Backstage como portal de desarrollo, adoptar GitOps para automatizar despliegues y gobernanza, aprovechar Crossplane para consumir infraestructura como servicio y aplicar Compliance as Code para integrar controles regulatorios desde el diseño.",
+    "track": "Platform Engineer"
+  },
+  {
+    "id": "2026-10-03-1200-sala-2-el-idioma-tambien-es-infraestructura-devops-y-conocimiento-en-espanol-para-el-fu",
+    "slug": "el-idioma-tambien-es-infraestructura-devops-y-conocimiento-en-espanol-para-el-fu",
+    "title": "El idioma también es infraestructura: DevOps y conocimiento en español para el futuro de Latam",
+    "speakerSlugs": [
+      "johan-prieto"
+    ],
+    "speakerNames": [
+      "Johan Heimar Prieto Benavides"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T12:00:00-03:00",
+    "endTime": "2026-10-03T12:30:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "635 millones de personas hablan español, mientras que más de 4 millones de talentos de tecnología en LATAM construyen el futuro digital. Sin embargo, gran parte de la sabiduría de DevOps, Kubernetes y plataformas internas permanece en inglés. Esta charla sugiere una idea clave: el idioma es también infraestructura para eliminar barreras y preparar a Latinoamérica para crecer.",
+    "track": "Cloud Native Experience"
+  },
+  {
+    "id": "2026-10-03-1200-sala-3-workshop-2",
+    "slug": "workshop-2",
+    "title": "Workshop 2",
+    "speakerSlugs": [
+      "aws-ug-sec-arg"
+    ],
+    "speakerNames": [
+      "AWS UG Sec Arg"
+    ],
+    "room": "sala-3",
+    "startTime": "2026-10-03T12:00:00-03:00",
+    "endTime": "2026-10-03T13:00:00-03:00",
+    "durationMinutes": 60,
+    "type": "workshop",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1230-sala-1-one-does-not-simply-resolve-an-incident",
+    "slug": "one-does-not-simply-resolve-an-incident",
+    "title": "One Does Not Simply Resolve an Incident",
+    "speakerSlugs": [
+      "santiago-abastante"
+    ],
+    "speakerNames": [
+      "Santiago Abastante"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T12:30:00-03:00",
+    "endTime": "2026-10-03T13:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Son las tres de la mañana de un sábado. Hay cincuenta personas en una war room y los equipos se van sumando a medida que pueden. Nadie tiene el contexto completo, muchas discusiones ya ocurrieron y lo único que sabemos a ciencia cierta es que la aplicación está caída.\nAlertas hay un millón. Un equipo asegura que su servidor está perfecto. Alguien pregunta si se cayó AWS. Seguridad recuerda esa vulnerabilidad que no se parcheó. Cada especialista observa su pod, su servicio, su base de datos o su parte del cluster, pero nadie consigue explicar qué está pasando con el sistema como un todo. Todos quieren resolver el incidente, pero ¿quién pone orden? ¿Cómo se encauza la investigación? ¿Cuánta evidencia necesitamos antes de empezar a restablecer los sistemas?\nPuede fallar, decía Tusam. Todo sistema puede y va a fallar; cuando lo haga, probablemente sea por algo que todavía no estábamos viendo. Kubernetes puede darnos resiliencia, automatización y una cantidad enorme de métricas, logs y eventos, pero ninguna de esas cosas garantiza que podamos tomar buenas decisiones bajo presión.\nEsta charla propone dejar por un rato lo netamente técnico para estudiar la parte humana y operacional de los incidentes: cómo separar hechos, hipótesis y opiniones; construir una visión compartida; validar evidencia; reducir el ruido; evitar las batallas de egos y controlar el “complejo de héroe”. También veremos qué ocurre cuando la autoridad, la urgencia del management, los objetivos de Seguridad y la necesidad de los ingenieros de entender la causa empujan en direcciones diferentes.\nEl objetivo es llevarnos un marco práctico para trabajar en contextos de incertidumbre: roles claros, registro de decisiones, gestión de hipótesis, criterios para escalar y una forma razonable de decidir cuándo seguir investigando y cuándo priorizar la recuperación.\nPorque la épica de resolver el quilombo en el último minuto siempre nos llena el corazón. Pero durante un incidente no necesitamos héroes: necesitamos que cincuenta personas puedan pensar y actuar como un solo equipo.",
+    "track": "Security"
+  },
+  {
+    "id": "2026-10-03-1230-sala-2-stop-babysitting-gpus-and-learn-crossplane",
+    "slug": "stop-babysitting-gpus-and-learn-crossplane",
+    "title": "Stop Babysitting GPUs and Learn Crossplane",
+    "speakerSlugs": [
+      "enzo-venturi"
+    ],
+    "speakerNames": [
+      "Enzo Venturi"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T12:30:00-03:00",
+    "endTime": "2026-10-03T13:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "The AI infrastructure landscape is fragmented. You don't need magic; you need a control plane. This session explores using Crossplane patterns to manage heterogeneous GPU fleets across hyperscalers and neoclouds. Using ModelPlane v0.1 as an early-stage case study, we’ll show how decoupling model intent from cluster realization actually works. Learn to replace bespoke \"vibe-coded\" scripts with rigorous, auditable XRDs. We'll look at the brutal economics of idle GPU costs, cold-start latency math, and why declarative infrastructure is the only sustainable path for AI platform engineering. No vendor hype, just reality.\n\nhttps://modelplane.ai/blog/open-control-plane-for-inference",
+    "track": "AI/GenAI/ML"
+  },
+  {
+    "id": "2026-10-03-1300-plenario-almuerzo",
+    "slug": "almuerzo",
+    "title": "Almuerzo",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T13:00:00-03:00",
+    "endTime": "2026-10-03T13:45:00-03:00",
+    "durationMinutes": 45,
+    "type": "lunch",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1345-sala-1-breaking-ai-from-the-inside-jailbreaks-vulnerabilities-and-skill-attacks",
+    "slug": "breaking-ai-from-the-inside-jailbreaks-vulnerabilities-and-skill-attacks",
+    "title": "Breaking AI From the Inside: Jailbreaks, Vulnerabilities, and Skill Attacks",
+    "speakerSlugs": [
+      "edson-ferreira"
+    ],
+    "speakerNames": [
+      "Edson Ferreira"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T13:45:00-03:00",
+    "endTime": "2026-10-03T14:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "en",
+    "abstract": "AI models and autonomous agents are increasingly prevalent in cloud-native applications and infrastructure, introducing a new attack surface.\nIn this talk, we will explore jailbreaks that bypass security guardrails, vulnerabilities specific to LLMs, and the abuse of \"skills\" or tools connected to AI agents. Through practical examples and real-world cases, we will examine how these attacks work and the defense and mitigation strategies that security and platform teams can implement.",
+    "track": "Security"
+  },
+  {
+    "id": "2026-10-03-1345-sala-2-tu-agente-puede-llamar-a-cualquier-lado-contencion-de-egress-con-cilium",
+    "slug": "tu-agente-puede-llamar-a-cualquier-lado-contencion-de-egress-con-cilium",
+    "title": "Tu agente puede llamar a cualquier lado: contención de egress con Cilium",
+    "speakerSlugs": [
+      "david-aguirre"
+    ],
+    "speakerNames": [
+      "David Aguirre"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T13:45:00-03:00",
+    "endTime": "2026-10-03T14:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Un agente decide en tiempo de ejecución a qué API va a llamar. Esa es su utilidad y también su problema: desde la perspectiva de la red es una carga cuyo destino no podemos predecir al momento de desplegarla. Y lo mismo ocurre para cualquier workload que resuelva su salida de manera dinámica. \n\nLas NetworkPolicy nativas razonan en direcciones IP. Ese modelo no puede expresar \"este pod habla con estas dos APIs y con nada más\": la IP detrás de un nombre cambia, y la política deja detener razon de ser.\n\nCilium resuelve eso razonando en identidades y en nombres de dominio. En esta charla armo un perímetro de egress para una carga de este tipo, lo veremos funcionar en Hubble, y mostraremos lo que este enfoque podria no resolver.",
+    "track": "Security"
+  },
+  {
+    "id": "2026-10-03-1345-sala-3-workshop",
+    "slug": "workshop",
+    "title": "Workshop",
+    "speakerSlugs": [],
+    "room": "sala-3",
+    "startTime": "2026-10-03T13:45:00-03:00",
+    "endTime": "2026-10-03T14:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "workshop",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1415-sala-1-kubectl-apply-a-un-agente-de-ai-kagent-mcp-servers-y-litellm-contra-las-apis-de-",
+    "slug": "kubectl-apply-a-un-agente-de-ai-kagent-mcp-servers-y-litellm-contra-las-apis-de-",
+    "title": "kubectl apply a un agente de AI: kagent, MCP servers y LiteLLM contra las APIs de costos de AWS",
+    "speakerSlugs": [
+      "macarena-poisson"
+    ],
+    "speakerNames": [
+      "Macarena Poisson"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T14:15:00-03:00",
+    "endTime": "2026-10-03T14:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Cuando alguien cuenta que puso un agente de IA a trabajar en entornos productivos, lo primero que uno imagina es una plataforma nueva al costado: otro dashboard, otro modelo de permisos, otro repositorio, otra cosa más para operar. Pero si ya tenés un cluster de Kubernetes operativo, buena parte de eso está resuelto.\n\nArmamos un agente de FinOps que analiza la infraestructura de AWS de una organización y produce un informe con oportunidades de ahorro. Instalamos tanto el agente como sus herramientas (MCP servers) con kagent, para poder tratarlos como otros objetos más del cluster: CRDs versionados en Git y desplegados con el mismo flujo que usamos para cualquier otro workload. Adelante del modelo pusimos LiteLLM, para que el agente sea agnóstico del proveedor de LLM y para asignarle un budget propio. Un agente de FinOps al que también hay que hacerle FinOps.\n\nA partir de ahí, todo lo demás pasó a ser un problema de plataforma. Cómo darle de forma segura credenciales y permisos en AWS a algo que decide por sí mismo qué API va a llamar, y cómo reconstruir después qué hizo realmente. Todo esto con un diseño agnóstico del cloud provider.\n\nAdemás, compartiremos lo que todavía no resolvimos: hoy cada agente es un pod que estaría prendido las 24 horas para un trabajo que llega una vez por mes. Vamos a explicar cómo pensamos solucionarlo con Agent Substrate, suspendiendo y reanudando agentes en lugar de tenerlos esperando.",
+    "track": "Platform Engineer"
+  },
+  {
+    "id": "2026-10-03-1415-sala-2-enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac",
+    "slug": "enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac",
+    "title": "Enterprise Document Extraction in Production: How and Why AXA Integrated NuExtract.",
+    "speakerSlugs": [
+      "etienne-bernard"
+    ],
+    "speakerNames": [
+      "Etienne Bernard"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T14:15:00-03:00",
+    "endTime": "2026-10-03T14:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "en",
+    "abstract": "Enterprises with high document volumes want to automate workflows, but fast and  accurate information extraction remains difficult at scale. General-purpose LLMs are powerful, but they are expensive, hard to deploy privately, and unreliable when organizations need clean, structured outputs from complex documents.\n\nIn this session, Etienne will share what Numind built, how Numind built it, and why AXA chose this path. The session will cover the  challenges of extracting structured information from enterprise documents, and how specialized small language models can provide a more accurate, efficient, and private alternative to general-purpose models.\n\nYou will learn how NuExtract3, a 4B open-source multimodal SLM, supports document-to-JSON extraction, OCR to Markdown, and enterprise-ready information extraction workflows. Etienne will discuss the architecture, implementation choices, lessons learned from the production deployment at AXA, and the business reasons for adopting specialized AI for document intelligence.\n\nThe session will be especially relevant for developers, AI leaders, and decision makers in insurance, banking, finance, and healthcare who are evaluating how to move document AI from prototype to production. By the end, you will understand how specialized SLMs can reduce cost, improve privacy, and make information extraction more reliable for high-stakes enterprise workflows.",
+    "track": "AI/GenAI/ML"
+  },
+  {
+    "id": "2026-10-03-1445-sala-1-innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
+    "slug": "innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
+    "title": "InnerSource in the AI Era: Scaling Innovation with Open Source Culture",
+    "speakerSlugs": [
+      "caio-medeiros-pinto",
+      "nadim"
+    ],
+    "speakerNames": [
+      "Caio Medeiros Pinto",
+      "Nadim Hobaica"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T14:45:00-03:00",
+    "endTime": "2026-10-03T15:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "AI has made it easier than ever to turn an idea into code, but making something x5 faster does not automatically make it useful, especially inside organizations where teams barely know what others are building 🙃.\n\nThis is where InnerSource can help! In this talk, we will explore how practices inspired by open source communities can connect isolated teams, reduce duplicated work, and give people a better way to share their ideas and solutions across their organization, or even outside of it.\n\nWe will also discuss the management side of InnerSource: how to create space for collaboration without wasting people’s time, how to motivate contributors, how to recognize maintainers, and how to ensure internal projects generate real value for teams and the business.\n\nBecause AI may reduce the time and effort required to build something, but culture determines whether that something becomes an abandoned repository, or an innovation that the whole organization can use.",
+    "track": "Business"
+  },
+  {
+    "id": "2026-10-03-1445-sala-2-argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
+    "slug": "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
+    "title": "Argo CD Multicluster: Estrategias Push vs. Pull para escalar tu infraestructura",
+    "speakerSlugs": [
+      "rodrigo-alvarez",
+      "pablo-castelo"
+    ],
+    "speakerNames": [
+      "Rodrigo Alvarez",
+      "Pablo Castelo"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T14:45:00-03:00",
+    "endTime": "2026-10-03T15:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "En el ecosistema actual de Kubernetes, gestionar un solo cluster es solo el principio. El verdadero reto surge cuando debemos escalar nuestras aplicaciones a múltiples regiones, nubes o entornos de borde. ¿Cómo mantenemos la coherencia sin volvernos locos?\nEn esta sesión, desglosaremos las dos arquitecturas predominantes para despliegues multicluster con Argo CD: los modelos Push y Pull. Analizaremos en profundidad:\n\nArquitectura Centralizada (Push): Cómo un único \"Hub\" de Argo CD puede orquestar despliegues en clusters remotos y cuáles son sus límites de escalabilidad y seguridad.\n\nArquitectura Distribuida (Pull): El enfoque de \"instala y olvida\", donde cada cluster es autónomo, mejorando la resiliencia pero desafiando la visibilidad centralizada.\n\nA través de casos de uso prácticos, compararemos latencias, gestión de permisos (RBAC) y la complejidad operativa de cada modelo. No se trata de cuál es mejor, sino de cuál es el adecuado para tu infraestructura",
+    "track": "Platform Engineer"
+  },
+  {
+    "id": "2026-10-03-1445-sala-3-transicion-actividad-corta",
+    "slug": "transicion-actividad-corta",
+    "title": "Transición / Actividad corta",
+    "speakerSlugs": [],
+    "room": "sala-3",
+    "startTime": "2026-10-03T14:45:00-03:00",
+    "endTime": "2026-10-03T15:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "transition",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1515-plenario-coffee-break",
+    "slug": "coffee-break",
+    "title": "Coffee Break",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T15:15:00-03:00",
+    "endTime": "2026-10-03T15:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "break",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1545-sala-1-ai-writes-code-who-designs-the-architecture",
+    "slug": "ai-writes-code-who-designs-the-architecture",
+    "title": "AI writes code. Who designs the architecture?",
+    "speakerSlugs": [
+      "jack-torpoco"
+    ],
+    "speakerNames": [
+      "Jack Torpoco"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T15:45:00-03:00",
+    "endTime": "2026-10-03T16:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Today, developers use tools like GitHub Copilot, Claude, and ChatGPT to generate code at high speed. But a critical problem is emerging: architecture is disappearing from the process.\n\nThis talk focuses on how to use AI without losing architectural integrity. We will explore a practical approach where code is generated quickly, but architecture is continuously discovered, validated, and evolved using principles such as domain boundaries, layered design, and C4-style thinking.\n\nThrough a real-world scenario, we will show how to detect architecture from repositories, translate code into meaningful models, and prevent fragile, tightly coupled systems.\n\nWe will also connect this to Cloud Native environments, where microservices, Kubernetes, and pipelines often lack architectural direction.\n\nAI builds fast. Architecture determines whether it survives.",
+    "track": "AI/GenAI/ML"
+  },
+  {
+    "id": "2026-10-03-1545-sala-2-del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
+    "slug": "del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
+    "title": "Del Código al Runtime: Seguridad Cloud Native con Checkov, Trivy, Kyverno y Falco",
+    "speakerSlugs": [
+      "miguel-de-los-santos"
+    ],
+    "speakerNames": [
+      "Miguel De Los Santos"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T15:45:00-03:00",
+    "endTime": "2026-10-03T16:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Security is often treated as a scattered collection of tools, but effective protection requires architectural alignment. In this session, we turn the 4C Model (Cloud, Cluster, Container, Code) into a practical blueprint for securing Kubernetes end-to-end. We will demonstrate how to shift security left with Infrastructure-as-Code scanning using Checkov, analyze container supply-chain risk with Trivy, enforce policy with Kyverno, and detect runtime threats at the syscall level with Falco. By connecting prevention, enforcement, and detection into a cohesive strategy, attendees will leave with a clear, implementable roadmap to secure Kubernetes from CI/CD pipelines to the running kernel.",
+    "track": "Security"
+  },
+  {
+    "id": "2026-10-03-1545-sala-3-workshop-4",
+    "slug": "workshop-4",
+    "title": "Workshop 4",
+    "speakerSlugs": [
+      "women-in-cloud-tbd"
+    ],
+    "speakerNames": [
+      "Women in Cloud(TBD)"
+    ],
+    "room": "sala-3",
+    "startTime": "2026-10-03T15:45:00-03:00",
+    "endTime": "2026-10-03T16:45:00-03:00",
+    "durationMinutes": 60,
+    "type": "workshop",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1615-sala-1-estandarizando-el-caos-gestion-declarativa-de-clusters-mixtos-con-capi-capmox-y-",
+    "slug": "estandarizando-el-caos-gestion-declarativa-de-clusters-mixtos-con-capi-capmox-y-",
+    "title": "Estandarizando el caos: Gestión declarativa de clusters mixtos con CAPI, CAPMOX y GitOps",
+    "speakerSlugs": [
+      "fernando-jose-cardozo-camargo"
+    ],
+    "speakerNames": [
+      "Fernando Jose Cardozo Camargo"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T16:15:00-03:00",
+    "endTime": "2026-10-03T16:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "La gestión de infraestructuras heterogéneas on-premise y en la nube suele generar fricción operativa. Esta charla técnica demuestra cómo unificar el ciclo de vida de los clusters utilizando Cluster API (CAPI) y su proveedor para Proxmox (CAPMOX). Exploraremos casos prácticos de despliegue de clusters de Kubernetes mixtos (con worker nodes de Linux y Windows) para soportar cargas de trabajo diversas de forma nativa. Finalmente, veremos cómo integrar todo el aprovisionamiento y la configuración bajo un modelo GitOps, transformando operaciones manuales complejas en flujos de trabajo declarativos, auditables y escalables que aportan valor directo al negocio.",
+    "track": "Cloud Native Experience"
+  },
+  {
+    "id": "2026-10-03-1615-sala-2-zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes",
+    "slug": "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes",
+    "title": "Zero Trust y Visibilidad Total: El poder de Cilium y eBPF en Kubernetes",
+    "speakerSlugs": [
+      "hector-mendoza-salazar",
+      "carlos-calla"
+    ],
+    "speakerNames": [
+      "Hector Mendoza Salazar",
+      "Carlos Calla"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T16:15:00-03:00",
+    "endTime": "2026-10-03T16:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "abstract": "Kubernetes ha simplificado el despliegue de aplicaciones, pero también ha incrementado los desafíos relacionados con la seguridad y la visibilidad de las comunicaciones entre servicios. En esta charla conoceremos cómo Cilium y eBPF permiten implementar un enfoque Zero Trust, aplicando políticas de seguridad basadas en identidad y ofreciendo observabilidad profunda del tráfico de red sin necesidad de sidecars. Mediante una demostración práctica utilizaremos Hubble para visualizar el flujo de las comunicaciones, detectar accesos no autorizados y comprender cómo fortalecer la seguridad y la operación diaria de un clúster Kubernetes con un impacto mínimo en el rendimiento.",
+    "track": "Observabilidad"
+  },
+  {
+    "id": "2026-10-03-1645-plenario-margen-rotacion-general",
+    "slug": "margen-rotacion-general",
+    "title": "Margen / Rotación general",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T16:45:00-03:00",
+    "endTime": "2026-10-03T17:00:00-03:00",
+    "durationMinutes": 15,
+    "type": "margin"
+  },
+  {
+    "id": "2026-10-03-1700-plenario-keynote-de-cierre",
+    "slug": "keynote-de-cierre",
+    "title": "Keynote de Cierre",
+    "speakerSlugs": [
+      "marcos-lilljedhal"
+    ],
+    "speakerNames": [
+      "Marcos Lilljedhal"
+    ],
+    "room": "plenario",
+    "startTime": "2026-10-03T17:00:00-03:00",
+    "endTime": "2026-10-03T17:45:00-03:00",
+    "durationMinutes": 45,
+    "type": "keynote",
+    "language": "es"
+  }
+]

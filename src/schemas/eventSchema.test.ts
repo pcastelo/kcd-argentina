@@ -8,6 +8,18 @@ describe('eventSchema', () => {
     expect(result.success).toBe(true)
   })
 
+  it('parses venue with mapUrl and mapEmbedUrl from seed event.json', () => {
+    const result = eventSchema.safeParse(eventData)
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.venue.mapUrl).toBe(
+        'https://www.google.com/maps/place/Plaza+Galicia/@-34.5846,-58.4574,17z',
+      )
+      expect(result.data.venue.mapEmbedUrl).toContain('maps.google.com')
+      expect(result.data.venue.image).toBe('/images/venue-plaza-galicia.jpg')
+    }
+  })
+
   it('rejects event missing required fields', () => {
     const result = eventSchema.safeParse({ title: 'Incomplete' })
     expect(result.success).toBe(false)

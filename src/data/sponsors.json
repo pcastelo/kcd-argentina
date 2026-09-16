@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "slug": "crubyt",
+    "name": "Crubyt",
+    "tier": "diamond",
+    "logo": "/sponsors/crubyt.webp",
+    "url": "https://crubyt.com/",
+    "order": 1
+  },
+  {
+    "slug": "valkey",
+    "name": "Valkey",
+    "tier": "platinum",
+    "logo": "/sponsors/valkey-logo.png",
+    "url": "https://valkey.io/",
+    "order": 1
+  },
+  {
+    "slug": "red-hat",
+    "name": "Red Hat",
+    "tier": "gold",
+    "logo": "/sponsors/red-hat.png",
+    "url": "https://www.redhat.com/",
+    "order": 1
+  },
+  {
+    "slug": "powercloud",
+    "name": "PowerCloud",
+    "tier": "light",
+    "logo": "/sponsors/powercloud-logo.png",
+    "url": "https://www.powercloud.com.ar/",
+    "order": 1
+  },
+  {
+    "slug": "cncf",
+    "name": "CNCF",
+    "tier": "community",
+    "logo": "/sponsors/cncf.png",
+    "url": "https://www.cncf.io/",
+    "order": 1
+  }
+]

@@ -5,11 +5,15 @@
   "city": "Buenos Aires",
   "venue": {
     "name": "Plaza Galicia",
-    "address": "4070 Leiva, Cdad. Autonoma de Buenos Aires C1427"
+    "address": "4070 Leiva, Cdad. Autonoma de Buenos Aires C1427",
+    "image": "/images/venue-plaza-galicia.jpg",
+    "mapUrl": "https://www.google.com/maps/place/Plaza+Galicia/@-34.5846,-58.4574,17z",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Plaza+Galicia,+4070+Leiva,+Cdad.+Autonoma+de+Buenos+Aires+C1427&hl=es&z=16&output=embed"
   },
   "status": "announced",
   "registrationUrl": "https://www.eventbrite.com/e/kcd-argentina-2026-tickets-1999811690600",
   "linktreeUrl": "https://linktr.ee/kcd.argentina",
+  "sponsorProspectusUrl": "https://drive.google.com/file/d/1BnQVM6NC_qYVlDo5VuSaYHEL7T0y9AOb/view",
   "contactEmail": "kcd.argentina@gmail.com",
   "timezone": "America/Argentina/Buenos_Aires"
 }
