@@ -21,7 +21,7 @@ describe('LocationSection', () => {
     expect(
       screen.getByRole('heading', { name: 'Plaza Galicia', level: 2 }),
     ).toBeInTheDocument()
-    expect(screen.getByText(i18n.t('location.title'))).toBeInTheDocument()
+    expect(screen.getByText(i18n.t('location.eyebrow'))).toBeInTheDocument()
     expect(
       screen.getByRole('img', {
         name: i18n.t('location.venueImageAlt', { venue: 'Plaza Galicia' }),

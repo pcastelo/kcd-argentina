@@ -15,11 +15,11 @@ export function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="text-center">
-      <p className="text-base font-semibold uppercase tracking-[0.22em] text-primary sm:text-lg">
+      <p className="text-xl font-semibold uppercase tracking-[0.22em] text-primary sm:text-2xl">
         {eyebrow}
       </p>
       <div className="mt-3 flex flex-col items-center gap-3">
-        <h2 className="text-2xl font-bold text-text sm:text-3xl">{title}</h2>
+        <h2 className="text-lg font-bold text-text sm:text-xl">{title}</h2>
         {badge ? (
           <span
             className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"

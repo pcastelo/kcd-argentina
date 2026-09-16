@@ -58,7 +58,13 @@ describe('AgendaSection', () => {
     ]
 
     mockedGetSessions.mockReturnValue(sessions)
-    mockedGetSpeakers.mockReturnValue([{ slug: 'ada-speaker', name: 'Ada Speaker' }])
+    mockedGetSpeakers.mockReturnValue([
+      {
+        slug: 'ada-speaker',
+        name: 'Ada Speaker',
+        photo: 'https://example.com/ada.jpg',
+      },
+    ])
 
     renderSection()
 
@@ -75,5 +81,14 @@ describe('AgendaSection', () => {
 
     expect(screen.getByText('Charla demo')).toBeInTheDocument()
     expect(screen.getByText('Keynote demo')).toBeInTheDocument()
+    expect(screen.getByText('Ada Speaker')).toBeInTheDocument()
+    expect(document.querySelector('img[src="https://example.com/ada.jpg"]')).toBeTruthy()
+
+    fireEvent.click(screen.getByRole('tab', { name: /Sala Principal/i }))
+
+    expect(screen.getByText('Ada Speaker')).toBeInTheDocument()
+    expect(
+      document.querySelector('img[src="https://example.com/ada.jpg"]'),
+    ).toBeNull()
   })
 })

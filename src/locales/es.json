@@ -50,6 +50,14 @@
     "title": "Sponsors",
     "subtitle": "Gracias a quienes hacen posible KCD Argentina",
     "becomeSponsor": "Convertite en sponsor",
+    "count": "{{count}} sponsors",
+    "stillOpen": "Seguimos sumando sponsors — tu marca puede estar acá",
+    "showcase": {
+      "featured": "Sponsors destacados",
+      "major": "Sponsors principales",
+      "partners": "Sponsors y comunidad"
+    },
+    "logoAriaLabel": "Visitar sitio de {{name}} (se abre en nueva pestana)",
     "emptyTier": "Espacio disponible — sumate como sponsor",
     "tiers": {
       "diamond": "Diamante",
@@ -120,6 +128,7 @@
     "reportIntro": "Para reportar incidentes, escribinos a"
   },
   "location": {
+    "eyebrow": "// Ubicación",
     "title": "Ubicación",
     "subtitle": "Te esperamos en Plaza Galicia, en el corazón de Buenos Aires",
     "when": "Fecha",

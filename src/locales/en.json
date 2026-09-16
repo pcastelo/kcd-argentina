@@ -50,6 +50,14 @@
     "title": "Sponsors",
     "subtitle": "Thank you to everyone making KCD Argentina possible",
     "becomeSponsor": "Become a sponsor",
+    "count": "{{count}} sponsors",
+    "stillOpen": "We are still adding sponsors — your brand could be here",
+    "showcase": {
+      "featured": "Featured sponsors",
+      "major": "Major sponsors",
+      "partners": "Partners and community"
+    },
+    "logoAriaLabel": "Visit {{name}} website (opens in new tab)",
     "emptyTier": "Open slot — join us as a sponsor",
     "tiers": {
       "diamond": "Diamond",
@@ -120,6 +128,7 @@
     "reportIntro": "To report an incident, contact us at"
   },
   "location": {
+    "eyebrow": "// Location",
     "title": "Location",
     "subtitle": "Join us at Plaza Galicia, in the heart of Buenos Aires",
     "when": "Date",

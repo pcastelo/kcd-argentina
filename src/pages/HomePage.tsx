@@ -29,6 +29,7 @@ export function HomePage() {
   const quickLinks = [
     { key: 'nav.agenda', hash: 'agenda' },
     { key: 'nav.speakers', hash: 'speakers' },
+    { key: 'nav.sponsors', hash: 'sponsors' },
     { key: 'nav.location', hash: 'local' },
   ] as const
 
