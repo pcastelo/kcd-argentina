@@ -5,17 +5,22 @@ import {
 } from '@/schemas/collectionSchemas'
 
 export const TIER_ORDER = [
+  'diamond',
   'platinum',
   'gold',
-  'silver',
+  'light',
   'community',
   'venue',
 ] as const
 
+function tierSortIndex(tier: Sponsor['tier']): number {
+  const index = TIER_ORDER.indexOf(tier as (typeof TIER_ORDER)[number])
+  return index === -1 ? TIER_ORDER.length : index
+}
+
 export function sortSponsors(sponsors: Sponsor[]): Sponsor[] {
   return [...sponsors].sort((left, right) => {
-    const tierDiff =
-      TIER_ORDER.indexOf(left.tier) - TIER_ORDER.indexOf(right.tier)
+    const tierDiff = tierSortIndex(left.tier) - tierSortIndex(right.tier)
     if (tierDiff !== 0) {
       return tierDiff
     }

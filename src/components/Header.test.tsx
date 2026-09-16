@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest'
 import { Header } from '@/components/Header'
 
 describe('Header', () => {
-  it('renders locale-aware links and language switcher on /es', () => {
+  it('renders locale-aware hash links and language switcher on /es', () => {
     const router = createMemoryRouter(
       [
         {
@@ -26,19 +26,19 @@ describe('Header', () => {
     )
     expect(screen.getByRole('link', { name: 'Agenda' })).toHaveAttribute(
       'href',
-      '/es/agenda',
+      '/es#agenda',
     )
-    expect(screen.getByRole('link', { name: 'Oradores' })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'Speakers' })).toHaveAttribute(
       'href',
-      '/es/speakers',
+      '/es#speakers',
     )
     expect(screen.getByRole('link', { name: 'Patrocinadores' })).toHaveAttribute(
       'href',
-      '/es/sponsors',
+      '/es#sponsors',
     )
     expect(screen.getByRole('link', { name: /Ubicaci/i })).toHaveAttribute(
       'href',
-      '/es/location',
+      '/es#local',
     )
     expect(
       screen.getByRole('button', { name: 'Cambiar idioma' }),

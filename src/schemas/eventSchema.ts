@@ -8,7 +8,9 @@ const isoDateTimeSchema = z.string().refine(
 export const venueSchema = z.object({
   name: z.string(),
   address: z.string(),
+  image: z.string().optional(),
   mapUrl: z.url().optional(),
+  mapEmbedUrl: z.url().optional(),
 })
 
 export const eventSchema = z.object({
@@ -20,6 +22,7 @@ export const eventSchema = z.object({
   status: z.enum(['planning', 'announced', 'live', 'past']),
   registrationUrl: z.url(),
   linktreeUrl: z.url(),
+  sponsorProspectusUrl: z.url(),
   contactEmail: z.email(),
   timezone: z.string(),
   cfpUrl: z.url().optional(),

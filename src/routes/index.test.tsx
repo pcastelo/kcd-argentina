@@ -3,7 +3,10 @@ import { createMemoryRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import { LocaleLayout } from '@/layouts/LocaleLayout'
 import { RootLayout } from '@/layouts/RootLayout'
+import i18n from '@/lib/i18n'
 import { HomePage } from '@/pages/HomePage'
+import { HashRedirectPage } from '@/pages/HashRedirectPage'
+import { LocationPage } from '@/pages/LocationPage'
 
 describe('locale routes', () => {
   it('redirects root to /es', async () => {
@@ -19,7 +22,10 @@ describe('locale routes', () => {
             {
               path: ':locale',
               element: <LocaleLayout />,
-              children: [{ index: true, element: <HomePage /> }],
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: 'location', element: <LocationPage /> },
+              ],
             },
           ],
         },
@@ -46,7 +52,10 @@ describe('locale routes', () => {
             {
               path: ':locale',
               element: <LocaleLayout />,
-              children: [{ index: true, element: <HomePage /> }],
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: 'location', element: <LocationPage /> },
+              ],
             },
           ],
         },
@@ -74,7 +83,10 @@ describe('locale routes', () => {
             {
               path: ':locale',
               element: <LocaleLayout />,
-              children: [{ index: true, element: <HomePage /> }],
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: 'location', element: <LocationPage /> },
+              ],
             },
           ],
         },
@@ -90,6 +102,103 @@ describe('locale routes', () => {
           name: 'Buy tickets on Eventbrite (opens in new tab)',
         }),
       ).toBeInTheDocument()
+    })
+  })
+
+  it('redirects /es/location to /es#local', async () => {
+    await i18n.changeLanguage('es')
+
+    const router = createMemoryRouter(
+      [
+        {
+          element: <RootLayout />,
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: 'location', element: <LocationPage /> },
+                { path: 'organizers', element: <HashRedirectPage hash="organizers" /> },
+                {
+                  path: 'code-of-conduct',
+                  element: <HashRedirectPage hash="conduct" />,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      { initialEntries: ['/es/location'] },
+    )
+
+    render(<RouterProvider router={router} />)
+
+    await waitFor(() => {
+      expect(router.state.location.pathname).toBe('/es')
+      expect(router.state.location.hash).toBe('#local')
+      expect(
+        screen.getByRole('heading', { name: 'Plaza Galicia', level: 2 }),
+      ).toBeInTheDocument()
+    })
+  })
+
+  it('redirects /es/organizers to /es#organizers', async () => {
+    const router = createMemoryRouter(
+      [
+        {
+          element: <RootLayout />,
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: 'organizers', element: <HashRedirectPage hash="organizers" /> },
+              ],
+            },
+          ],
+        },
+      ],
+      { initialEntries: ['/es/organizers'] },
+    )
+
+    render(<RouterProvider router={router} />)
+
+    await waitFor(() => {
+      expect(router.state.location.pathname).toBe('/es')
+      expect(router.state.location.hash).toBe('#organizers')
+    })
+  })
+
+  it('redirects /es/code-of-conduct to /es#conduct', async () => {
+    const router = createMemoryRouter(
+      [
+        {
+          element: <RootLayout />,
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [
+                { index: true, element: <HomePage /> },
+                {
+                  path: 'code-of-conduct',
+                  element: <HashRedirectPage hash="conduct" />,
+                },
+              ],
+            },
+          ],
+        },
+      ],
+      { initialEntries: ['/es/code-of-conduct'] },
+    )
+
+    render(<RouterProvider router={router} />)
+
+    await waitFor(() => {
+      expect(router.state.location.pathname).toBe('/es')
+      expect(router.state.location.hash).toBe('#conduct')
     })
   })
 })

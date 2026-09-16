@@ -1,1 +1,336 @@
-[]
+[
+  {
+    "slug": "aws-ug-sec-arg",
+    "name": "AWS UG Sec Arg",
+    "sessionSlugs": [
+      "workshop-2"
+    ]
+  },
+  {
+    "slug": "axel-labruna",
+    "name": "Axel Labruna",
+    "title": "DevSecOps & Cloud Manager - Solution Architect",
+    "bio": "My name is Axel and I'm from Argentina, where I live with my dog child Sansa. Love playing with her (and any dog), go for a walk and grab a coffee or have mate (argentinian drink :D ) in some park and read. Also series, films, friends, tech.\nOh almost forgot! I'm an (almost yet) computer engineer who loves to code and automate, nowadays very into Artificial Intelligence (surprised, right? :D ), GitHub and AWS as well!",
+    "photo": "https://cdn.sessionize.com/image/c8e8-400o400o1-pSRdGFj6EBrrq3Lw7qELuL.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/axelglabruna/"
+    },
+    "sessionSlugs": [
+      "agentops-el-futuro-que-ya-llego"
+    ]
+  },
+  {
+    "slug": "caio-medeiros-pinto",
+    "name": "Caio Medeiros Pinto",
+    "title": "Senior DevOps Pre-sales & Engineer",
+    "company": "Testkube",
+    "bio": "I'm a IT professional with many hats 🎩, so if I had to list them I would say I consider myself:\n\n👨‍💻 * Student and practitioner of some movements, such as DevOps, Lean, Platform Engineering.\n🎖️ * DevOps Institute Ambassador.\n🎖️ * Platform Engineering Ambassador.\n☁️ * Cloud-native tech experienced user.\n🔥 * Open-source lover.\n🤓 * Developer at heart.\n👨🏽‍🏫 * Mentor by vocation.\n💡 * Thought-leader.\n\nLast but not least, I am a beloved husband and proud doggy dad ❤️.",
+    "photo": "https://cdn.sessionize.com/image/4ef6-400o400o1-MgUhbPiBF2oJ7P1vRqB8nd.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/caiodona"
+    },
+    "sessionSlugs": [
+      "innersource-in-the-ai-era-scaling-innovation-with-open-source-culture"
+    ]
+  },
+  {
+    "slug": "carlos-calla",
+    "name": "Carlos Calla",
+    "title": "Arquitecto de integración de TI",
+    "company": "Compartamos Banco",
+    "bio": "Soy Ingeniero de computación y sistemas, especialista en desarrollo con Spring Boot y Quarkus en Kubernetes (GKE, EKS). Además de diseñar y definir arquitecturas, tengo experiencia implementando prácticas DevSecOps, CI/CD y observabilidad. He sido Technical Tribe Lead y he liderado proyectos de migraciones de monolitos a microservicios orientadas a rendimiento, resiliencia, alineado al negocio.",
+    "photo": "https://cdn.sessionize.com/image/159d-400o400o1-DVd6gRwKdrXteJCF85scRi.png",
+    "social": {
+      "linkedin": "https://linkedin.com/in/carlos-alberto-calla"
+    },
+    "sessionSlugs": [
+      "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes"
+    ]
+  },
+  {
+    "slug": "david-aguirre",
+    "name": "David Aguirre",
+    "title": "Senior Devops Engineer",
+    "bio": "Kubestronaut, apasionado sobre tecnologias cloud, infraestructura y automatizaciones. Tengo experiencia trabajando con las principales nubes: AWS, Azure, GCP y OCI. \nTambien he trabajado con Github Enterprise, Azure Devops, CI/CD en diferentes plataformas, kubernetes e Inteligencia Artificial con Github Copilot.\nMis interes principales incluyen: Kubernetes, Ingeniera de Plataforma, Seguridad e IA. Actualmente colaborando con la Documentación de Opentelemetry.",
+    "photo": "https://cdn.sessionize.com/image/1a17-400o400o1-BoU17yE2fDpADS9tbrqP8t.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/david-aguirre-universe/"
+    },
+    "sessionSlugs": [
+      "tu-agente-puede-llamar-a-cualquier-lado-contencion-de-egress-con-cilium"
+    ]
+  },
+  {
+    "slug": "edson-ferreira",
+    "name": "Edson Ferreira",
+    "title": "Solutions Engineer, CNCF Ambassador, OpenSource Contributor",
+    "bio": "With over 7 years of experience in the tech industry, currently working as a Solutions Engineer at Orca Security, focusing on cloud native security. He actively contributes to open source by maintaining the Portuguese (Brazil) translations of the Kubernetes documentation.",
+    "photo": "https://cdn.sessionize.com/image/991c-400o400o1-Wt8PMaeJychKLEAYp5yuUU.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/edsoncelio"
+    },
+    "sessionSlugs": [
+      "breaking-ai-from-the-inside-jailbreaks-vulnerabilities-and-skill-attacks"
+    ]
+  },
+  {
+    "slug": "enzo-venturi",
+    "name": "Enzo Venturi",
+    "title": "CNCF Ambassador",
+    "bio": "I am a CNCF Ambassador, organizer of Kubernetes Community Days Lima, and Platform Engineer focused on Kubernetes, Linux, networking, and Go. I help people learn about cloud native technologies through community events, talks, and local initiatives in Peru. In my work, I help teams build secure and automated platforms on Kubernetes, and I enjoy digging into low-level topics such as the Linux kernel, networking, eBPF, observability, and how cloud native systems really work under the hood.",
+    "photo": "https://cdn.sessionize.com/image/3d33-400o400o1-MS2nUpTdHT1HqwumKsqbMb.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/nzv"
+    },
+    "sessionSlugs": [
+      "stop-babysitting-gpus-and-learn-crossplane"
+    ]
+  },
+  {
+    "slug": "etienne-bernard",
+    "name": "Etienne Bernard",
+    "title": "Co-founder & CEO of NuMind (YC S22), building specialized LLMs for document extraction.",
+    "bio": "Etienne Bernard is the Co-founder and CEO of NuMind, a YC  company building specialized language models for reliable information extraction from complex documents. NuMind develops document extraction models capable of extracting structured data and content from messy, complex documents. Etienne holds a PhD in Physics from ENS and MIT, previously led the Machine Learning group at Wolfram Research, and authored Introduction to Machine Learning. His research has received over 1,000 citations on Google Scholar.\n\nHe has spoken at 100+ events, including ML Prague, DevTalks Romania (as a keynote speaker), SXSW, Adopt AI, OSDC Boston, WeAreDevelopers Berlin, and NYC Enterprise AI. He has also been a guest lecturer several times at Harvard and MIT. His current work focuses on specialized Small Language Models that help enterprises achieve more accurate, private, and cost-efficient document AI than general-purpose LLMs.",
+    "photo": "https://cdn.sessionize.com/image/56e5-400o400o1-sdh3RPGmKJau82qVFEbkdN.png",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/etiennebcp/",
+      "twitter": "https://x.com/etiennebcp"
+    },
+    "sessionSlugs": [
+      "enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac"
+    ]
+  },
+  {
+    "slug": "federico-bongiovanni",
+    "name": "Federico Bongiovanni",
+    "title": "Senior Engineering Manager, GKE, Google Cloud",
+    "bio": "Senior Engineering Manager, GKE, Google Cloud\n\nFederico Bongiovanni is an Engineering Leader on Google Cloud GKE team, a Kubernetes Contributor and Co-Chair SIG API Machinery. Working at Google since 2018 with a passion for open source, building robust, scalable solutions and developing teams and people.\nOutside of work, he enjoys spending time with his wife and 3 kids, sports, outdoors and cooking. Lives in the Bay Area, speaks English, Spanish, Italian and Portuguese.",
+    "photo": "https://cdn.sessionize.com/image/51fa-400o400o1-PJxbaABh2RDMHjy2y8C6zs.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/federico-bongiovanni-8296073/"
+    }
+  },
+  {
+    "slug": "fernando-jose-cardozo-camargo",
+    "name": "Fernando Jose Cardozo Camargo",
+    "title": "Devops Team Lead",
+    "company": "CCSolutions.io",
+    "bio": "CKA, CKAD y apuntando por Kubestronaut. He trabajado en distintos entornos Cloud y On-premise administrando Kubernetes y múltiples tecnologías CNCF. Buscando semana a semana desafíos interesantes que lleven al límite mis conocimientos en todo el campo Cloud Native",
+    "photo": "https://cdn.sessionize.com/image/06b9-400o400o1-ScMV4sFwUJay8ReyFNAfiT.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/fernandocardozo12/"
+    },
+    "sessionSlugs": [
+      "estandarizando-el-caos-gestion-declarativa-de-clusters-mixtos-con-capi-capmox-y-"
+    ]
+  },
+  {
+    "slug": "francisco-meneses",
+    "name": "Francisco Meneses",
+    "title": "Openshift Associate Manager para STP LATAM en Red Hat",
+    "bio": "Soy Openshift Associate Manager para STP LATAM en Red Hat y Ambassador de Platform Engineering, con más de diez años de experiencia en el mundo de las tecnologías de la información. A lo largo de mi carrera he trabajado como analista, desarrollador, consultor y arquitecto, siempre con un fuerte enfoque en la colaboración y en el uso de tecnologías open source para generar impacto real en las organizaciones.\n\nEn mi rol actual lidero iniciativas de integración y transformación digital en la región. Me apasiona diseñar arquitecturas que no solo resuelvan necesidades técnicas, sino que también acompañen a los equipos en su proceso de cambio cultural y de adopción tecnológica. Disfruto mucho el poder apoyar tanto a los equipos de consultoría como a las áreas comerciales, construyendo propuestas sólidas y alineadas a las mejores prácticas.\n\nUno de mis intereses principales es la transformación impulsada por métricas: creo firmemente que medir el avance y basar las decisiones en datos concretos es clave para lograr resultados sostenibles. Este enfoque me ha llevado a participar en distintas iniciativas que buscan ayudar a los clientes a visualizar y comprender el impacto de su evolución tecnológica.\n\nA lo largo de los años he obtenido certificaciones en áreas como GitOps, Backstage, Cloud Foundations y Observabilidad, que reflejan mi interés constante por seguir aprendiendo y perfeccionando mi práctica.\n\nComo speaker, me gusta compartir experiencias reales, aprendizajes y buenas prácticas sobre arquitecturas de integración, platform engineering y adopción de open source. Mi estilo es cercano, práctico y orientado a resultados: busco que quienes me escuchan puedan llevarse ideas que puedan aplicar de inmediato en su propio contexto.",
+    "photo": "https://cdn.sessionize.com/image/83d2-400o400o1-Ajm5YgWLyY9QN7v5JbeF5.jpg",
+    "social": {
+      "linkedin": "https://linkedin.com/in/rh-pancho",
+      "twitter": "https://twitter.com/FrMenesesG"
+    },
+    "sessionSlugs": [
+      "norte-sur-este-oeste-e-hibrido-ha-y-failover-con-gateway-api-linkerd-y-skupper"
+    ]
+  },
+  {
+    "slug": "hector-mendoza-salazar",
+    "name": "Hector Mendoza Salazar",
+    "title": "Consultor de Infraestructura en Compartamos Banco, enfocado en resiliencia, troubleshooting y operación de plataformas cloud native sobre Kubernetes",
+    "bio": "Consultor de Infraestructura en Compartamos Banco, enfocado en la operación de plataformas cloud native sobre Kubernetes. Tengo experiencia trabajando con infraestructura, automatización y GitOps, así como en la resolución de incidentes y análisis de fallos en sistemas distribuidos. Me interesa entender cómo se comportan los sistemas en producción y mejorar su estabilidad en el día a día.",
+    "photo": "https://cdn.sessionize.com/image/b63d-400o400o1-JUsxoH8SSipJqLQL6tKHF8.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/hector-mendoza-salazar"
+    },
+    "sessionSlugs": [
+      "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes"
+    ]
+  },
+  {
+    "slug": "jack-torpoco",
+    "name": "Jack Torpoco",
+    "title": "Solution Architect IBERIA / CTO TyC IASolutions",
+    "bio": "Ingeniero en software con más de 15 años de experiencia en desarrollo de soluciones para empresas de tecnología, telecomunicaciones y sector público. Especialista en infraestructura cloud-native, con más de 8 certificaciones en AWS, además de credenciales técnicas en Azure y Google Cloud Platform. Actualmente lidero proyectos en TyC, empresa peruana que desarrolla soluciones con inteligencia artificial para seguridad urbana, detección de basura y armas, análisis de video en tiempo real, y agentes inteligentes desplegados sobre Kubernetes.\n\nHe trabajado extensivamente con arquitecturas distribuidas, visión computarizada, y procesamiento en el borde, aplicando tecnologías open source en entornos de alta exigencia operativa. Estoy certificado como Golden Kubestronaut —una distinción técnica abierta validada por la comunidad global de Kubernetes— y promuevo activamente la adopción de tecnologías nativas de la nube en Latinoamérica, con foco en resiliencia, eficiencia y contexto real.",
+    "photo": "https://cdn.sessionize.com/image/ba6b-400o400o1-poobK41tvcMdXPa2ba1RNx.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/jack-torpoco-4691144a/"
+    },
+    "sessionSlugs": [
+      "ai-writes-code-who-designs-the-architecture"
+    ]
+  },
+  {
+    "slug": "johan-prieto",
+    "name": "Johan Heimar Prieto Benavides",
+    "title": "Leader Devops",
+    "bio": "Johan is a Systems Engineer with over 15 years of experience. He began as a software developer and grew to be a leader in software architecture and DevOps projects, especially in banking and telecom.\n\nBesides his main job, he's passionate about being a speaker and a writer. Johan has even written a book in Spanish called 'DevOps en nuestra lengua', sharing his knowledge and experiences.\n\nHe's worked in various fields like state banking and telecoms, always bringing his practical skills to each project. Johan likes to mix new ideas with good management, which has helped many businesses.\n\nOn the other hand, constantly seeking to train, learn, and explore new areas in the field of computer engineering.",
+    "photo": "https://cdn.sessionize.com/image/0d2b-400o400o1-DTw9erdxbfPgS88UaSKeHf.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/johan-heimar-p-7a110a167/",
+      "twitter": "https://twitter.com/cursacloud"
+    },
+    "sessionSlugs": [
+      "el-idioma-tambien-es-infraestructura-devops-y-conocimiento-en-espanol-para-el-fu"
+    ]
+  },
+  {
+    "slug": "josua-castro",
+    "name": "Josua Castro",
+    "title": "Technology Engineer, Kubestronaut, SysAdmin, Platform Engineer",
+    "bio": "Soy un apasionado de la tecnología y del mundo Cloud Native, con amplia experiencia haciendo que las cosas funcionen mejor, más rápido y de forma más segura. A lo largo de mi carrera he trabajado en proyectos TI de diferentes industrias, liderando desde la administración de infraestructuras y centros de datos, hasta la automatización de procesos y despliegues en la nube a nivel bancario.\n\nMe especializo en crear soluciones robustas que escalen con el negocio. Disfruto transformar entornos tradicionales en plataformas modernas, aplicando buenas prácticas de seguridad, automatización, integración continua (CI) y despliegue continuo (CD).\n\nMe gusta trabajar en equipos con propósito, enfocados en resultados y que no temen enfrentar retos. Creo firmemente en el poder de la colaboración, la mejora continua y una cultura DevOps fortalecida por prácticas como IaC y GitOps.",
+    "photo": "https://cdn.sessionize.com/image/12a4-400o400o1-342JfVNt2qP69wioahcFKZ.png",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/josuacvga"
+    },
+    "sessionSlugs": [
+      "como-platform-engineering-habilita-velocidad-compliance-y-self-service"
+    ]
+  },
+  {
+    "slug": "macarena-poisson",
+    "name": "Macarena Poisson",
+    "title": "DevOps Engineer",
+    "bio": "Estudiante de Lic. en Informática, DevOps Engineer en Mikroways",
+    "photo": "https://cdn.sessionize.com/image/8a67-400o400o1-3SsyVnoXbH8ahPst5sERxZ.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/macarena-lindo-poisson"
+    },
+    "sessionSlugs": [
+      "kubectl-apply-a-un-agente-de-ai-kagent-mcp-servers-y-litellm-contra-las-apis-de-"
+    ]
+  },
+  {
+    "slug": "maika-esteves",
+    "name": "Maika Esteves",
+    "title": "Devops Engineer Senior",
+    "bio": "Soy Maika Esteves, ingeniera en telecomunicaciones y DevOps/Cloud Engineer con más de 7 años de experiencia. Me especializo en CI/CD, Kubernetes (AKS/EKS) e infraestructura en Azure y AWS.\n\nActualmente trabajo en Naranja X a través de Boreal Solution, en un equipo de plataforma de CI/CD. En los últimos años me enfoqué también en AI Engineering: construyo y opero agentes de IA en producción.\n\nMe apasiona compartir lo que aprendo. Soy docente en la Diplomatura DevOps de mundosE y co-organizadora de DevOpsDays Buenos Aires. Además, estoy lanzando Sin SLA, un podcast de DevOps y Cloud para la comunidad tech de Latinoamérica.",
+    "photo": "https://cdn.sessionize.com/image/d608-400o400o1-DqqeNYZyeiFmnp6jriegHm.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/maikaesteves/"
+    },
+    "sessionSlugs": [
+      "agentops-el-futuro-que-ya-llego"
+    ]
+  },
+  {
+    "slug": "marcos-lilljedhal",
+    "name": "Marcos Lilljedhal",
+    "sessionSlugs": [
+      "keynote-de-cierre"
+    ]
+  },
+  {
+    "slug": "matias-mospan",
+    "name": "Matias Mospan",
+    "title": "PlatformArchitect@HumanIsKind",
+    "bio": "Kubestronaut\nSolutions Architect@Matech UY\n+20 Años en IT",
+    "photo": "https://cdn.sessionize.com/image/7b53-400o400o1-rfYbBNLwVKyHrKWo4UqNyQ.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/matiasmospan"
+    },
+    "sessionSlugs": [
+      "control-plane-data-plane-gobernanza-de-ia-al-estilo-cloud-native"
+    ]
+  },
+  {
+    "slug": "miguel-de-los-santos",
+    "name": "Miguel De Los Santos",
+    "title": "Upwind, Sales Engineer",
+    "bio": "Miguel de los Santos is a results-oriented technology professional with extensive experience in sales engineering, cybersecurity, cloud computing, and education. As a Senior Sales Engineer at Upwind, he acts as a trusted advisor, guiding customers toward achieving their goals with cloud security solutions. His expertise includes understanding customer needs, showcasing product capabilities, and ensuring seamless adoption.  Prior to Sysdig, he held sales engineering roles at VISO TRUST and F5, specializing in third-party cyber risk and global solutions architecture, respectively.  Miguel is also passionate about education, serving as an Adjunct Professor at Hult International Business School, teaching FinTech, and as an Adjunct Instructor at Urban College of Boston for over 11 years, focusing on computer applications and technology. He holds a Master of Applied Computer Science from Wentworth Institute of Technology and is a Certified Third Party Risk Professional.  His achievements include awards like the 2018 Force Multiplier and the 2016 President's Club. He is fluent in English and Spanish.",
+    "photo": "https://cdn.sessionize.com/image/8c22-400o400o1-nwdDkp14DYjhxkcxxNccqx.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/migueladelossantos/"
+    },
+    "sessionSlugs": [
+      "del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco"
+    ]
+  },
+  {
+    "slug": "nadim",
+    "name": "Nadim Hobaica",
+    "title": "Delivery Manager south of Latinamerica",
+    "company": "Red Hat",
+    "photo": "https://cdn.sessionize.com/image/3ec2-400o400o1-HuHSrfLY6kC7zWPNVXemUi.png",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/nadimhobaica/"
+    },
+    "sessionSlugs": [
+      "innersource-in-the-ai-era-scaling-innovation-with-open-source-culture"
+    ]
+  },
+  {
+    "slug": "pablo-castelo",
+    "name": "Pablo Castelo",
+    "title": "Architect  @ Red Hat",
+    "bio": "Pablo, a seasoned IT Architect, fuels digital transformation with over 15 years of experience. Specializing in cloud-native tech and DevOps, he designs and implements scalable solutions at Red Hat LATAM. Passionate about open-source, he empowers organizations worldwide to adopt cutting-edge tech and achieve their goals.",
+    "photo": "https://cdn.sessionize.com/image/c28e-400o400o1-fhFyYQ8hR98xRfNxNygbVX.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/pablocastelo/"
+    },
+    "sessionSlugs": [
+      "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura"
+    ]
+  },
+  {
+    "slug": "rodrigo-alvarez",
+    "name": "Rodrigo Alvarez",
+    "title": "Red Hat, Senior Architect",
+    "bio": "Mi nombre es Rodrigo Alvarez, soy de Argentina. Soy Ingeniero en Sistemas de Información y trabajo como Arquitecto en el área de servicios profesionales para Red Hat LATAM.\nSoy un apasionado por la cultura open source, especializado en temas vinculados con prácticas DevOps, focalizado en la mejora de la entrega continua, seguridad y automatización de flujos de CICD.\nEn mi trabajo, tengo el beneficio de encontrarme con distintas arquitecturas, tecnologías y culturas que generan desafíos que me motivan a estar en un constante aprendizaje y mejora.",
+    "photo": "https://cdn.sessionize.com/image/0fff-400o400o1-BvmhFM74ttqR3Jc6Fc5Uwk.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/rodrigo-alvarez-arg/"
+    },
+    "sessionSlugs": [
+      "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura"
+    ]
+  },
+  {
+    "slug": "santiago-abastante",
+    "name": "Santiago Abastante",
+    "title": "Dbnz",
+    "bio": "Cloud Incident Responder",
+    "photo": "https://cdn.sessionize.com/image/c202-400o400o1-PTDwkkq8ePStxy8RzVV7xp.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/sabastante/"
+    },
+    "sessionSlugs": [
+      "one-does-not-simply-resolve-an-incident"
+    ]
+  },
+  {
+    "slug": "sergio-canales",
+    "name": "Sergio Canales",
+    "title": "Principal Architect @ Red Hat",
+    "bio": "I find immense joy in collaborating with diverse teams, cultivating a positive work environment that encourages creativity and open communication. Emphasizing team development is essential to achieving successful outcomes and driving innovation in every aspect.\nEmbracing challenges and staying up-to-date with the latest technology trends keeps me motivated and eager to explore new opportunities.\nI'm a Cloud Native Administrator, Developer, Architect and Fan!",
+    "photo": "https://cdn.sessionize.com/image/d00b-400o400o1-4eRVNDhwx54wd9SJYBgmJ9.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/sergio-canales-espinoza/",
+      "twitter": "https://twitter.com/Iarwain_BenAdar"
+    },
+    "sessionSlugs": [
+      "norte-sur-este-oeste-e-hibrido-ha-y-failover-con-gateway-api-linkerd-y-skupper"
+    ]
+  },
+  {
+    "slug": "vaideesh-jeyakumar-thirukumara",
+    "name": "Vaideesh Jeyakumar Thirukumara",
+    "title": "Cloud Practice Lead, Senior Engineer Cloud Computing, Tata Consultancy Services",
+    "bio": "Vaideesh is a Cloud Practice Leader based in Uruguay, where he leads SRE and platform standardization across multiple enterprise client environments running on OpenShift. His work focuses on building consistent reliability practices SLOs, incident response, observability  across teams with very different starting points, and earning genuine adoption rather than issuing top-down mandates. This is his first conference talk.",
+    "photo": "https://cdn.sessionize.com/image/9a99-400o400o1-4yrJikoGYPuTwmmY3xFbUc.jpg",
+    "social": {
+      "linkedin": "https://www.linkedin.com/in/thirukumara-vaideesh-j-770224165/"
+    }
+  },
+  {
+    "slug": "women-in-cloud-tbd",
+    "name": "Women in Cloud(TBD)",
+    "sessionSlugs": [
+      "workshop-4"
+    ]
+  }
+]

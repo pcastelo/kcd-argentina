@@ -8,14 +8,20 @@ export function isValidLocale(locale: string | undefined): locale is Locale {
   return SUPPORTED_LOCALES.includes(locale as Locale)
 }
 
-export function localePath(locale: Locale, segment?: string): string {
+export function localePath(
+  locale: Locale,
+  segment?: string,
+  hash?: string,
+): string {
   const base = `/${locale}`
-  if (!segment) {
-    return base
+  let path = base
+
+  if (segment) {
+    const normalized = segment.startsWith('/') ? segment.slice(1) : segment
+    path = normalized ? `${base}/${normalized}` : base
   }
 
-  const normalized = segment.startsWith('/') ? segment.slice(1) : segment
-  return normalized ? `${base}/${normalized}` : base
+  return hash ? `${path}#${hash}` : path
 }
 
 export function swapLocale(pathname: string, currentLocale: string): string {

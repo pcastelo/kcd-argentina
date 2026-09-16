@@ -2,11 +2,14 @@
   "app": {
     "name": "KCD Argentina 2026"
   },
+  "common": {
+    "comingSoon": "Próximamente"
+  },
   "nav": {
     "ariaLabel": "Navegación principal",
     "home": "Inicio",
     "agenda": "Agenda",
-    "speakers": "Oradores",
+    "speakers": "Speakers",
     "sponsors": "Patrocinadores",
     "location": "Ubicación"
   },
@@ -15,14 +18,19 @@
     "contact": "Contacto",
     "social": "Redes",
     "cncf": "CNCF Supported Event",
+    "organizers": "Organizadores",
+    "conduct": "Código de Conducta",
     "copyright": "© 2026 KCD Argentina"
   },
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
     "heroSubtitle": "La comunidad Cloud Native se reúne en Buenos Aires",
+    "eventMetaLabel": "Detalles del evento",
     "ctaTickets": "Obtené tus entradas",
+    "ctaAgenda": "Ver agenda",
     "ctaTicketsAriaLabel": "Comprar entradas en Eventbrite (se abre en nueva pestaña)",
+    "quickNavLabel": "Explorar el evento",
     "countdown": {
       "days": "días",
       "hours": "horas",
@@ -36,6 +44,100 @@
       "becomeSponsor": "Convertite en sponsor",
       "emptyState": "¿Querés ser parte? Conocé nuestros planes de sponsorship."
     }
+  },
+  "sponsors": {
+    "eyebrow": "// Sponsors",
+    "title": "Sponsors",
+    "subtitle": "Gracias a quienes hacen posible KCD Argentina",
+    "becomeSponsor": "Convertite en sponsor",
+    "emptyTier": "Espacio disponible — sumate como sponsor",
+    "tiers": {
+      "diamond": "Diamante",
+      "platinum": "Platinum",
+      "gold": "Gold",
+      "light": "Light",
+      "silver": "Silver",
+      "community": "Community",
+      "venue": "Venue"
+    }
+  },
+  "agenda": {
+    "eyebrow": "// Agenda",
+    "title": "Agenda",
+    "subtitle": "Un día completo de charlas, workshops y keynotes en Plaza Galicia",
+    "draftNotice": "Agenda preliminar — puede actualizarse antes del evento.",
+    "sessionAriaLabel": "{{title}} en {{room}}",
+    "workshopContinuation": "{{title}} (continuación)",
+    "filterLabel": "Filtrar agenda por sala",
+    "emptyFilter": "No hay sesiones en esta sala.",
+    "durationMinutes": "{{count}} min",
+    "filters": {
+      "all": "Todos"
+    },
+    "types": {
+      "reception": "Recepción",
+      "keynote": "Keynote",
+      "talk": "Charla",
+      "workshop": "Workshop",
+      "break": "Break",
+      "lunch": "Almuerzo",
+      "transition": "Transición",
+      "margin": "Margen",
+      "continuation": "Continuación"
+    },
+    "rooms": {
+      "plenario": "Plenario",
+      "sala-1": "Sala Principal",
+      "sala-2": "Sala 2",
+      "sala-3": "Sala 3 (Workshops)"
+    },
+    "roomsShort": {
+      "plenario": "Plenario",
+      "sala-1": "Sala Principal",
+      "sala-2": "Sala 2",
+      "sala-3": "Workshops"
+    }
+  },
+  "speakers": {
+    "eyebrow": "// Speakers",
+    "title": "Speakers",
+    "subtitle": "Conocé a quienes comparten su experiencia en KCD Argentina 2026",
+    "count": "{{count}} speakers",
+    "profileAriaLabel": "Ver perfil de LinkedIn de {{name}} (se abre en nueva pestaña)"
+  },
+  "organizers": {
+    "eyebrow": "// Organizadores",
+    "title": "Organizadores",
+    "subtitle": "El equipo detrás de KCD Argentina 2026",
+    "profileAriaLabel": "Ver perfil de LinkedIn de {{name}} (se abre en nueva pestaña)",
+    "pendingName": "Por confirmar",
+    "pendingRole": "Comité organizador",
+    "pendingAvatar": "?"
+  },
+  "conduct": {
+    "eyebrow": "// Comunidad",
+    "title": "Código de Conducta",
+    "reportIntro": "Para reportar incidentes, escribinos a"
+  },
+  "location": {
+    "title": "Ubicación",
+    "subtitle": "Te esperamos en Plaza Galicia, en el corazón de Buenos Aires",
+    "when": "Fecha",
+    "hours": "Horario",
+    "area": "Barrio",
+    "neighborhood": "Chacarita, CABA",
+    "venueImageAlt": "Edificio {{venue}} en Buenos Aires",
+    "photoCredit": "Foto: Gabwt2020 / CC BY-SA 4.0 (Wikimedia Commons)",
+    "mapTitle": "Mapa de Plaza Galicia en Google Maps",
+    "address": "Dirección",
+    "howToGetThere": "Cómo llegar",
+    "transportHint": "Llegá en transporte público — el venue está bien conectado con subte y colectivos.",
+    "subte": "Subte (Metro)",
+    "subteDetails": "Línea D — Estación José Hernández (~15 min caminando)",
+    "bus": "Colectivo",
+    "busDetails": "Líneas 15, 29, 64, 68, 152 por Av. Cabildo / Av. Congreso",
+    "openInMaps": "Abrir en Google Maps",
+    "openInMapsAriaLabel": "Abrir Plaza Galicia en Google Maps (se abre en nueva pestaña)"
   },
   "languageSwitcher": {
     "label": "Cambiar idioma",

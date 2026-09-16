@@ -13,7 +13,7 @@ export function Card({ children, className, glow = false }: CardProps) {
 
   return (
     <div
-      className={`rounded-lg border border-border bg-surface p-6${glow ? ` ${glowClasses}` : ''}${className ? ` ${className}` : ''}`}
+      className={`rounded-lg border border-border bg-surface${glow ? ` ${glowClasses}` : ''}${className ? ` ${className}` : ' p-6'}`}
     >
       {children}
     </div>
