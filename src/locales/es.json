@@ -20,7 +20,22 @@
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
-    "placeholder": "Sitio en construcción. Próximamente agenda, speakers y más."
+    "heroSubtitle": "La comunidad Cloud Native se reúne en Buenos Aires",
+    "ctaTickets": "Obtené tus entradas",
+    "ctaTicketsAriaLabel": "Comprar entradas en Eventbrite (se abre en nueva pestaña)",
+    "countdown": {
+      "days": "días",
+      "hours": "horas",
+      "minutes": "minutos",
+      "seconds": "segundos",
+      "eventStarted": "¡El evento está en curso!",
+      "eventEnded": "¡Gracias por participar!"
+    },
+    "sponsors": {
+      "title": "Sponsors",
+      "becomeSponsor": "Convertite en sponsor",
+      "emptyState": "¿Querés ser parte? Conocé nuestros planes de sponsorship."
+    }
   },
   "languageSwitcher": {
     "label": "Cambiar idioma",

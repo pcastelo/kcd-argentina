@@ -15,7 +15,12 @@ export const sponsorSchema = z.object({
   slug: z.string(),
   name: z.string(),
   tier: z.enum(['platinum', 'gold', 'silver', 'community', 'venue']),
+  logo: z.string(),
+  url: z.url().optional(),
+  order: z.number().optional(),
 })
+
+export type Sponsor = z.infer<typeof sponsorSchema>
 
 export const organizerSchema = z.object({
   slug: z.string(),
