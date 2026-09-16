@@ -57,7 +57,11 @@ describe('locale routes', () => {
     render(<RouterProvider router={router} />)
 
     await waitFor(() => {
-      expect(screen.getByText(/speakers y m/i)).toBeInTheDocument()
+      expect(
+        screen.getByRole('link', {
+          name: /Comprar entradas en Eventbrite/i,
+        }),
+      ).toBeInTheDocument()
     })
   })
 
@@ -82,7 +86,9 @@ describe('locale routes', () => {
 
     await waitFor(() => {
       expect(
-        screen.getByText(/Site under construction/i),
+        screen.getByRole('link', {
+          name: 'Buy tickets on Eventbrite (opens in new tab)',
+        }),
       ).toBeInTheDocument()
     })
   })

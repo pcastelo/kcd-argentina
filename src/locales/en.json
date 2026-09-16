@@ -20,7 +20,22 @@
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
-    "placeholder": "Site under construction. Agenda, speakers, and more coming soon."
+    "heroSubtitle": "The Cloud Native community meets in Buenos Aires",
+    "ctaTickets": "Get your tickets",
+    "ctaTicketsAriaLabel": "Buy tickets on Eventbrite (opens in new tab)",
+    "countdown": {
+      "days": "days",
+      "hours": "hours",
+      "minutes": "minutes",
+      "seconds": "seconds",
+      "eventStarted": "The event is happening now!",
+      "eventEnded": "Thanks for attending!"
+    },
+    "sponsors": {
+      "title": "Sponsors",
+      "becomeSponsor": "Become a sponsor",
+      "emptyState": "Want to be part of it? Check out our sponsorship plans."
+    }
   },
   "languageSwitcher": {
     "label": "Switch language",

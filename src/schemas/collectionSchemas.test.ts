@@ -7,6 +7,7 @@ import {
   organizersSchema,
   sessionsSchema,
   speakersSchema,
+  sponsorSchema,
   sponsorsSchema,
 } from './collectionSchemas'
 
@@ -25,5 +26,28 @@ describe('collectionSchemas', () => {
 
   it('parses empty organizer list', () => {
     expect(organizersSchema.safeParse(organizersData).success).toBe(true)
+  })
+
+  it('parses a valid sponsor with logo and optional fields', () => {
+    const result = sponsorSchema.safeParse({
+      slug: 'crubyt',
+      name: 'Crubyt',
+      tier: 'platinum',
+      logo: '/sponsors/crubyt.png',
+      url: 'https://crubyt.com',
+      order: 1,
+    })
+
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a sponsor missing logo', () => {
+    const result = sponsorSchema.safeParse({
+      slug: 'crubyt',
+      name: 'Crubyt',
+      tier: 'platinum',
+    })
+
+    expect(result.success).toBe(false)
   })
 })
