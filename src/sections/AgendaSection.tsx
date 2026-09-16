@@ -42,9 +42,11 @@ function sessionTypeBadgeClass(type: SessionType | 'continuation'): string {
 function AgendaSessionSpeakers({
   speakers,
   showPhotos,
+  speakersListLabel,
 }: {
   speakers: AgendaSpeakerDisplay[]
   showPhotos: boolean
+  speakersListLabel: string
 }) {
   if (speakers.length === 0) {
     return null
@@ -59,7 +61,10 @@ function AgendaSessionSpeakers({
   }
 
   return (
-    <ul className="mt-2 flex flex-wrap gap-2">
+    <ul
+      aria-label={speakersListLabel}
+      className="mt-2 flex flex-wrap gap-2"
+    >
       {speakers.map((speaker) => (
         <li
           key={speaker.slug}
@@ -184,6 +189,7 @@ function AgendaTimelineItem({
           <AgendaSessionSpeakers
             speakers={speakers}
             showPhotos={showSpeakerPhotos}
+            speakersListLabel={t('agenda.sessionSpeakersLabel')}
           />
         </div>
       </Card>

@@ -42,7 +42,6 @@ describe('SponsorsSection', () => {
       'href',
       'https://drive.google.com/file/d/1BnQVM6NC_qYVlDo5VuSaYHEL7T0y9AOb/view',
     )
-    expect(screen.queryByText(i18n.t('sponsors.emptyTier'))).not.toBeInTheDocument()
   })
 
   it('renders populated tier groups with sized logo cards', async () => {
@@ -81,6 +80,5 @@ describe('SponsorsSection', () => {
       '/sponsors/banco-galicia.png',
     )
     expect(screen.getByText(i18n.t('sponsors.stillOpen'))).toBeInTheDocument()
-    expect(screen.queryByText(i18n.t('sponsors.emptyTier'))).not.toBeInTheDocument()
   })
 })

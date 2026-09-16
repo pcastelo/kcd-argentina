@@ -52,13 +52,7 @@
     "becomeSponsor": "Become a sponsor",
     "count": "{{count}} sponsors",
     "stillOpen": "We are still adding sponsors — your brand could be here",
-    "showcase": {
-      "featured": "Featured sponsors",
-      "major": "Major sponsors",
-      "partners": "Partners and community"
-    },
     "logoAriaLabel": "Visit {{name}} website (opens in new tab)",
-    "emptyTier": "Open slot — join us as a sponsor",
     "tiers": {
       "diamond": "Diamond",
       "platinum": "Platinum",
@@ -75,6 +69,7 @@
     "subtitle": "A full day of talks, workshops, and keynotes at Plaza Galicia",
     "draftNotice": "Preliminary schedule — subject to change before the event.",
     "sessionAriaLabel": "{{title}} in {{room}}",
+    "sessionSpeakersLabel": "Session speakers",
     "workshopContinuation": "{{title}} (continued)",
     "filterLabel": "Filter schedule by room",
     "emptyFilter": "No sessions in this room.",
