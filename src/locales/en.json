@@ -2,6 +2,21 @@
   "app": {
     "name": "KCD Argentina 2026"
   },
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "home": "Home",
+    "agenda": "Agenda",
+    "speakers": "Speakers",
+    "sponsors": "Sponsors",
+    "location": "Location"
+  },
+  "footer": {
+    "tagline": "Growing Cloud Native Together",
+    "contact": "Contact",
+    "social": "Social",
+    "cncf": "CNCF Supported Event",
+    "copyright": "© 2026 KCD Argentina"
+  },
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",

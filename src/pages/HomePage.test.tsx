@@ -5,12 +5,17 @@ import i18n from '@/lib/i18n'
 import { HomePage } from '@/pages/HomePage'
 
 describe('HomePage', () => {
-  it('renders semantic main landmark', () => {
+  it('renders event title and placeholder copy', () => {
     render(
       <I18nextProvider i18n={i18n}>
         <HomePage />
       </I18nextProvider>,
     )
-    expect(screen.getByRole('main')).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: 'KCD Argentina 2026' }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/Sitio en construcción/i),
+    ).toBeInTheDocument()
   })
 })

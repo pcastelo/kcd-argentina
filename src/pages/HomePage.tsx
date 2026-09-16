@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Container } from '@/components/Container'
 import { getEvent } from '@/lib/event'
 import { formatEventDate } from '@/lib/formatEventDate'
 
@@ -8,15 +9,15 @@ export function HomePage() {
   const eventDate = formatEventDate(event.dateStart, event.timezone)
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-3xl flex-col justify-center px-6 py-16">
-      <h1 className="text-3xl font-bold text-slate-100">{t('app.name')}</h1>
-      <p className="mt-4 text-lg text-slate-300">
+    <Container className="flex flex-col justify-center py-16">
+      <h1 className="text-3xl font-bold text-text">{t('app.name')}</h1>
+      <p className="mt-4 text-lg text-text">
         {t('home.tagline', { city: event.city })}
       </p>
-      <p className="mt-2 text-slate-400">
+      <p className="mt-2 text-text-muted">
         {t('home.venueDate', { venue: event.venue.name, date: eventDate })}
       </p>
-      <p className="mt-6 text-sm text-slate-500">{t('home.placeholder')}</p>
-    </main>
+      <p className="mt-6 text-sm text-text-muted">{t('home.placeholder')}</p>
+    </Container>
   )
 }
