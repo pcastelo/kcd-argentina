@@ -3,31 +3,23 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Section } from '@/components/Section'
 import { SectionHeader } from '@/components/SectionHeader'
+import { SponsorLogoCard } from '@/components/SponsorLogoCard'
 import { getEvent } from '@/lib/event'
-import { getSponsors, TIER_ORDER } from '@/lib/sponsors'
-import type { Sponsor } from '@/schemas/collectionSchemas'
-
-function groupSponsorsByTier(sponsors: Sponsor[]) {
-  const groups = new Map<string, Sponsor[]>()
-
-  for (const tier of TIER_ORDER) {
-    groups.set(tier, [])
-  }
-
-  for (const sponsor of sponsors) {
-    const tierSponsors = groups.get(sponsor.tier) ?? []
-    tierSponsors.push(sponsor)
-    groups.set(sponsor.tier, tierSponsors)
-  }
-
-  return groups
-}
+import {
+  getPopulatedSponsorTiers,
+  getSponsors,
+  groupSponsorsByTier,
+  SPONSOR_TIER_LAYOUT,
+  TIER_ORDER,
+} from '@/lib/sponsors'
 
 export function SponsorsSection() {
   const { t } = useTranslation()
   const event = getEvent()
   const sponsors = getSponsors()
   const groups = groupSponsorsByTier(sponsors)
+  const populatedTiers = getPopulatedSponsorTiers(groups)
+  const hasOpenTiers = populatedTiers.length < TIER_ORDER.length
 
   return (
     <Section id="sponsors" tone="surface" className="scroll-mt-8">
@@ -36,65 +28,63 @@ export function SponsorsSection() {
           eyebrow={t('sponsors.eyebrow')}
           title={t('sponsors.title')}
           subtitle={t('sponsors.subtitle')}
+          badge={
+            sponsors.length > 0
+              ? t('sponsors.count', { count: sponsors.length })
+              : undefined
+          }
         />
 
-        <div className="mt-10 space-y-10">
-          {TIER_ORDER.map((tier) => {
-            const tierSponsors = groups.get(tier) ?? []
+        {sponsors.length === 0 ? (
+          <div className="mt-10 flex flex-col items-center gap-4 text-center">
+            <p className="max-w-2xl text-text-muted">
+              {t('home.sponsors.emptyState')}
+            </p>
+            <Button href={event.sponsorProspectusUrl} variant="primary" openInNewTab>
+              {t('sponsors.becomeSponsor')}
+            </Button>
+          </div>
+        ) : (
+          <div className="mt-10 space-y-10">
+            {populatedTiers.map((tier) => {
+              const tierSponsors = groups.get(tier) ?? []
+              const layout = SPONSOR_TIER_LAYOUT[tier]
 
-            return (
-              <div key={tier}>
-                <h3 className="text-center text-sm font-semibold uppercase tracking-wider text-primary">
-                  {t(`sponsors.tiers.${tier}`)}
-                </h3>
-                {tierSponsors.length === 0 ? (
-                  <p className="mt-4 text-center text-sm text-text-muted">
-                    {t('sponsors.emptyTier')}
-                  </p>
-                ) : (
-                  <ul className="mt-6 flex flex-wrap items-center justify-center gap-8">
+              return (
+                <section key={tier} aria-labelledby={`sponsors-tier-${tier}`}>
+                  <h3
+                    id={`sponsors-tier-${tier}`}
+                    className="text-center text-sm font-semibold uppercase tracking-wider text-primary"
+                  >
+                    {t(`sponsors.tiers.${tier}`)}
+                  </h3>
+                  <ul className={`mt-6 ${layout.listClassName}`}>
                     {tierSponsors.map((sponsor) => (
-                      <li key={sponsor.slug}>
-                        <div
-                          className="flex h-20 min-w-[11rem] items-center justify-center rounded-lg border border-border/60 bg-white px-5 py-3 shadow-sm"
-                        >
-                          {sponsor.url ? (
-                            <a
-                              href={sponsor.url}
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              className="inline-flex max-w-full rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
-                            >
-                              <img
-                                src={sponsor.logo}
-                                alt={sponsor.name}
-                                loading="lazy"
-                                className="max-h-12 w-auto max-w-[12rem] object-contain"
-                              />
-                            </a>
-                          ) : (
-                            <img
-                              src={sponsor.logo}
-                              alt={sponsor.name}
-                              loading="lazy"
-                              className="max-h-12 w-auto max-w-[12rem] object-contain"
-                            />
-                          )}
-                        </div>
-                      </li>
+                      <SponsorLogoCard
+                        key={sponsor.slug}
+                        sponsor={sponsor}
+                        tier={tier}
+                      />
                     ))}
                   </ul>
-                )}
-              </div>
-            )
-          })}
-        </div>
+                </section>
+              )
+            })}
+          </div>
+        )}
 
-        <div className="mt-10 flex justify-center">
-          <Button href={event.sponsorProspectusUrl} variant="primary" openInNewTab>
-            {t('sponsors.becomeSponsor')}
-          </Button>
-        </div>
+        {sponsors.length > 0 ? (
+          <div className="mt-10 flex flex-col items-center gap-4 text-center">
+            {hasOpenTiers ? (
+              <p className="max-w-2xl text-sm text-text-muted">
+                {t('sponsors.stillOpen')}
+              </p>
+            ) : null}
+            <Button href={event.sponsorProspectusUrl} variant="primary" openInNewTab>
+              {t('sponsors.becomeSponsor')}
+            </Button>
+          </div>
+        ) : null}
       </Container>
     </Section>
   )

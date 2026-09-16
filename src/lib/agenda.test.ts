@@ -4,6 +4,7 @@ import {
   countTimelineByRoom,
   filterTimelineByRoom,
   getAgendaTimelineSessions,
+  getSessionSpeakersForDisplay,
   getSessions,
   getSpeakers,
   groupSessionsByTimeSlot,
@@ -114,6 +115,38 @@ describe('agenda lib', () => {
   it('identifies full-width plenary blocks', () => {
     expect(isFullWidthSession('reception')).toBe(true)
     expect(isFullWidthSession('talk')).toBe(false)
+  })
+
+  it('resolves session speakers with photos from speaker slugs', () => {
+    const speakersBySlug = new Map([
+      [
+        'ada-speaker',
+        {
+          slug: 'ada-speaker',
+          name: 'Ada Speaker',
+          photo: 'https://example.com/ada.jpg',
+        },
+      ],
+    ])
+
+    const session: Session = {
+      id: 'talk',
+      slug: 'talk',
+      title: 'Charla demo',
+      speakerSlugs: ['ada-speaker'],
+      room: 'sala-1',
+      startTime: '2026-10-03T10:30:00-03:00',
+      endTime: '2026-10-03T11:00:00-03:00',
+      type: 'talk',
+    }
+
+    expect(getSessionSpeakersForDisplay(session, speakersBySlug)).toEqual([
+      {
+        slug: 'ada-speaker',
+        name: 'Ada Speaker',
+        photo: 'https://example.com/ada.jpg',
+      },
+    ])
   })
 
   it('loads speakers referenced by sessions', () => {

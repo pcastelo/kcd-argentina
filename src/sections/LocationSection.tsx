@@ -69,7 +69,7 @@ export function LocationSection() {
     <Section id="local" tone="plain" className="scroll-mt-8">
       <Container>
         <SectionHeader
-          eyebrow={t('location.title')}
+          eyebrow={t('location.eyebrow')}
           title={venue.name}
           subtitle={t('location.subtitle')}
         />

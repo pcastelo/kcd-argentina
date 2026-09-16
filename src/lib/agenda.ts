@@ -4,8 +4,15 @@ import {
   type Room,
   type Session,
   type SessionType,
+  type Speaker,
   sessionsSchema,
 } from '@/schemas/collectionSchemas'
+
+export type AgendaSpeakerDisplay = {
+  slug: string
+  name: string
+  photo?: string
+}
 
 export { getSpeakers }
 
@@ -182,6 +189,31 @@ export function getSessionSpeakerNames(
   return session.speakerSlugs
     .map((slug) => speakersBySlug.get(slug))
     .filter((name): name is string => Boolean(name))
+}
+
+export function getSessionSpeakersForDisplay(
+  session: Session,
+  speakersBySlug: Map<string, Speaker>,
+): AgendaSpeakerDisplay[] {
+  if (session.speakerSlugs.length > 0) {
+    return session.speakerSlugs
+      .map((slug) => speakersBySlug.get(slug))
+      .filter((speaker): speaker is Speaker => Boolean(speaker))
+      .map((speaker) => ({
+        slug: speaker.slug,
+        name: speaker.name,
+        photo: speaker.photo,
+      }))
+  }
+
+  if (session.speakerNames?.length) {
+    return session.speakerNames.map((name, index) => ({
+      slug: `${session.id}-speaker-${index}`,
+      name,
+    }))
+  }
+
+  return []
 }
 
 const ROOM_SORT_ORDER: Record<Room, number> = {

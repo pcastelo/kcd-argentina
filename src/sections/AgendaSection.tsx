@@ -8,12 +8,13 @@ import { getEvent } from '@/lib/event'
 import {
   type AgendaDisplaySession,
   type AgendaRoomFilter,
+  type AgendaSpeakerDisplay,
   AGENDA_FILTER_ORDER,
   countTimelineByRoom,
   filterTimelineByRoom,
   getAgendaTimelineSessions,
   getSessionDurationMinutes,
-  getSessionSpeakerNames,
+  getSessionSpeakersForDisplay,
   getSessions,
   getSpeakers,
 } from '@/lib/agenda'
@@ -21,7 +22,7 @@ import {
   formatAgendaClockTime,
   formatAgendaTimeRange,
 } from '@/lib/formatAgendaTime'
-import type { SessionType } from '@/schemas/collectionSchemas'
+import type { SessionType, Speaker } from '@/schemas/collectionSchemas'
 
 function sessionTypeBadgeClass(type: SessionType | 'continuation'): string {
   switch (type) {
@@ -38,12 +39,69 @@ function sessionTypeBadgeClass(type: SessionType | 'continuation'): string {
   }
 }
 
+function AgendaSessionSpeakers({
+  speakers,
+  showPhotos,
+  speakersListLabel,
+}: {
+  speakers: AgendaSpeakerDisplay[]
+  showPhotos: boolean
+  speakersListLabel: string
+}) {
+  if (speakers.length === 0) {
+    return null
+  }
+
+  if (!showPhotos) {
+    return (
+      <p className="mt-1.5 text-xs text-text-muted">
+        {speakers.map((speaker) => speaker.name).join(' \u00b7 ')}
+      </p>
+    )
+  }
+
+  return (
+    <ul
+      aria-label={speakersListLabel}
+      className="mt-2 flex flex-wrap gap-2"
+    >
+      {speakers.map((speaker) => (
+        <li
+          key={speaker.slug}
+          className="flex items-center gap-1.5 rounded-full border border-border/60 bg-surface/50 px-2 py-1"
+        >
+          {speaker.photo ? (
+            <img
+              src={speaker.photo}
+              alt=""
+              aria-hidden="true"
+              className="h-6 w-6 rounded-full object-cover ring-1 ring-primary/20"
+              loading="lazy"
+              width={24}
+              height={24}
+            />
+          ) : (
+            <span
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-primary/15 text-[10px] font-bold text-primary"
+              aria-hidden="true"
+            >
+              {speaker.name.charAt(0)}
+            </span>
+          )}
+          <span className="text-xs text-text-muted">{speaker.name}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 function AgendaTimelineItem({
   session,
   title,
   roomLabel,
   typeLabel,
-  speakerNames,
+  speakers,
+  showSpeakerPhotos,
   timezone,
   locale,
   isLast,
@@ -53,7 +111,8 @@ function AgendaTimelineItem({
   title: string
   roomLabel: string
   typeLabel: string
-  speakerNames: string[]
+  speakers: AgendaSpeakerDisplay[]
+  showSpeakerPhotos: boolean
   timezone: string
   locale: string
   isLast: boolean
@@ -127,11 +186,11 @@ function AgendaTimelineItem({
             </span>
           </div>
 
-          {speakerNames.length > 0 ? (
-            <p className="mt-1.5 text-xs text-text-muted">
-              {speakerNames.join(' \u00b7 ')}
-            </p>
-          ) : null}
+          <AgendaSessionSpeakers
+            speakers={speakers}
+            showPhotos={showSpeakerPhotos}
+            speakersListLabel={t('agenda.sessionSpeakersLabel')}
+          />
         </div>
       </Card>
     </li>
@@ -144,7 +203,10 @@ export function AgendaSection() {
   const locale = i18n.language === 'en' ? 'en-US' : 'es-AR'
   const sessions = getSessions()
   const speakers = getSpeakers()
-  const speakersBySlug = new Map(speakers.map((speaker) => [speaker.slug, speaker.name]))
+  const speakersBySlug = useMemo(
+    () => new Map(speakers.map((speaker: Speaker) => [speaker.slug, speaker])),
+    [speakers],
+  )
   const [roomFilter, setRoomFilter] = useState<AgendaRoomFilter>('sala-1')
 
   const timeline = useMemo(() => getAgendaTimelineSessions(sessions), [sessions])
@@ -153,6 +215,7 @@ export function AgendaSection() {
     () => filterTimelineByRoom(timeline, roomFilter),
     [timeline, roomFilter],
   )
+  const showSpeakerPhotos = roomFilter === 'all'
 
   function getSessionTitle(session: AgendaDisplaySession): string {
     if (session.isWorkshopContinuation) {
@@ -224,11 +287,12 @@ export function AgendaSection() {
               title={getSessionTitle(session)}
               roomLabel={t(`agenda.roomsShort.${session.room}`)}
               typeLabel={getTypeLabel(session)}
-              speakerNames={
+              speakers={
                 session.isWorkshopContinuation
                   ? []
-                  : getSessionSpeakerNames(session, speakersBySlug)
+                  : getSessionSpeakersForDisplay(session, speakersBySlug)
               }
+              showSpeakerPhotos={showSpeakerPhotos}
               timezone={event.timezone}
               locale={locale}
               isLast={index === filteredTimeline.length - 1}

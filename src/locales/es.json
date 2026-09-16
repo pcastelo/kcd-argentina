@@ -50,7 +50,9 @@
     "title": "Sponsors",
     "subtitle": "Gracias a quienes hacen posible KCD Argentina",
     "becomeSponsor": "Convertite en sponsor",
-    "emptyTier": "Espacio disponible — sumate como sponsor",
+    "count": "{{count}} patrocinadores",
+    "stillOpen": "Seguimos sumando sponsors — tu marca puede estar acá",
+    "logoAriaLabel": "Visitar sitio de {{name}} (se abre en una nueva pestaña)",
     "tiers": {
       "diamond": "Diamante",
       "platinum": "Platinum",
@@ -67,6 +69,7 @@
     "subtitle": "Un día completo de charlas, workshops y keynotes en Plaza Galicia",
     "draftNotice": "Agenda preliminar — puede actualizarse antes del evento.",
     "sessionAriaLabel": "{{title}} en {{room}}",
+    "sessionSpeakersLabel": "Oradores de la sesión",
     "workshopContinuation": "{{title}} (continuación)",
     "filterLabel": "Filtrar agenda por sala",
     "emptyFilter": "No hay sesiones en esta sala.",
@@ -120,6 +123,7 @@
     "reportIntro": "Para reportar incidentes, escribinos a"
   },
   "location": {
+    "eyebrow": "// Ubicación",
     "title": "Ubicación",
     "subtitle": "Te esperamos en Plaza Galicia, en el corazón de Buenos Aires",
     "when": "Fecha",
