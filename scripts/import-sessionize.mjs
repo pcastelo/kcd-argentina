@@ -102,7 +102,7 @@ function parseTagLine(value) {
     }
   }
 
-  const dashMatch = text.match(/^(.+?)\s+[-ùù]\s+(.+)$/)
+  const dashMatch = text.match(/^(.+?)\s+[-\u2013\u2014]\s+(.+)$/)
   if (dashMatch) {
     const left = dashMatch[1].trim()
     const right = dashMatch[2].trim()

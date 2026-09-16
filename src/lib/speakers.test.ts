@@ -37,7 +37,7 @@ describe('speakers', () => {
     expect(
       formatSpeakerAffiliation({
         title:
-          'Consultor de Infraestructura en Compartamos Banco, enfocado en resiliencia, troubleshooting y operación de plataformas cloud native sobre Kubernetes',
+          'Consultor de Infraestructura en Compartamos Banco, enfocado en resiliencia, troubleshooting y operacion de plataformas cloud native sobre Kubernetes',
       }),
     ).toBe('Consultor de Infraestructura at Compartamos Banco')
   })
