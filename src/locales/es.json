@@ -21,5 +21,10 @@
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
     "placeholder": "Sitio en construcción. Próximamente agenda, speakers y más."
+  },
+  "languageSwitcher": {
+    "label": "Cambiar idioma",
+    "current": "Español",
+    "switchTo": "English"
   }
 }

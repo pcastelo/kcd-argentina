@@ -1,19 +1,26 @@
 import { render, screen } from '@testing-library/react'
 import { createMemoryRouter, RouterProvider } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
+import { LocaleLayout } from '@/layouts/LocaleLayout'
 import { RootLayout } from '@/layouts/RootLayout'
 import { HomePage } from '@/pages/HomePage'
 
 describe('RootLayout', () => {
-  it('renders header, main, and footer landmarks', () => {
+  it('renders header, main, and footer landmarks on /es', () => {
     const router = createMemoryRouter(
       [
         {
           element: <RootLayout />,
-          children: [{ path: '/', element: <HomePage /> }],
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [{ index: true, element: <HomePage /> }],
+            },
+          ],
         },
       ],
-      { initialEntries: ['/'] },
+      { initialEntries: ['/es'] },
     )
 
     render(<RouterProvider router={router} />)
