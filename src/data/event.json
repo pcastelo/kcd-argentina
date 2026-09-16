@@ -1,0 +1,15 @@
+{
+  "title": "KCD Argentina 2026",
+  "dateStart": "2026-10-03T09:00:00-03:00",
+  "dateEnd": "2026-10-03T19:00:00-03:00",
+  "city": "Buenos Aires",
+  "venue": {
+    "name": "Plaza Galicia",
+    "address": "4070 Leiva, Cdad. Autonoma de Buenos Aires C1427"
+  },
+  "status": "announced",
+  "registrationUrl": "https://www.eventbrite.com/e/kcd-argentina-2026-tickets-1999811690600",
+  "linktreeUrl": "https://linktr.ee/kcd.argentina",
+  "contactEmail": "kcd.argentina@gmail.com",
+  "timezone": "America/Argentina/Buenos_Aires"
+}

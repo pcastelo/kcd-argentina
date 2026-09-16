@@ -1,0 +1,10 @@
+{
+  "app": {
+    "name": "KCD Argentina 2026"
+  },
+  "home": {
+    "tagline": "Kubernetes Community Days Argentina — {{city}}",
+    "venueDate": "{{venue}} | {{date}}",
+    "placeholder": "Sitio en construcción. Próximamente agenda, speakers y más."
+  }
+}
