@@ -1,11 +1,14 @@
 # KCD Argentina 2026
 
+[![CI](https://github.com/pcastelo/kcd-argentina/actions/workflows/ci.yml/badge.svg)](https://github.com/pcastelo/kcd-argentina/actions/workflows/ci.yml)
+
 Public marketing site for **Kubernetes Community Days Argentina** — static Vite + React app deployed to GitHub Pages.
 
 | Item | Value |
 |------|-------|
 | Event | 3 October 2026 · Plaza Galicia · Buenos Aires |
-| Production | https://kcdargentina.castelo.ar |
+| Production (Pages) | https://pcastelo.github.io/kcd-argentina/ |
+| Custom domain (planned) | https://kcdargentina.castelo.ar |
 | SDD store | [kcd-argentina-sdd](https://github.com/pcastelo/kcd-argentina-sdd) |
 
 ## Prerequisites
@@ -29,6 +32,18 @@ npm run validate:data  # Zod validation for src/data/*.json
 
 1. Branch from `main`: `feature/<issue>-<change-name>` (never commit features directly on `main`).
 2. Plan in OpenSpec store (`kcd-argentina-sdd`), implement here, open PR with `Closes #N`.
+3. CI runs on every PR to `main` (lint, typecheck, validate:data, test, build).
+
+## Deployment
+
+- **Repository:** public (required for free GitHub Pages).
+- **Pages source:** GitHub Actions (Settings → Pages → Build and deployment → GitHub Actions).
+- **Trigger:** merge to `main` runs the Deploy workflow and publishes `dist/`.
+- **SPA routing:** deploy copies `index.html` to `404.html` for client-side routes.
+
+## Pre-launch search blocking
+
+`public/robots.txt` (`Disallow: /`) and a `noindex` meta tag in `index.html` discourage search indexing while the site is under construction. Remove both in issue [#14](https://github.com/pcastelo/kcd-argentina/issues/14) (`seo-metadata`) before public launch.
 
 ## Stack
 
