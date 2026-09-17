@@ -8,7 +8,7 @@ Public marketing site for **Kubernetes Community Days Argentina** — static Vit
 |------|-------|
 | Event | 3 October 2026 · Plaza Galicia · Buenos Aires |
 | Production (Pages) | https://pcastelo.github.io/kcd-argentina/ |
-| Custom domain (planned) | https://kcdargentina.castelo.ar |
+| Custom domain | https://kcdargentina.ar |
 | SDD store | [kcd-argentina-sdd](https://github.com/pcastelo/kcd-argentina-sdd) |
 
 ## Prerequisites
