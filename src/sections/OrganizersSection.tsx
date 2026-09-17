@@ -14,7 +14,6 @@ export function OrganizersSection() {
       <Container>
         <SectionHeader
           eyebrow={t('organizers.eyebrow')}
-          title={t('organizers.title')}
           subtitle={t('organizers.subtitle')}
         />
 
@@ -26,7 +25,7 @@ export function OrganizersSection() {
               : organizer.name
             const displayRole = isPlaceholder
               ? t('organizers.pendingRole')
-              : organizer.role
+              : organizer.role ?? null
             const avatarLabel = isPlaceholder
               ? t('organizers.pendingAvatar')
               : organizer.name.charAt(0)
@@ -34,7 +33,7 @@ export function OrganizersSection() {
             return (
             <li key={organizer.slug}>
               <Card
-                className={`h-full text-center${isPlaceholder ? ' border-dashed opacity-80' : ''}`}
+                className={`h-full p-6 pt-8 text-center${isPlaceholder ? ' border-dashed opacity-80' : ''}`}
               >
                 {organizer.photo ? (
                   <img
@@ -70,7 +69,9 @@ export function OrganizersSection() {
                     displayName
                   )}
                 </h3>
-                <p className="mt-1 text-sm text-primary">{displayRole}</p>
+                {displayRole ? (
+                  <p className="mt-1 text-sm text-primary">{displayRole}</p>
+                ) : null}
                 {!isPlaceholder && organizer.company ? (
                   <p className="mt-2 text-sm text-text-muted">
                     {organizer.company}

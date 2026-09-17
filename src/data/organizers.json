@@ -48,21 +48,25 @@
     "linkedin": "https://www.linkedin.com/in/axelglabruna/"
   },
   {
-    "slug": "organizer-pending-2",
-    "name": "Por confirmar",
-    "role": "Comité organizador",
-    "placeholder": true
+    "slug": "camila-sofia-fernandez",
+    "name": "Camila Sofía Fernández",
+    "role": "Senior Systems Engineer",
+    "company": "Medallia",
+    "photo": "/organizers/camila-sofia-fernandez.png",
+    "linkedin": "https://www.linkedin.com/in/camilasofiafernandez/"
   },
   {
-    "slug": "organizer-pending-3",
-    "name": "Por confirmar",
-    "role": "Comité organizador",
-    "placeholder": true
+    "slug": "juan-pablo-martinez",
+    "name": "Juan Pablo Martinez",
+    "photo": "/organizers/juan-pablo-martinez.png",
+    "linkedin": "https://www.linkedin.com/in/juan-martinez-6978a7327/"
   },
   {
-    "slug": "organizer-pending-4",
-    "name": "Por confirmar",
-    "role": "Comité organizador",
-    "placeholder": true
+    "slug": "maika-de-jesus-esteves",
+    "name": "Maika de Jesus Esteves",
+    "role": "CloudOps Engineer",
+    "company": "Boreal IT Solutions",
+    "photo": "/organizers/maika-de-jesus-esteves.jpg",
+    "linkedin": "https://www.linkedin.com/in/maikaesteves/"
   }
 ]

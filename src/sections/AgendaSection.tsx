@@ -236,7 +236,6 @@ export function AgendaSection() {
       <Container>
         <SectionHeader
           eyebrow={t('agenda.eyebrow')}
-          title={t('agenda.title')}
           subtitle={t('agenda.subtitle')}
           note={t('agenda.draftNotice')}
         />

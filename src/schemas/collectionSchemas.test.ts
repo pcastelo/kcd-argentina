@@ -81,6 +81,19 @@ describe('collectionSchemas', () => {
     expect(result.success).toBe(true)
   })
 
+  it('parses an organizer without role or company', () => {
+    const result = organizersSchema.safeParse([
+      {
+        slug: 'juan-pablo-martinez',
+        name: 'Juan Pablo Martinez',
+        photo: '/organizers/juan-pablo-martinez.png',
+        linkedin: 'https://www.linkedin.com/in/juan-martinez-6978a7327/',
+      },
+    ])
+
+    expect(result.success).toBe(true)
+  })
+
   it('rejects a sponsor missing logo', () => {
     const result = sponsorSchema.safeParse({
       slug: 'crubyt',

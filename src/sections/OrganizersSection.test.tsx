@@ -46,4 +46,22 @@ describe('OrganizersSection', () => {
       }),
     ).toHaveAttribute('href', 'https://www.linkedin.com/in/ada-organizer/')
   })
+
+  it('renders organizer without role or company', async () => {
+    await i18n.changeLanguage('es')
+    const organizers: Organizer[] = [
+      {
+        slug: 'juan-pablo-martinez',
+        name: 'Juan Pablo Martinez',
+        photo: '/organizers/juan-pablo-martinez.png',
+        linkedin: 'https://www.linkedin.com/in/juan-martinez-6978a7327/',
+      },
+    ]
+    mockedGetOrganizers.mockReturnValue(organizers)
+
+    renderSection()
+
+    expect(screen.getByText('Juan Pablo Martinez')).toBeInTheDocument()
+    expect(screen.queryByText('Organizador')).not.toBeInTheDocument()
+  })
 })

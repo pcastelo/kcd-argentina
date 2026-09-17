@@ -1,6 +1,6 @@
 type SectionHeaderProps = {
   eyebrow: string
-  title: string
+  title?: string
   subtitle?: string
   note?: string
   badge?: string
@@ -13,21 +13,37 @@ export function SectionHeader({
   note,
   badge,
 }: SectionHeaderProps) {
+  const eyebrowClassName =
+    'text-xl font-semibold uppercase tracking-[0.22em] text-primary sm:text-2xl'
+
   return (
     <div className="text-center">
-      <p className="text-xl font-semibold uppercase tracking-[0.22em] text-primary sm:text-2xl">
-        {eyebrow}
-      </p>
-      <div className="mt-3 flex flex-col items-center gap-3">
-        <h2 className="text-lg font-bold text-text sm:text-xl">{title}</h2>
-        {badge ? (
-          <span
-            className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-          >
-            {badge}
-          </span>
-        ) : null}
-      </div>
+      {title ? (
+        <>
+          <p className={eyebrowClassName}>{eyebrow}</p>
+          <div className="mt-3 flex flex-col items-center gap-3">
+            <h2 className="text-lg font-bold text-text sm:text-xl">{title}</h2>
+            {badge ? (
+              <span
+                className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+              >
+                {badge}
+              </span>
+            ) : null}
+          </div>
+        </>
+      ) : (
+        <div className="flex flex-col items-center gap-3">
+          <h2 className={eyebrowClassName}>{eyebrow}</h2>
+          {badge ? (
+            <span
+              className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+            >
+              {badge}
+            </span>
+          ) : null}
+        </div>
+      )}
       {subtitle ? (
         <p className="mx-auto mt-3 max-w-2xl text-text-muted">{subtitle}</p>
       ) : null}

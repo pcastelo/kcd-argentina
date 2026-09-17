@@ -26,7 +26,6 @@ export function SponsorsSection() {
       <Container>
         <SectionHeader
           eyebrow={t('sponsors.eyebrow')}
-          title={t('sponsors.title')}
           subtitle={t('sponsors.subtitle')}
           badge={
             sponsors.length > 0

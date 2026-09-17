@@ -13,7 +13,7 @@ describe('App', () => {
         screen.getByText(/Kubernetes Community Days Argentina — Buenos Aires/i),
       ).toBeInTheDocument()
       expect(
-        screen.getByRole('heading', { name: 'Organizadores', level: 2 }),
+        screen.getByRole('heading', { name: '// Organizadores', level: 2 }),
       ).toBeInTheDocument()
     })
   })

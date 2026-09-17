@@ -87,7 +87,6 @@ export function SpeakersSection() {
       <Container>
         <SectionHeader
           eyebrow={t('speakers.eyebrow')}
-          title={t('speakers.title')}
           subtitle={t('speakers.subtitle')}
           badge={t('speakers.count', { count: speakers.length })}
         />

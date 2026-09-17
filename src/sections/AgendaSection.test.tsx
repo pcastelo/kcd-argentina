@@ -68,7 +68,7 @@ describe('AgendaSection', () => {
 
     renderSection()
 
-    expect(screen.getByRole('heading', { name: 'Agenda' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '// Agenda' })).toBeInTheDocument()
     expect(screen.getByRole('tab', { name: /Sala Principal/i })).toHaveAttribute(
       'aria-selected',
       'true',

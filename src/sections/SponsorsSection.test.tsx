@@ -33,7 +33,7 @@ describe('SponsorsSection', () => {
     renderSection()
 
     expect(
-      screen.getByRole('heading', { name: i18n.t('sponsors.title'), level: 2 }),
+      screen.getByRole('heading', { name: i18n.t('sponsors.eyebrow'), level: 2 }),
     ).toBeInTheDocument()
     expect(screen.getByText(i18n.t('home.sponsors.emptyState'))).toBeInTheDocument()
     expect(
