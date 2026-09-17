@@ -72,6 +72,14 @@
     "order": 4
   },
   {
+    "slug": "aws-wic",
+    "name": "AWS WIC",
+    "tier": "community",
+    "logo": "/sponsors/aws-wic.png",
+    "url": "https://awswomenincloudba.com.ar/",
+    "order": 5
+  },
+  {
     "slug": "banco-galicia",
     "name": "Banco Galicia",
     "tier": "venue",
