@@ -10,8 +10,8 @@ export const TIER_ORDER = [
   'gold',
   'light',
   'silver',
-  'community',
   'venue',
+  'community',
 ] as const
 
 export type SponsorTier = (typeof TIER_ORDER)[number]
@@ -55,7 +55,7 @@ export const SPONSOR_TIER_LAYOUT: Record<SponsorTier, SponsorTierLayout> = {
     listClassName: 'flex flex-wrap items-center justify-center gap-4',
   },
   venue: {
-    logoClassName: 'max-h-10 w-auto max-w-[10rem] sm:max-h-12 sm:max-w-[11rem]',
+    logoClassName: 'max-h-12 w-auto max-w-[11rem] sm:max-h-14 sm:max-w-[12rem]',
     cardClassName: 'min-h-20 min-w-[11rem] px-5 py-4',
     listClassName: 'flex flex-wrap items-center justify-center gap-5',
   },

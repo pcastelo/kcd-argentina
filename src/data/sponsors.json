@@ -46,5 +46,37 @@
     "logo": "/sponsors/aws-sbg-undav.png",
     "url": "https://www.meetup.com/aws-sbg-at-univ-nacional-de-avellaneda/",
     "order": 1
+  },
+  {
+    "slug": "steam-girls",
+    "name": "STEAM Girls",
+    "tier": "community",
+    "logo": "/sponsors/steam-girls.png",
+    "url": "https://whatido.tech/comunidad.html?slug=steam-girls-q2p1",
+    "order": 2
+  },
+  {
+    "slug": "whatido",
+    "name": "whatIDO_",
+    "tier": "community",
+    "logo": "/sponsors/whatido.png",
+    "url": "https://whatido.tech/",
+    "order": 3
+  },
+  {
+    "slug": "jala-university",
+    "name": "Jala University",
+    "tier": "community",
+    "logo": "/sponsors/jala-university.png",
+    "url": "https://jala.university/",
+    "order": 4
+  },
+  {
+    "slug": "banco-galicia",
+    "name": "Banco Galicia",
+    "tier": "venue",
+    "logo": "/sponsors/banco-galicia.png",
+    "url": "https://www.galicia.ar/",
+    "order": 1
   }
 ]
