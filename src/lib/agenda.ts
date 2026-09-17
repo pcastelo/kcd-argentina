@@ -68,68 +68,12 @@ export function addMinutes(isoDate: string, minutes: number): string {
   return `${date}T${padTimePart(nextHours)}:${padTimePart(nextMinutes)}:${seconds}${offset}`
 }
 
-function getWorkshopSlotCount(session: Session): number {
-  if (session.type !== 'workshop') {
-    return 1
-  }
-
-  const duration = session.durationMinutes ?? SLOT_MINUTES
-  return Math.max(1, Math.ceil(duration / SLOT_MINUTES))
-}
-
-function createWorkshopContinuation(
-  workshop: Session,
-  slotStart: string,
-): AgendaDisplaySession {
-  return {
-    ...workshop,
-    id: `${workshop.id}-continuation-${slotStart}`,
-    slug: `${workshop.slug}-continuation`,
-    title: workshop.title,
-    speakerSlugs: [],
-    speakerNames: undefined,
-    startTime: slotStart,
-    endTime: addMinutes(slotStart, SLOT_MINUTES),
-    durationMinutes: SLOT_MINUTES,
-    isWorkshopContinuation: true,
-  }
-}
-
 function collectSlotStartTimes(sessions: Session[]): string[] {
-  const starts = new Set<string>()
-
-  for (const session of sessions) {
-    starts.add(session.startTime)
-
-    if (session.type === 'workshop') {
-      const slotCount = getWorkshopSlotCount(session)
-      for (let index = 1; index < slotCount; index += 1) {
-        starts.add(addMinutes(session.startTime, index * SLOT_MINUTES))
-      }
-    }
-  }
+  const starts = new Set(sessions.map((session) => session.startTime))
 
   return [...starts].sort(
     (left, right) => new Date(left).getTime() - new Date(right).getTime(),
   )
-}
-
-function findWorkshopContinuations(
-  sessions: Session[],
-  slotStart: string,
-): AgendaDisplaySession[] {
-  return sessions
-    .filter((session) => session.type === 'workshop' && session.room === 'sala-3')
-    .filter((workshop) => {
-      const slotCount = getWorkshopSlotCount(workshop)
-      for (let index = 1; index < slotCount; index += 1) {
-        if (addMinutes(workshop.startTime, index * SLOT_MINUTES) === slotStart) {
-          return true
-        }
-      }
-      return false
-    })
-    .map((workshop) => createWorkshopContinuation(workshop, slotStart))
 }
 
 export function groupSessionsByTimeSlot(sessions: Session[]): AgendaTimeSlot[] {
@@ -145,14 +89,13 @@ export function groupSessionsByTimeSlot(sessions: Session[]): AgendaTimeSlot[] {
     const roomSessions = startingSessions.filter(
       (session) => !isFullWidthSession(session.type),
     )
-    const workshopContinuations = findWorkshopContinuations(sessions, startTime)
     const endTime =
       plenarySessions[0]?.endTime ?? addMinutes(startTime, SLOT_MINUTES)
 
     return {
       startTime,
       endTime,
-      sessions: [...plenarySessions, ...roomSessions, ...workshopContinuations],
+      sessions: [...plenarySessions, ...roomSessions],
     }
   })
 }
@@ -227,15 +170,7 @@ function resolveDisplayEndTime(
   session: AgendaDisplaySession,
   slotEndTime: string,
 ): string {
-  if (session.isWorkshopContinuation) {
-    return slotEndTime
-  }
-
-  if (isFullWidthSession(session.type)) {
-    return session.endTime
-  }
-
-  if (session.type === 'workshop') {
+  if (isFullWidthSession(session.type) || session.type === 'workshop') {
     return session.endTime
   }
 

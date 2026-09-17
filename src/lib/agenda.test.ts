@@ -65,9 +65,29 @@ describe('agenda lib', () => {
       'sala-1',
       'sala-3',
     ])
-    expect(slots[1]?.sessions.some((session) => session.isWorkshopContinuation)).toBe(
-      true,
-    )
+    expect(slots[1]?.sessions.map((session) => session.room)).toEqual(['sala-1'])
+  })
+
+  it('shows a 60-minute workshop once with its full end time', () => {
+    const sessions: Session[] = [
+      {
+        id: 'workshop',
+        slug: 'workshop-1',
+        title: 'Workshop 1',
+        speakerSlugs: [],
+        room: 'sala-3',
+        startTime: '2026-10-03T10:30:00-03:00',
+        endTime: '2026-10-03T11:30:00-03:00',
+        durationMinutes: 60,
+        type: 'workshop',
+      },
+    ]
+
+    const timeline = getAgendaTimelineSessions(sessions)
+
+    expect(timeline).toHaveLength(1)
+    expect(timeline[0]?.endTime).toBe('2026-10-03T11:30:00-03:00')
+    expect(timeline[0]?.isWorkshopContinuation).toBeUndefined()
   })
 
   it('builds a flat timeline and filters by room', () => {

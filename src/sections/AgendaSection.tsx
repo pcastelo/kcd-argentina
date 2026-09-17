@@ -24,7 +24,7 @@ import {
 } from '@/lib/formatAgendaTime'
 import type { SessionType, Speaker } from '@/schemas/collectionSchemas'
 
-function sessionTypeBadgeClass(type: SessionType | 'continuation'): string {
+function sessionTypeBadgeClass(type: SessionType): string {
   switch (type) {
     case 'keynote':
       return 'bg-primary/20 text-primary'
@@ -32,8 +32,6 @@ function sessionTypeBadgeClass(type: SessionType | 'continuation'): string {
       return 'bg-accent/20 text-accent'
     case 'talk':
       return 'bg-secondary/20 text-secondary'
-    case 'continuation':
-      return 'bg-accent/10 text-text-muted'
     default:
       return 'bg-surface text-text-muted'
   }
@@ -120,8 +118,6 @@ function AgendaTimelineItem({
 }) {
   const { t } = useTranslation()
   const duration = getSessionDurationMinutes(session)
-  const isContinuation = session.isWorkshopContinuation === true
-  const badgeType = isContinuation ? 'continuation' : session.type
   const timeRange = formatAgendaTimeRange(
     session.startTime,
     session.endTime,
@@ -172,15 +168,11 @@ function AgendaTimelineItem({
 
         <div className="min-w-0 flex-1 px-2.5 py-2 sm:px-3 sm:py-2.5">
           <div className="flex items-start justify-between gap-2">
-            <h3
-              className={`min-w-0 flex-1 text-sm font-semibold leading-snug ${
-                isContinuation ? 'italic text-text-muted' : 'text-text'
-              }`}
-            >
+            <h3 className="min-w-0 flex-1 text-sm font-semibold leading-snug text-text">
               {title}
             </h3>
             <span
-              className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${sessionTypeBadgeClass(badgeType)}`}
+              className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${sessionTypeBadgeClass(session.type)}`}
             >
               {typeLabel}
             </span>
@@ -216,20 +208,6 @@ export function AgendaSection() {
     [timeline, roomFilter],
   )
   const showSpeakerPhotos = roomFilter === 'all'
-
-  function getSessionTitle(session: AgendaDisplaySession): string {
-    if (session.isWorkshopContinuation) {
-      return t('agenda.workshopContinuation', { title: session.title })
-    }
-    return session.title
-  }
-
-  function getTypeLabel(session: AgendaDisplaySession): string {
-    if (session.isWorkshopContinuation) {
-      return t('agenda.types.continuation')
-    }
-    return t(`agenda.types.${session.type}`)
-  }
 
   return (
     <Section id="agenda" tone="glow" className="scroll-mt-8">
@@ -283,14 +261,10 @@ export function AgendaSection() {
             <AgendaTimelineItem
               key={session.id}
               session={session}
-              title={getSessionTitle(session)}
+              title={session.title}
               roomLabel={t(`agenda.roomsShort.${session.room}`)}
-              typeLabel={getTypeLabel(session)}
-              speakers={
-                session.isWorkshopContinuation
-                  ? []
-                  : getSessionSpeakersForDisplay(session, speakersBySlug)
-              }
+              typeLabel={t(`agenda.types.${session.type}`)}
+              speakers={getSessionSpeakersForDisplay(session, speakersBySlug)}
               showSpeakerPhotos={showSpeakerPhotos}
               timezone={event.timezone}
               locale={locale}

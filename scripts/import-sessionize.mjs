@@ -1,5 +1,7 @@
 /**
- * Enrich speakers.json and sessions.json from a Sessionize Excel export.
+ * @deprecated Use `npm run sync:sessionize` instead. Sessionize API is the source of truth.
+ *
+ * Legacy enricher: merges speakers.json and sessions.json from a Sessionize Excel export.
  *
  * Usage:
  *   node scripts/import-sessionize.mjs [path-to-export.xlsx]
@@ -10,6 +12,20 @@ import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import XLSX from 'xlsx'
+import {
+  attachSessionSlugs,
+  cleanText,
+  findSpeakerSlugForName,
+  fold,
+  mapLanguage,
+  namesMatch,
+  namesOverlap,
+  normalizeTitle,
+  parseTagLine,
+  parseUrl,
+  slugify,
+  splitSpeakerNames,
+} from './lib/sessionize-merge.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const repoRoot = join(__dirname, '..')
@@ -21,117 +37,6 @@ const defaultWorkbook = resolve(
 
 const SESSIONS_SHEET = 'Accepted sessions'
 const SPEAKERS_SHEET = 'Accepted speakers'
-
-function fold(value) {
-  return String(value ?? '')
-    .normalize('NFD')
-    .replace(/\p{M}/gu, '')
-    .toLowerCase()
-    .trim()
-}
-
-function slugify(value) {
-  return fold(value)
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '')
-    .slice(0, 80)
-}
-
-function normalizeTitle(value) {
-  return fold(value).replace(/[.!?]+$/g, '').trim()
-}
-
-function splitSpeakerNames(value) {
-  return String(value ?? '')
-    .split(',')
-    .map((name) => name.trim())
-    .filter(Boolean)
-}
-
-function nameTokens(name) {
-  return fold(name)
-    .split(/\s+/)
-    .filter((token) => token.length > 2)
-}
-
-function namesOverlap(leftName, rightName) {
-  const leftTokens = nameTokens(leftName)
-  const rightTokens = nameTokens(rightName)
-  if (leftTokens.length === 0 || rightTokens.length === 0) {
-    return false
-  }
-
-  const shared = leftTokens.filter((token) => rightTokens.includes(token))
-  const minimum = Math.min(leftTokens.length, rightTokens.length)
-
-  return shared.length >= minimum || (leftTokens.length === 1 && shared.length === 1)
-}
-
-function namesMatch(agendaName, sessionizeName) {
-  return namesOverlap(agendaName, sessionizeName)
-}
-
-function mapLanguage(value) {
-  const text = fold(value)
-  if (text.startsWith('en')) {
-    return 'en'
-  }
-  if (text.startsWith('es') || text.startsWith('span')) {
-    return 'es'
-  }
-  return undefined
-}
-
-function cleanText(value) {
-  return String(value ?? '')
-    .replace(/\r\n/g, '\n')
-    .trim()
-}
-
-function parseTagLine(value) {
-  const text = cleanText(value)
-  if (!text) {
-    return { title: undefined, company: undefined }
-  }
-
-  const atMatch = text.match(/^(.+?)\s+at\s+(.+)$/i)
-  if (atMatch) {
-    return {
-      title: atMatch[1].trim(),
-      company: atMatch[2].trim(),
-    }
-  }
-
-  const dashMatch = text.match(/^(.+?)\s+[-\u2013\u2014]\s+(.+)$/)
-  if (dashMatch) {
-    const left = dashMatch[1].trim()
-    const right = dashMatch[2].trim()
-    const leftLooksLikeCompany =
-      /\b(banco|bank|aws|google|microsoft|amazon|axa|testkube|orca|compartamos)\b/i.test(
-        left,
-      ) || left.split(/\s+/).length <= 3
-
-    if (leftLooksLikeCompany) {
-      return { company: left, title: right }
-    }
-
-    return { title: text, company: undefined }
-  }
-
-  return { title: text, company: undefined }
-}
-
-function parseUrl(value) {
-  const text = String(value ?? '').trim()
-  if (!text) {
-    return undefined
-  }
-  try {
-    return new URL(text).toString()
-  } catch {
-    return undefined
-  }
-}
 
 function buildSessionizeSpeakers(rows) {
   const speakers = []
@@ -166,28 +71,6 @@ function buildSessionizeSpeakers(rows) {
   }
 
   return { speakers, bySlug, byId }
-}
-
-function findSpeakerSlugForName(name, sessionizeSpeakers, existingBySlug) {
-  const direct = slugify(name)
-
-  for (const [slug, speaker] of existingBySlug.entries()) {
-    if (namesOverlap(name, speaker.name)) {
-      return slug
-    }
-  }
-
-  for (const speaker of sessionizeSpeakers.speakers) {
-    if (namesOverlap(name, speaker.name)) {
-      return speaker.slug
-    }
-  }
-
-  if (sessionizeSpeakers.bySlug.has(direct)) {
-    return direct
-  }
-
-  return direct
 }
 
 function findSessionizeRow(agendaSession, sessionizeRows) {
@@ -323,24 +206,6 @@ function enrichSessions(sessions, sessionizeRows, sessionizeSpeakers, existingSp
   })
 
   return { enriched, matched }
-}
-
-function attachSessionSlugs(speakers, sessions) {
-  const slugsBySpeaker = new Map(speakers.map((speaker) => [speaker.slug, new Set()]))
-
-  for (const session of sessions) {
-    for (const slug of session.speakerSlugs ?? []) {
-      slugsBySpeaker.get(slug)?.add(session.slug)
-    }
-  }
-
-  return speakers.map((speaker) => {
-    const sessionSlugs = [...(slugsBySpeaker.get(speaker.slug) ?? [])].sort()
-    if (sessionSlugs.length === 0) {
-      return speaker
-    }
-    return { ...speaker, sessionSlugs }
-  })
 }
 
 function main() {

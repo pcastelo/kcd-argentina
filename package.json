@@ -17,6 +17,7 @@
     "import:agenda": "node scripts/import-agenda.mjs",
     "import:sessionize": "node scripts/import-sessionize.mjs",
     "import:data": "node scripts/import-agenda.mjs && node scripts/import-sessionize.mjs",
+    "sync:sessionize": "node scripts/sync-sessionize.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,0 +1,331 @@
+{
+  "categories": [
+    {
+      "id": 133252,
+      "title": "Session format",
+      "items": [
+        {
+          "id": 482493,
+          "name": "Lightning talk",
+          "sort": 1
+        },
+        {
+          "id": 482494,
+          "name": "Session",
+          "sort": 2
+        },
+        {
+          "id": 482495,
+          "name": "Workshop",
+          "sort": 3
+        },
+        {
+          "id": 482496,
+          "name": "Panel",
+          "sort": 4
+        }
+      ],
+      "sort": 0,
+      "type": "session"
+    },
+    {
+      "id": 133253,
+      "title": "Level",
+      "items": [
+        {
+          "id": 482497,
+          "name": "Introductory and overview",
+          "sort": 1
+        },
+        {
+          "id": 482498,
+          "name": "Intermediate",
+          "sort": 2
+        },
+        {
+          "id": 482499,
+          "name": "Advanced",
+          "sort": 3
+        },
+        {
+          "id": 482500,
+          "name": "Expert",
+          "sort": 4
+        }
+      ],
+      "sort": 1,
+      "type": "session"
+    },
+    {
+      "id": 133257,
+      "title": "Track",
+      "items": [
+        {
+          "id": 482510,
+          "name": "Security",
+          "sort": 1
+        },
+        {
+          "id": 482503,
+          "name": "Platform Engineer",
+          "sort": 2
+        },
+        {
+          "id": 482504,
+          "name": "AI/GenAI/ML",
+          "sort": 3
+        },
+        {
+          "id": 482505,
+          "name": "Cloud Native Experience",
+          "sort": 4
+        },
+        {
+          "id": 482506,
+          "name": "Cloud Native 101",
+          "sort": 5
+        },
+        {
+          "id": 482511,
+          "name": "Operaciones+Rendimiento",
+          "sort": 6
+        },
+        {
+          "id": 482512,
+          "name": "Data",
+          "sort": 7
+        },
+        {
+          "id": 482507,
+          "name": "Observabilidad",
+          "sort": 8
+        },
+        {
+          "id": 482508,
+          "name": "Emergente y avanzada",
+          "sort": 9
+        },
+        {
+          "id": 482513,
+          "name": "App Development",
+          "sort": 10
+        },
+        {
+          "id": 482509,
+          "name": "Business",
+          "sort": 11
+        }
+      ],
+      "sort": 3,
+      "type": "session"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 85833,
+      "name": "Sala Principal",
+      "sort": 0
+    },
+    {
+      "id": 85834,
+      "name": "Sala 2",
+      "sort": 1
+    },
+    {
+      "id": 85835,
+      "name": "Sala 3 (Workshops)",
+      "sort": 2
+    }
+  ],
+  "sessions": [
+    {
+      "id": "7e42bb81-2cb9-4d26-82fa-322e3d106de2",
+      "title": "Recepción y Acreditación",
+      "description": null,
+      "startsAt": "2026-10-03T09:00:00",
+      "endsAt": "2026-10-03T10:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 85833,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1299070",
+      "title": "Norte-sur, este-oeste e híbrido: HA y failover con Gateway API, Linkerd y Skupper",
+      "description": "Cuando una app vive en más de un cluster —o parte del workload ni siquiera está en Kubernetes— la pregunta ya no es “¿qué Ingress uso?”. Es: ¿cómo entra el tráfico, cómo se hablan los servicios entre sí, y cómo sobrevive el sistema cuando algo se cae?\r\n\r\nEn esta charla de 30 minutos recorremos esos tres planos de conectividad con una demo en vivo, toda en la laptop: sin VPN mágica ni cuenta cloud. Vas a ver alta disponibilidad y failover de punta a punta, y —sobre todo— un criterio claro para elegir la pieza correcta en cada capa, en lugar de forzar una sola herramienta a resolverlo todo.\r\n\r\nTe llevás un mapa mental aplicable a plataformas reales y una demo reproducible para seguir explorando después del evento.",
+      "startsAt": "2026-10-03T11:00:00",
+      "endsAt": "2026-10-03T11:30:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "d77b382d-de0c-4d5e-ae2e-c0a3559f2357",
+        "bdd020f1-1799-4169-aebb-d8d5bcad33dc"
+      ],
+      "categoryItems": [
+        482494,
+        482497,
+        482511
+      ],
+      "questionAnswers": [
+        {
+          "questionId": 133256,
+          "answerValue": "Kubernetes, Gateway API, Kuadrant, Linkerd, Skupper, Kind, Podman, multicluster, HA, failover, platform engineering"
+        }
+      ],
+      "roomId": 85833,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1290057",
+      "title": "Zero Trust y Visibilidad Total: El poder de Cilium y eBPF en Kubernetes",
+      "description": "Kubernetes ha simplificado el despliegue de aplicaciones, pero también ha incrementado los desafíos relacionados con la seguridad y la visibilidad de las comunicaciones entre servicios. En esta charla conoceremos cómo Cilium y eBPF permiten implementar un enfoque Zero Trust, aplicando políticas de seguridad basadas en identidad y ofreciendo observabilidad profunda del tráfico de red sin necesidad de sidecars. Mediante una demostración práctica utilizaremos Hubble para visualizar el flujo de las comunicaciones, detectar accesos no autorizados y comprender cómo fortalecer la seguridad y la operación diaria de un clúster Kubernetes con un impacto mínimo en el rendimiento.",
+      "startsAt": "2026-10-03T16:15:00",
+      "endsAt": "2026-10-03T16:45:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "6be0fb22-45a3-4ed3-a89b-3d0c94ba4454",
+        "5d334222-6152-4fa9-9380-4e6f423f33e5"
+      ],
+      "categoryItems": [
+        482494,
+        482498,
+        482507
+      ],
+      "questionAnswers": [
+        {
+          "questionId": 133256,
+          "answerValue": "Kubernetes, Cilium, eBPF, OpenTelemetry, Distributed Tracing, Observabilidad, Hubble, OTLP, Instrumentación automática de aplicaciones Java, Microservicios"
+        }
+      ],
+      "roomId": 85834,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
+      "id": "1307065",
+      "title": "Construí tu propio juez de hackathons: agentes de IA ejecutando código no confiable en Kubernetes",
+      "description": "Los agentes de IA ya no solo generan texto: compilan, instalan dependencias y ejecutan código que nadie revisó. ¿Cómo corrés eso en tu cluster sin regalarle las llaves a un npm install malicioso?\r\n\r\nEn este workshop hands-on vamos a construir un \"juez de hackathons\" automático: una plataforma donde un agente de IA evalúa proyectos reales — clona el repo, instala dependencias, corre los tests y emite un scorecard — con cada ejecución aislada en un sandbox con virtualización a nivel kernel.\r\n\r\nPara lograrlo vamos a usar Agent Sandbox (proyecto de kubernetes-sigs) y gVisor, y en el camino vamos a ver cómo se extiende la API de Kubernetes para un problema nuevo: CRDs como SandboxTemplate y SandboxClaim, warm pools para aprovisionamiento sub-segundo, y Gateway API para el routing. Todo open source, corriendo sobre infraestructura de GKE que Google generosamente provee para este workshop (nada de vendor pitch, lo prometo).\r\n\r\nAl final, los asistentes van a poder someter su propio código al juez — y alguno seguramente va a intentar romperlo. Eso también es parte del plan.\r\n\r\nNivel intermedio, pero no se necesita experiencia previa con agentes: alcanza con conocer los básicos de Kubernetes (pods, deployments, kubectl). Los asistentes se llevan un repo reproducible para correrlo en cualquier cluster con gVisor.",
+      "startsAt": "2026-10-03T13:45:00",
+      "endsAt": "2026-10-03T14:45:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "000d7bae-e300-4760-967b-0b9c253cf066"
+      ],
+      "categoryItems": [
+        482495,
+        482498,
+        482504
+      ],
+      "questionAnswers": [
+        {
+          "questionId": 133256,
+          "answerValue": "Kubernetes, Agent Sandbox (kubernetes-sigs), gVisor, Gateway API, Custom Resource Definitions (CRDs) y controllers, warm pools / aprovisionamiento de baja latencia, agentes de IA (Agent Development Kit), ejecución segura de código no confiable, Workload Identity, GKE Autopilot como infraestructura del lab."
+        }
+      ],
+      "roomId": 85835,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    }
+  ],
+  "speakers": [
+    {
+      "id": "5d334222-6152-4fa9-9380-4e6f423f33e5",
+      "firstName": "Carlos",
+      "lastName": "Calla",
+      "bio": "Soy Ingeniero de computación y sistemas, especialista en desarrollo con Spring Boot y Quarkus en Kubernetes (GKE, EKS). Además de diseñar y definir arquitecturas, tengo experiencia implementando prácticas DevSecOps, CI/CD y observabilidad. He sido Technical Tribe Lead y he liderado proyectos de migraciones de monolitos a microservicios orientadas a rendimiento, resiliencia, alineado al negocio.",
+      "tagLine": "Compartamos Banco - Arquitecto de integración de TI",
+      "profilePicture": "https://cdn.sessionize.com/image/159d-400o400o1-DVd6gRwKdrXteJCF85scRi.png",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1290057
+      ],
+      "fullName": "Carlos Calla",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "000d7bae-e300-4760-967b-0b9c253cf066",
+      "firstName": "Federico",
+      "lastName": "Bongiovanni",
+      "bio": "Senior Engineering Manager, GKE, Google Cloud\r\n\r\nFederico Bongiovanni is an Engineering Leader on Google Cloud GKE team, a Kubernetes Contributor and Co-Chair SIG API Machinery. Working at Google since 2018 with a passion for open source, building robust, scalable solutions and developing teams and people.\r\nOutside of work, he enjoys spending time with his wife and 3 kids, sports, outdoors and cooking. Lives in the Bay Area, speaks English, Spanish, Italian and Portuguese.",
+      "tagLine": "Senior Engineering Manager, GKE, Google Cloud",
+      "profilePicture": "https://cdn.sessionize.com/image/51fa-400o400o1-PJxbaABh2RDMHjy2y8C6zs.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1307065
+      ],
+      "fullName": "Federico Bongiovanni",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "d77b382d-de0c-4d5e-ae2e-c0a3559f2357",
+      "firstName": "Francisco",
+      "lastName": "Meneses",
+      "bio": "Soy Openshift Associate Manager para STP LATAM en Red Hat y Ambassador de Platform Engineering, con más de diez años de experiencia en el mundo de las tecnologías de la información. A lo largo de mi carrera he trabajado como analista, desarrollador, consultor y arquitecto, siempre con un fuerte enfoque en la colaboración y en el uso de tecnologías open source para generar impacto real en las organizaciones.\r\n\r\nEn mi rol actual lidero iniciativas de integración y transformación digital en la región. Me apasiona diseñar arquitecturas que no solo resuelvan necesidades técnicas, sino que también acompañen a los equipos en su proceso de cambio cultural y de adopción tecnológica. Disfruto mucho el poder apoyar tanto a los equipos de consultoría como a las áreas comerciales, construyendo propuestas sólidas y alineadas a las mejores prácticas.\r\n\r\nUno de mis intereses principales es la transformación impulsada por métricas: creo firmemente que medir el avance y basar las decisiones en datos concretos es clave para lograr resultados sostenibles. Este enfoque me ha llevado a participar en distintas iniciativas que buscan ayudar a los clientes a visualizar y comprender el impacto de su evolución tecnológica.\r\n\r\nA lo largo de los años he obtenido certificaciones en áreas como GitOps, Backstage, Cloud Foundations y Observabilidad, que reflejan mi interés constante por seguir aprendiendo y perfeccionando mi práctica.\r\n\r\nComo speaker, me gusta compartir experiencias reales, aprendizajes y buenas prácticas sobre arquitecturas de integración, platform engineering y adopción de open source. Mi estilo es cercano, práctico y orientado a resultados: busco que quienes me escuchan puedan llevarse ideas que puedan aplicar de inmediato en su propio contexto.",
+      "tagLine": "Openshift Associate Manager para STP LATAM en Red Hat",
+      "profilePicture": "https://cdn.sessionize.com/image/83d2-400o400o1-Ajm5YgWLyY9QN7v5JbeF5.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1299070
+      ],
+      "fullName": "Francisco Meneses",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "6be0fb22-45a3-4ed3-a89b-3d0c94ba4454",
+      "firstName": "Hector",
+      "lastName": "Mendoza Salazar",
+      "bio": "Consultor de Infraestructura en Compartamos Banco, enfocado en la operación de plataformas cloud native sobre Kubernetes. Tengo experiencia trabajando con infraestructura, automatización y GitOps, así como en la resolución de incidentes y análisis de fallos en sistemas distribuidos. Me interesa entender cómo se comportan los sistemas en producción y mejorar su estabilidad en el día a día.",
+      "tagLine": "Consultor de Infraestructura en Compartamos Banco, enfocado en resiliencia, troubleshooting y operación de plataformas cloud native sobre Kubernetes",
+      "profilePicture": "https://cdn.sessionize.com/image/b63d-400o400o1-JUsxoH8SSipJqLQL6tKHF8.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1290057
+      ],
+      "fullName": "Hector Mendoza Salazar",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "bdd020f1-1799-4169-aebb-d8d5bcad33dc",
+      "firstName": "Sergio",
+      "lastName": "Canales",
+      "bio": "I find immense joy in collaborating with diverse teams, cultivating a positive work environment that encourages creativity and open communication. Emphasizing team development is essential to achieving successful outcomes and driving innovation in every aspect.\r\nEmbracing challenges and staying up-to-date with the latest technology trends keeps me motivated and eager to explore new opportunities.\r\nI'm a Cloud Native Administrator, Developer, Architect and Fan!",
+      "tagLine": "Principal Architect @ Red Hat",
+      "profilePicture": "https://cdn.sessionize.com/image/d00b-400o400o1-4eRVNDhwx54wd9SJYBgmJ9.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1299070
+      ],
+      "fullName": "Sergio Canales",
+      "categoryItems": [],
+      "questionAnswers": []
+    }
+  ]
+}
