@@ -27,7 +27,7 @@ describe('LocationSection', () => {
         name: i18n.t('location.venueImageAlt', { venue: 'Plaza Galicia' }),
       }),
     ).toHaveAttribute('src', '/images/venue-plaza-galicia.jpg')
-    expect(screen.getByText(/4070 Leiva/i)).toBeInTheDocument()
+    expect(screen.getByText(/Leiva 4070/i)).toBeInTheDocument()
     expect(
       screen.getByRole('heading', { name: i18n.t('location.howToGetThere') }),
     ).toBeInTheDocument()

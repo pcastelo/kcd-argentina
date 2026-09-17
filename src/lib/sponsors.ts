@@ -50,8 +50,8 @@ export const SPONSOR_TIER_LAYOUT: Record<SponsorTier, SponsorTierLayout> = {
     listClassName: 'flex flex-wrap items-center justify-center gap-5',
   },
   community: {
-    logoClassName: 'max-h-9 w-auto max-w-[8rem] sm:max-h-10 sm:max-w-[9rem]',
-    cardClassName: 'min-h-[4rem] min-w-[8.5rem] px-3 py-2.5',
+    logoClassName: 'max-h-11 w-auto max-w-[11rem] sm:max-h-12 sm:max-w-[13rem]',
+    cardClassName: 'min-h-[4.5rem] min-w-[10rem] px-3 py-2',
     listClassName: 'flex flex-wrap items-center justify-center gap-4',
   },
   venue: {

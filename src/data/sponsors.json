@@ -38,5 +38,13 @@
     "logo": "/sponsors/powercloud.svg",
     "url": "https://www.powercloud.com.ar/",
     "order": 2
+  },
+  {
+    "slug": "aws-sbg-undav",
+    "name": "AWS Student Builder Group UNDAV",
+    "tier": "community",
+    "logo": "/sponsors/aws-sbg-undav.png",
+    "url": "https://www.meetup.com/aws-sbg-at-univ-nacional-de-avellaneda/",
+    "order": 1
   }
 ]
