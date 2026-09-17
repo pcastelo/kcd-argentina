@@ -45,7 +45,6 @@ describe('sessionize-api', () => {
     const zeroTrust = fixture.sessions.find((session) =>
       session.title.includes('Zero Trust'),
     )
-    const categoryMap = buildCategoryMap(fixture.categories)
     const sessions = buildSessionsJson(fixture)
     const zeroTrustSession = sessions.find((session) => session.title.includes('Zero Trust'))
 

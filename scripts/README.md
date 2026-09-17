@@ -7,7 +7,7 @@ Agenda and speaker content for the public site is generated from the Sessionize 
 - **Endpoint:** `vxssqlh8` (override with `SESSIONIZE_ENDPOINT_ID`)
 - **API:** `https://sessionize.com/api/v2/{endpointId}/view/All`
 - **Output:** `src/data/sessions.json`, `src/data/speakers.json`
-- **GitHub issue:** [#25 — Sessionize API sync (agenda + speakers)](https://github.com/pcastelo/kcd-argentina/issues/25)
+- **GitHub issue:** [#25 - Sessionize API sync (agenda + speakers)](https://github.com/pcastelo/kcd-argentina/issues/25)
 
 ### Local sync
 
@@ -20,9 +20,9 @@ npm run sync:sessionize
 
 ### Organizer requirements
 
-1. **Schedule announced** in Sessionize — sessions must have `startsAt`, `endsAt`, and `roomId`.
-2. **Speakers confirmed** in Sessionize admin — unconfirmed speakers are omitted from the API (and from the site).
-3. **Endpoint filter** — keep the Sessionize endpoint filter aligned with accepted/informed sessions.
+1. **Schedule announced** in Sessionize - sessions must have `startsAt`, `endsAt`, and `roomId`.
+2. **Speakers confirmed** in Sessionize admin - unconfirmed speakers are omitted from the API (and from the site).
+3. **Endpoint filter** - keep the Sessionize endpoint filter aligned with accepted/informed sessions.
 
 ### Automated sync (GitHub Actions)
 
@@ -48,7 +48,7 @@ Workflow: `.github/workflows/sync-sessionize.yml`
 | Sala 3 (Workshops) | `sala-3` |
 | Times in API | ISO `-03:00` on `2026-10-03` |
 
-Workshop continuation rows for the agenda grid are still virtual in `src/lib/agenda.ts` — they are not stored in JSON.
+Workshops render as a single agenda card with their full `durationMinutes` from JSON (no continuation rows).
 
 ## Legacy Excel pipeline (fallback only)
 
@@ -56,7 +56,7 @@ Use only when the API is unavailable or for offline recovery.
 
 ```bash
 npm run import:agenda [path-to-Agenda.xlsx]
-npm run import:sessionize [path-to-export.xlsx]   # deprecated — prefer sync:sessionize
+npm run import:sessionize [path-to-export.xlsx]   # deprecated - prefer sync:sessionize
 npm run import:data
 ```
 

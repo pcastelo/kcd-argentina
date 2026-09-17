@@ -110,7 +110,7 @@ export function mapLanguage(value) {
 }
 
 export function inferLanguageFromTitle(title) {
-  if (/[αινσϊρΏ‘]/i.test(title)) {
+  if (/[\u00E1\u00E9\u00ED\u00F3\u00FA\u00F1\u00BF\u00A1]/i.test(title)) {
     return 'es'
   }
 

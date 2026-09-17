@@ -5,7 +5,7 @@
  *   node scripts/sync-sessionize.mjs [--endpoint-id <id>] [--dry-run]
  *
  * Environment:
- *   SESSIONIZE_ENDPOINT_ID ù defaults to vxssqlh8
+ *   SESSIONIZE_ENDPOINT_ID - defaults to vxssqlh8
  */
 import { readFileSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
