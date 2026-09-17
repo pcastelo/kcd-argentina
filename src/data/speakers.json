@@ -1,12 +1,5 @@
 [
   {
-    "slug": "aws-ug-sec-arg",
-    "name": "AWS UG Sec Arg",
-    "sessionSlugs": [
-      "workshop-2"
-    ]
-  },
-  {
     "slug": "axel-labruna",
     "name": "Axel Labruna",
     "title": "DevSecOps & Cloud Manager - Solution Architect",
@@ -108,7 +101,10 @@
     "photo": "https://cdn.sessionize.com/image/51fa-400o400o1-PJxbaABh2RDMHjy2y8C6zs.jpg",
     "social": {
       "linkedin": "https://www.linkedin.com/in/federico-bongiovanni-8296073/"
-    }
+    },
+    "sessionSlugs": [
+      "construi-tu-propio-juez-de-hackathons-agentes-de-ia-ejecutando-codigo-no-confiab"
+    ]
   },
   {
     "slug": "fernando-jose-cardozo-camargo",
@@ -218,13 +214,6 @@
     ]
   },
   {
-    "slug": "marcos-lilljedhal",
-    "name": "Marcos Lilljedhal",
-    "sessionSlugs": [
-      "keynote-de-cierre"
-    ]
-  },
-  {
     "slug": "matias-mospan",
     "name": "Matias Mospan",
     "title": "PlatformArchitect@HumanIsKind",
@@ -255,6 +244,7 @@
     "name": "Nadim Hobaica",
     "title": "Delivery Manager south of Latinamerica",
     "company": "Red Hat",
+    "bio": "https://www.linkedin.com/in/nadimhobaica?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     "photo": "https://cdn.sessionize.com/image/3ec2-400o400o1-HuHSrfLY6kC7zWPNVXemUi.png",
     "social": {
       "linkedin": "https://www.linkedin.com/in/nadimhobaica/"
@@ -324,13 +314,9 @@
     "photo": "https://cdn.sessionize.com/image/9a99-400o400o1-4yrJikoGYPuTwmmY3xFbUc.jpg",
     "social": {
       "linkedin": "https://www.linkedin.com/in/thirukumara-vaideesh-j-770224165/"
-    }
-  },
-  {
-    "slug": "women-in-cloud-tbd",
-    "name": "Women in Cloud(TBD)",
+    },
     "sessionSlugs": [
-      "workshop-4"
+      "one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s"
     ]
   }
 ]
