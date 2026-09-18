@@ -4,6 +4,7 @@ import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { Section } from '@/components/Section'
 import { SectionHeader } from '@/components/SectionHeader'
+import { SessionDetailDialog } from '@/components/SessionDetailDialog'
 import { getEvent } from '@/lib/event'
 import {
   type AgendaDisplaySession,
@@ -17,6 +18,7 @@ import {
   getSessionSpeakersForDisplay,
   getSessions,
   getSpeakers,
+  isSessionDetailEligible,
 } from '@/lib/agenda'
 import {
   formatAgendaClockTime,
@@ -104,6 +106,7 @@ function AgendaTimelineItem({
   locale,
   isLast,
   showRoom,
+  onSelect,
 }: {
   session: AgendaDisplaySession
   title: string
@@ -115,6 +118,7 @@ function AgendaTimelineItem({
   locale: string
   isLast: boolean
   showRoom: boolean
+  onSelect?: (session: AgendaDisplaySession) => void
 }) {
   const { t } = useTranslation()
   const duration = getSessionDurationMinutes(session)
@@ -124,6 +128,7 @@ function AgendaTimelineItem({
     timezone,
     locale,
   )
+  const clickable = Boolean(onSelect)
 
   return (
     <li className="grid grid-cols-[4.5rem_1fr] gap-2.5 sm:grid-cols-[5.5rem_1fr] sm:gap-3">
@@ -152,7 +157,13 @@ function AgendaTimelineItem({
         </span>
       </div>
 
-      <Card className="mb-2.5 flex overflow-hidden p-0 sm:mb-3">
+      <Card
+        className={`mb-2.5 flex overflow-hidden p-0 sm:mb-3${
+          clickable
+            ? ' cursor-pointer transition-colors hover:border-primary/50 focus-within:border-primary/50'
+            : ''
+        }`}
+      >
         {showRoom ? (
           <div
             className="flex w-11 shrink-0 items-center justify-center border-r border-border bg-surface/60 px-1 py-2 sm:w-12"
@@ -166,24 +177,53 @@ function AgendaTimelineItem({
           </div>
         ) : null}
 
-        <div className="min-w-0 flex-1 px-2.5 py-2 sm:px-3 sm:py-2.5">
-          <div className="flex items-start justify-between gap-2">
-            <h3 className="min-w-0 flex-1 text-sm font-semibold leading-snug text-text">
-              {title}
-            </h3>
-            <span
-              className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${sessionTypeBadgeClass(session.type)}`}
-            >
-              {typeLabel}
-            </span>
-          </div>
+        {clickable ? (
+          <button
+            type="button"
+            className="min-w-0 flex-1 px-2.5 py-2 text-left sm:px-3 sm:py-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary"
+            onClick={() => onSelect?.(session)}
+            aria-label={t('agenda.sessionAriaLabel', {
+              title,
+              room: roomLabel,
+            })}
+          >
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="min-w-0 flex-1 text-sm font-semibold leading-snug text-text">
+                {title}
+              </h3>
+              <span
+                className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${sessionTypeBadgeClass(session.type)}`}
+              >
+                {typeLabel}
+              </span>
+            </div>
 
-          <AgendaSessionSpeakers
-            speakers={speakers}
-            showPhotos={showSpeakerPhotos}
-            speakersListLabel={t('agenda.sessionSpeakersLabel')}
-          />
-        </div>
+            <AgendaSessionSpeakers
+              speakers={speakers}
+              showPhotos={showSpeakerPhotos}
+              speakersListLabel={t('agenda.sessionSpeakersLabel')}
+            />
+          </button>
+        ) : (
+          <div className="min-w-0 flex-1 px-2.5 py-2 sm:px-3 sm:py-2.5">
+            <div className="flex items-start justify-between gap-2">
+              <h3 className="min-w-0 flex-1 text-sm font-semibold leading-snug text-text">
+                {title}
+              </h3>
+              <span
+                className={`shrink-0 rounded px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide ${sessionTypeBadgeClass(session.type)}`}
+              >
+                {typeLabel}
+              </span>
+            </div>
+
+            <AgendaSessionSpeakers
+              speakers={speakers}
+              showPhotos={showSpeakerPhotos}
+              speakersListLabel={t('agenda.sessionSpeakersLabel')}
+            />
+          </div>
+        )}
       </Card>
     </li>
   )
@@ -200,6 +240,8 @@ export function AgendaSection() {
     [speakers],
   )
   const [roomFilter, setRoomFilter] = useState<AgendaRoomFilter>('sala-1')
+  const [selectedSession, setSelectedSession] =
+    useState<AgendaDisplaySession | null>(null)
 
   const timeline = useMemo(() => getAgendaTimelineSessions(sessions), [sessions])
   const counts = useMemo(() => countTimelineByRoom(timeline), [timeline])
@@ -208,6 +250,15 @@ export function AgendaSection() {
     [timeline, roomFilter],
   )
   const showSpeakerPhotos = roomFilter === 'all'
+
+  const dialogSpeakers = useMemo(() => {
+    if (!selectedSession) {
+      return []
+    }
+    return selectedSession.speakerSlugs
+      .map((slug) => speakersBySlug.get(slug))
+      .filter((speaker): speaker is Speaker => Boolean(speaker))
+  }, [selectedSession, speakersBySlug])
 
   return (
     <Section id="agenda" tone="glow" className="scroll-mt-8">
@@ -270,12 +321,30 @@ export function AgendaSection() {
               locale={locale}
               isLast={index === filteredTimeline.length - 1}
               showRoom={roomFilter === 'all' && session.room !== 'plenario'}
+              onSelect={
+                isSessionDetailEligible(session.type)
+                  ? setSelectedSession
+                  : undefined
+              }
             />
           ))}
         </ol>
 
         {filteredTimeline.length === 0 ? (
           <p className="mt-8 text-center text-text-muted">{t('agenda.emptyFilter')}</p>
+        ) : null}
+
+        {selectedSession ? (
+          <SessionDetailDialog
+            open
+            session={selectedSession}
+            speakers={dialogSpeakers}
+            roomLabel={t(`agenda.roomsShort.${selectedSession.room}`)}
+            typeLabel={t(`agenda.types.${selectedSession.type}`)}
+            timezone={event.timezone}
+            locale={locale}
+            onClose={() => setSelectedSession(null)}
+          />
         ) : null}
       </Container>
     </Section>

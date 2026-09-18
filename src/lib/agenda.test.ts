@@ -9,6 +9,7 @@ import {
   getSpeakers,
   groupSessionsByTimeSlot,
   isFullWidthSession,
+  isSessionDetailEligible,
 } from '@/lib/agenda'
 import type { Session } from '@/schemas/collectionSchemas'
 
@@ -179,5 +180,19 @@ describe('agenda lib', () => {
         expect(speakerSlugs.has(slug)).toBe(true)
       }
     }
+  })
+
+  it('marks talk, workshop, and keynote as detail-eligible', () => {
+    expect(isSessionDetailEligible('talk')).toBe(true)
+    expect(isSessionDetailEligible('workshop')).toBe(true)
+    expect(isSessionDetailEligible('keynote')).toBe(true)
+  })
+
+  it('marks service session types as not detail-eligible', () => {
+    expect(isSessionDetailEligible('reception')).toBe(false)
+    expect(isSessionDetailEligible('break')).toBe(false)
+    expect(isSessionDetailEligible('lunch')).toBe(false)
+    expect(isSessionDetailEligible('transition')).toBe(false)
+    expect(isSessionDetailEligible('margin')).toBe(false)
   })
 })
