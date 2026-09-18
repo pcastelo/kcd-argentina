@@ -3,19 +3,23 @@ import { createMemoryRouter, RouterProvider } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import { Header } from '@/components/Header'
 
+function renderHeader(initialEntry: string) {
+  const router = createMemoryRouter(
+    [
+      {
+        path: '/:locale',
+        element: <Header />,
+      },
+    ],
+    { initialEntries: [initialEntry] },
+  )
+
+  return render(<RouterProvider router={router} />)
+}
+
 describe('Header', () => {
   it('renders locale-aware hash links and language switcher on /es', () => {
-    const router = createMemoryRouter(
-      [
-        {
-          path: '/:locale',
-          element: <Header />,
-        },
-      ],
-      { initialEntries: ['/es'] },
-    )
-
-    render(<RouterProvider router={router} />)
+    renderHeader('/es')
 
     expect(screen.getByRole('banner')).toBeInTheDocument()
     expect(screen.getByAltText(/KCD Argentina/i)).toBeInTheDocument()
@@ -43,5 +47,29 @@ describe('Header', () => {
     expect(
       screen.getByRole('button', { name: 'Cambiar idioma' }),
     ).toBeInTheDocument()
+  })
+
+  it('marks Home as current page when hash is empty', () => {
+    renderHeader('/es')
+
+    expect(screen.getByRole('link', { name: 'Inicio' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    )
+    expect(screen.getByRole('link', { name: 'Agenda' })).not.toHaveAttribute(
+      'aria-current',
+    )
+  })
+
+  it('marks Agenda as current page for /es#agenda', () => {
+    renderHeader('/es#agenda')
+
+    expect(screen.getByRole('link', { name: 'Agenda' })).toHaveAttribute(
+      'aria-current',
+      'page',
+    )
+    expect(screen.getByRole('link', { name: 'Inicio' })).not.toHaveAttribute(
+      'aria-current',
+    )
   })
 })

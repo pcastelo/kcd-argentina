@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { Container } from '@/components/Container'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { getBrandIconSrc } from '@/lib/brand'
@@ -18,9 +18,21 @@ const focusRingClasses =
 
 const linkClasses = `text-text-muted hover:text-text ${focusRingClasses}`
 
+function isNavItemCurrent(
+  hash: string | undefined,
+  locationHash: string,
+): boolean {
+  const normalized = locationHash === '#' ? '' : locationHash
+  if (!hash) {
+    return normalized === '' || normalized === '#home'
+  }
+  return normalized === `#${hash}`
+}
+
 export function Header() {
   const { t } = useTranslation()
   const { locale: localeParam } = useParams<{ locale: string }>()
+  const { hash } = useLocation()
   const locale = isValidLocale(localeParam) ? localeParam : DEFAULT_LOCALE
 
   return (
@@ -39,15 +51,19 @@ export function Header() {
           className="flex flex-1 flex-wrap items-center gap-4"
           aria-label={t('nav.ariaLabel')}
         >
-          {navItems.map((item) => (
-            <Link
-              key={item.key}
-              to={localePath(locale, undefined, item.hash)}
-              className={linkClasses}
-            >
-              {t(item.key)}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const current = isNavItemCurrent(item.hash, hash)
+            return (
+              <Link
+                key={item.key}
+                to={localePath(locale, undefined, item.hash)}
+                className={linkClasses}
+                aria-current={current ? 'page' : undefined}
+              >
+                {t(item.key)}
+              </Link>
+            )
+          })}
           <LanguageSwitcher />
         </nav>
       </Container>

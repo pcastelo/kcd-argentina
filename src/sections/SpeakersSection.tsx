@@ -40,9 +40,9 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
   const profileContent = (
     <>
       <SpeakerPhoto speaker={speaker} linked={Boolean(linkedin)} />
-      <span className="mt-4 text-base font-bold text-text transition group-hover:text-primary sm:text-lg">
+      <h3 className="mt-4 text-base font-bold text-text transition group-hover:text-primary sm:text-lg">
         {speaker.name}
-      </span>
+      </h3>
     </>
   )
 

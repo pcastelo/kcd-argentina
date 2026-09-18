@@ -12,6 +12,9 @@
   "common": {
     "comingSoon": "Próximamente"
   },
+  "a11y": {
+    "skipToContent": "Saltar al contenido"
+  },
   "nav": {
     "ariaLabel": "Navegación principal",
     "home": "Inicio",

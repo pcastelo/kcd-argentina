@@ -51,7 +51,6 @@ export function Countdown({
   return (
     <div
       role="timer"
-      aria-live="polite"
       className={`rounded-lg border border-border bg-surface/80 px-4 py-5 sm:px-6${className ? ` ${className}` : ''}`}
     >
       <div className="grid grid-cols-4 divide-x divide-border">
