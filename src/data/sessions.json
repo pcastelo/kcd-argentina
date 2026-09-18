@@ -189,7 +189,8 @@
     "slug": "breaking-ai-from-the-inside-jailbreaks-vulnerabilities-and-skill-attacks",
     "title": "Breaking AI From the Inside: Jailbreaks, Vulnerabilities, and Skill Attacks",
     "speakerSlugs": [
-      "edson-ferreira"
+      "edson-ferreira",
+      "igor-eulalio"
     ],
     "room": "sala-1",
     "startTime": "2026-10-03T13:45:00-03:00",
@@ -198,7 +199,8 @@
     "type": "talk",
     "language": "en",
     "speakerNames": [
-      "Edson Ferreira"
+      "Edson Ferreira",
+      "Igor Eulálio"
     ],
     "abstract": "AI models and autonomous agents are increasingly prevalent in cloud-native applications and infrastructure, introducing a new attack surface.\nIn this talk, we will explore jailbreaks that bypass security guardrails, vulnerabilities specific to LLMs, and the abuse of \"skills\" or tools connected to AI agents. Through practical examples and real-world cases, we will examine how these attacks work and the defense and mitigation strategies that security and platform teams can implement.",
     "track": "Security"

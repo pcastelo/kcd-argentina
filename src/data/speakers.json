@@ -121,6 +121,17 @@
     ]
   },
   {
+    "slug": "igor-eulalio",
+    "name": "Igor Eulálio",
+    "title": "Senior Solutions Architect",
+    "company": "Orca",
+    "bio": "Experienced Software Engineer with extensive knowledge of the Cloud and Container industry, currently working in the security space.\nIgor has spoken in multiple events accross Latin America and Europe, always bringing open source and CNCF related topics, also contributing to open source projects like Falco, ArgoCD and Karpenter.",
+    "photo": "https://cdn.sessionize.com/image/6e9d-400o400o1-KoFkPpDY3T2SD3hPTC8gzj.png",
+    "sessionSlugs": [
+      "breaking-ai-from-the-inside-jailbreaks-vulnerabilities-and-skill-attacks"
+    ]
+  },
+  {
     "slug": "jack-torpoco",
     "name": "Jack Torpoco",
     "title": "Solution Architect IBERIA / CTO TyC IASolutions",
