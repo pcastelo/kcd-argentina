@@ -27,20 +27,6 @@
     ]
   },
   {
-    "slug": "carlos-calla",
-    "name": "Carlos Calla",
-    "title": "Arquitecto de integración de TI",
-    "company": "Compartamos Banco",
-    "bio": "Soy Ingeniero de computación y sistemas, especialista en desarrollo con Spring Boot y Quarkus en Kubernetes (GKE, EKS). Además de diseñar y definir arquitecturas, tengo experiencia implementando prácticas DevSecOps, CI/CD y observabilidad. He sido Technical Tribe Lead y he liderado proyectos de migraciones de monolitos a microservicios orientadas a rendimiento, resiliencia, alineado al negocio.",
-    "photo": "https://cdn.sessionize.com/image/159d-400o400o1-DVd6gRwKdrXteJCF85scRi.png",
-    "social": {
-      "linkedin": "https://linkedin.com/in/carlos-alberto-calla"
-    },
-    "sessionSlugs": [
-      "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes"
-    ]
-  },
-  {
     "slug": "david-aguirre",
     "name": "David Aguirre",
     "title": "Senior Devops Engineer",
@@ -132,19 +118,6 @@
     },
     "sessionSlugs": [
       "norte-sur-este-oeste-e-hibrido-ha-y-failover-con-gateway-api-linkerd-y-skupper"
-    ]
-  },
-  {
-    "slug": "hector-mendoza-salazar",
-    "name": "Hector Mendoza Salazar",
-    "title": "Consultor de Infraestructura en Compartamos Banco, enfocado en resiliencia, troubleshooting y operación de plataformas cloud native sobre Kubernetes",
-    "bio": "Consultor de Infraestructura en Compartamos Banco, enfocado en la operación de plataformas cloud native sobre Kubernetes. Tengo experiencia trabajando con infraestructura, automatización y GitOps, así como en la resolución de incidentes y análisis de fallos en sistemas distribuidos. Me interesa entender cómo se comportan los sistemas en producción y mejorar su estabilidad en el día a día.",
-    "photo": "https://cdn.sessionize.com/image/b63d-400o400o1-JUsxoH8SSipJqLQL6tKHF8.jpg",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/hector-mendoza-salazar"
-    },
-    "sessionSlugs": [
-      "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes"
     ]
   },
   {

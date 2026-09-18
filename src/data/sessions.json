@@ -410,27 +410,6 @@
     "track": "Cloud Native Experience"
   },
   {
-    "id": "2026-10-03-1615-sala-2-zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes",
-    "slug": "zero-trust-y-visibilidad-total-el-poder-de-cilium-y-ebpf-en-kubernetes",
-    "title": "Zero Trust y Visibilidad Total: El poder de Cilium y eBPF en Kubernetes",
-    "speakerSlugs": [
-      "hector-mendoza-salazar",
-      "carlos-calla"
-    ],
-    "room": "sala-2",
-    "startTime": "2026-10-03T16:15:00-03:00",
-    "endTime": "2026-10-03T16:45:00-03:00",
-    "durationMinutes": 30,
-    "type": "talk",
-    "language": "es",
-    "speakerNames": [
-      "Hector Mendoza Salazar",
-      "Carlos Calla"
-    ],
-    "abstract": "Kubernetes ha simplificado el despliegue de aplicaciones, pero también ha incrementado los desafíos relacionados con la seguridad y la visibilidad de las comunicaciones entre servicios. En esta charla conoceremos cómo Cilium y eBPF permiten implementar un enfoque Zero Trust, aplicando políticas de seguridad basadas en identidad y ofreciendo observabilidad profunda del tráfico de red sin necesidad de sidecars. Mediante una demostración práctica utilizaremos Hubble para visualizar el flujo de las comunicaciones, detectar accesos no autorizados y comprender cómo fortalecer la seguridad y la operación diaria de un clúster Kubernetes con un impacto mínimo en el rendimiento.",
-    "track": "Observabilidad"
-  },
-  {
     "id": "2026-10-03-1700-plenario-keynote-de-cierre",
     "slug": "keynote-de-cierre",
     "title": "Keynote de Cierre",
