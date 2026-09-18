@@ -9,11 +9,8 @@ const site = JSON.parse(
 
 const SITE_ORIGIN = site.origin
 
-/** Locale route pairs: [esPath, enPath] */
-const ROUTE_PAIRS = [
-  ['/es', '/en'],
-  ['/es/location', '/en/location'],
-]
+/** Locale home routes only — SPA hash sections are not separate URLs. */
+const ROUTE_PAIRS = [['/es', '/en']]
 
 function url(path) {
   return `${SITE_ORIGIN}${path}`
