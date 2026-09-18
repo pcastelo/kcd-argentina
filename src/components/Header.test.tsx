@@ -44,6 +44,10 @@ describe('Header', () => {
       'href',
       '/es#local',
     )
+    expect(screen.getByRole('link', { name: 'Organizadores' })).toHaveAttribute(
+      'href',
+      '/es#organizers',
+    )
     expect(
       screen.getByRole('button', { name: 'Cambiar idioma' }),
     ).toBeInTheDocument()

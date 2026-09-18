@@ -13,6 +13,7 @@ import { CodeOfConductSection } from '@/sections/CodeOfConductSection'
 import { AgendaSection } from '@/sections/AgendaSection'
 import { LocationSection } from '@/sections/LocationSection'
 import { OrganizersSection } from '@/sections/OrganizersSection'
+import { RecapSection } from '@/sections/RecapSection'
 import { SpeakersSection } from '@/sections/SpeakersSection'
 import { SponsorsSection } from '@/sections/SponsorsSection'
 
@@ -145,6 +146,7 @@ export function HomePage() {
       <SpeakersSection />
       <LocationSection />
       <OrganizersSection />
+      <RecapSection />
       <CodeOfConductSection />
     </>
   )
