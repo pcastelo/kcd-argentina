@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react'
+import { HelmetProvider } from 'react-helmet-async'
 import { createMemoryRouter, RouterProvider } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import { LocaleLayout } from '@/layouts/LocaleLayout'
@@ -23,7 +24,11 @@ describe('RootLayout', () => {
       { initialEntries: ['/es'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     expect(screen.getByRole('banner')).toBeInTheDocument()
     expect(screen.getByRole('main')).toBeInTheDocument()
