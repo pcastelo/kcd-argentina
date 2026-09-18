@@ -15,5 +15,10 @@
   "linktreeUrl": "https://linktr.ee/kcd.argentina",
   "sponsorProspectusUrl": "https://drive.google.com/file/d/1BnQVM6NC_qYVlDo5VuSaYHEL7T0y9AOb/view",
   "contactEmail": "kcd.argentina@gmail.com",
-  "timezone": "America/Argentina/Buenos_Aires"
+  "timezone": "America/Argentina/Buenos_Aires",
+  "socialLinks": [
+    { "platform": "instagram", "url": "https://www.instagram.com/kcd.argentina/" },
+    { "platform": "linkedin", "url": "https://www.linkedin.com/company/cncf-buenos-aires/" },
+    { "platform": "meetup", "url": "https://www.meetup.com/kubernetes-community-argentina/" }
+  ]
 }

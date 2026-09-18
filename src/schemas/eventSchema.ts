@@ -13,6 +13,11 @@ export const venueSchema = z.object({
   mapEmbedUrl: z.url().optional(),
 })
 
+export const socialLinkSchema = z.object({
+  platform: z.enum(['instagram', 'linkedin', 'twitter', 'meetup', 'youtube']),
+  url: z.url(),
+})
+
 export const eventSchema = z.object({
   title: z.string(),
   dateStart: isoDateTimeSchema,
@@ -26,7 +31,9 @@ export const eventSchema = z.object({
   contactEmail: z.email(),
   timezone: z.string(),
   cfpUrl: z.url().optional(),
+  socialLinks: z.array(socialLinkSchema).optional(),
 })
 
 export type Event = z.infer<typeof eventSchema>
 export type Venue = z.infer<typeof venueSchema>
+export type SocialLink = z.infer<typeof socialLinkSchema>
