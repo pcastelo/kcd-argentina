@@ -45,7 +45,7 @@ npm run validate:data  # Zod validation for src/data/*.json
 
 The live site allows crawlers: `public/robots.txt` uses `Allow: /` and points to `https://kcdargentina.ar/sitemap.xml`. Locale pages set titles, descriptions, and Open Graph tags via `react-helmet-async` (issue [#14](https://github.com/pcastelo/kcd-argentina/issues/14)).
 
-**Note:** GitHub Pages still returns HTTP 404 for deep SPA paths (e.g. `/es`) while serving `404.html` so the app loads. That soft-404 is a known Pages limitation; consider a Cloudflare response override if search indexing of `/es` and `/en` needs a true 200.
+**Note:** Locale entrypoints (`/es`, `/en`) are real HTML files copied at build time so GitHub Pages returns HTTP 200 (not a soft-404 via `404.html`). Unknown paths still use `404.html` with status 404 and the in-app NotFound page.
 
 ## Stack
 
