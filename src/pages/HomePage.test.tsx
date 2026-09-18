@@ -97,9 +97,25 @@ describe('HomePage', () => {
         expect.stringMatching(/Patrocinador|Sponsor/i),
         'Plaza Galicia',
         '// Organizadores',
+        i18n.t('recap.title'),
         expect.stringMatching(/Conducta|Conduct/i),
       ]),
     )
+
+    const organizers = document.getElementById('organizers')
+    const recap = document.getElementById('recap')
+    const conduct = document.getElementById('conduct')
+    expect(organizers).toBeTruthy()
+    expect(recap).toBeTruthy()
+    expect(conduct).toBeTruthy()
+    expect(
+      organizers!.compareDocumentPosition(recap!) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
+    expect(
+      recap!.compareDocumentPosition(conduct!) &
+        Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy()
   })
 
   it('uses location SEO when the URL hash is #local', async () => {

@@ -11,6 +11,7 @@ const navItems = [
   { key: 'nav.speakers', hash: 'speakers' },
   { key: 'nav.sponsors', hash: 'sponsors' },
   { key: 'nav.location', hash: 'local' },
+  { key: 'nav.organizers', hash: 'organizers' },
 ] as const
 
 const focusRingClasses =

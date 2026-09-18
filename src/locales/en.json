@@ -24,7 +24,8 @@
     "agenda": "Agenda",
     "speakers": "Speakers",
     "sponsors": "Sponsors",
-    "location": "Location"
+    "location": "Location",
+    "organizers": "Organizers"
   },
   "footer": {
     "tagline": "Growing Cloud Native Together",
@@ -139,6 +140,18 @@
     "pendingName": "To be announced",
     "pendingRole": "Organizing committee",
     "pendingAvatar": "?"
+  },
+  "recap": {
+    "eyebrow": "// 2024 Edition",
+    "title": "This is how the last KCD Argentina felt.",
+    "caption01": "The community",
+    "caption02": "Main hall",
+    "caption03": "On stage",
+    "caption04": "Mate and networking",
+    "altGroup": "Group photo from KCD Argentina 2024",
+    "altAudience": "Audience with hands raised during a talk",
+    "altSpeaker": "Speaker presenting on stage",
+    "altMate": "Attendees sharing mate"
   },
   "conduct": {
     "eyebrow": "// Community",
