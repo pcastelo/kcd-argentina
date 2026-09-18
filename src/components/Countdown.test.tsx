@@ -26,7 +26,9 @@ describe('Countdown', () => {
 
     renderCountdown(() => now)
 
-    expect(screen.getByRole('timer')).toBeInTheDocument()
+    const timer = screen.getByRole('timer')
+    expect(timer).toBeInTheDocument()
+    expect(timer).not.toHaveAttribute('aria-live')
     expect(screen.getByText('2')).toBeInTheDocument()
     expect(
       screen.getByText(i18n.t('home.countdown.days')),
@@ -39,9 +41,9 @@ describe('Countdown', () => {
 
     renderCountdown(() => now)
 
-    expect(
-      screen.getByText(i18n.t('home.countdown.eventStarted')),
-    ).toBeInTheDocument()
+    expect(screen.getByRole('status')).toHaveTextContent(
+      i18n.t('home.countdown.eventStarted'),
+    )
   })
 
   it('renders thank-you message after the event ends', async () => {
@@ -50,8 +52,8 @@ describe('Countdown', () => {
 
     renderCountdown(() => now)
 
-    expect(
-      screen.getByText(i18n.t('home.countdown.eventEnded')),
-    ).toBeInTheDocument()
+    expect(screen.getByRole('status')).toHaveTextContent(
+      i18n.t('home.countdown.eventEnded'),
+    )
   })
 })

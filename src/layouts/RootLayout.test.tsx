@@ -34,4 +34,32 @@ describe('RootLayout', () => {
     expect(screen.getByRole('main')).toBeInTheDocument()
     expect(screen.getByRole('contentinfo')).toBeInTheDocument()
   })
+
+  it('renders skip-to-content link targeting main', () => {
+    const router = createMemoryRouter(
+      [
+        {
+          element: <RootLayout />,
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [{ index: true, element: <HomePage /> }],
+            },
+          ],
+        },
+      ],
+      { initialEntries: ['/es'] },
+    )
+
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
+
+    const skip = screen.getByRole('link', { name: /Saltar al contenido/i })
+    expect(skip).toHaveAttribute('href', '#main-content')
+    expect(screen.getByRole('main')).toHaveAttribute('id', 'main-content')
+  })
 })

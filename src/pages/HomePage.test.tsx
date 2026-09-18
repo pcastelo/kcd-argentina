@@ -78,6 +78,30 @@ describe('HomePage', () => {
     })
   })
 
+  it('exposes a single h1 and section h2 headings', async () => {
+    await i18n.changeLanguage('es')
+
+    renderHome('/es')
+
+    const h1s = screen.getAllByRole('heading', { level: 1, hidden: true })
+    expect(h1s).toHaveLength(1)
+    expect(h1s[0]).toHaveTextContent('KCD Argentina 2026')
+
+    const h2Names = screen
+      .getAllByRole('heading', { level: 2 })
+      .map((el) => el.textContent)
+    expect(h2Names).toEqual(
+      expect.arrayContaining([
+        '// Agenda',
+        '// Speakers',
+        expect.stringMatching(/Patrocinador|Sponsor/i),
+        'Plaza Galicia',
+        '// Organizadores',
+        expect.stringMatching(/Conducta|Conduct/i),
+      ]),
+    )
+  })
+
   it('uses location SEO when the URL hash is #local', async () => {
     await i18n.changeLanguage('es')
 
