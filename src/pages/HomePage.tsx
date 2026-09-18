@@ -70,8 +70,8 @@ export function HomePage() {
             src={brandAssets.logoDark}
             alt=""
             className="h-auto w-full max-w-[18rem] sm:max-w-[22rem] md:max-w-[28rem]"
-            width={448}
-            height={130}
+            width={597}
+            height={283}
           />
           <h1 className="sr-only">{event.title}</h1>
           <p className="mt-8 max-w-3xl text-xl font-medium leading-snug text-text sm:mt-10 sm:text-2xl md:text-3xl">
