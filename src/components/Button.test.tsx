@@ -15,7 +15,7 @@ describe('Button', () => {
     render(<Button variant="ghost">Learn more</Button>)
     const button = screen.getByRole('button', { name: 'Learn more' })
     expect(button.className).toContain('bg-transparent')
-    expect(button.className).toContain('border-border')
+    expect(button.className).toContain('border-text-muted/55')
     expect(button.className).toContain('text-text')
   })
 

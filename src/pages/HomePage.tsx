@@ -62,7 +62,7 @@ export function HomePage() {
           aria-hidden="true"
         />
         <div
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(56,139,253,0.12)_0%,_transparent_65%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_color-mix(in_srgb,var(--color-primary)_12%,transparent)_0%,_transparent_65%)]"
           aria-hidden="true"
         />
         <Container className="relative z-10 flex w-full flex-col items-center py-12 text-center sm:py-16 lg:py-20">

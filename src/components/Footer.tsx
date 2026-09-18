@@ -67,7 +67,7 @@ export function Footer() {
           </a>
         </div>
         {socialLinks && socialLinks.length > 0 ? (
-          <div className="mt-4 flex items-center gap-3 text-sm">
+          <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
             <span className="text-text-muted">{t('footer.followUs')}:</span>
             {socialLinks.map((link) => {
               const Icon = PLATFORM_ICONS[link.platform]

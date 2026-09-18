@@ -196,4 +196,33 @@ describe('AgendaSection', () => {
       screen.queryByRole('heading', { level: 2, name: 'Charla demo' }),
     ).not.toBeInTheDocument()
   })
+
+  it('restores focus to the activating card when the dialog closes', async () => {
+    await i18n.changeLanguage('es')
+
+    mockedGetSessions.mockReturnValue([talkSession])
+    mockedGetSpeakers.mockReturnValue([])
+
+    renderSection()
+
+    const opener = screen.getByRole('button', {
+      name: i18n.t('agenda.sessionAriaLabel', {
+        title: 'Charla demo',
+        room: i18n.t('agenda.roomsShort.sala-1'),
+      }),
+    })
+    opener.focus()
+    fireEvent.click(opener)
+
+    fireEvent.click(
+      screen.getByRole('button', {
+        name: i18n.t('agenda.detail.closeAriaLabel'),
+      }),
+    )
+
+    expect(
+      screen.queryByRole('heading', { level: 2, name: 'Charla demo' }),
+    ).not.toBeInTheDocument()
+    expect(opener).toHaveFocus()
+  })
 })

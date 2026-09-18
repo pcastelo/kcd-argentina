@@ -10,7 +10,10 @@
     "ogSiteName": "KCD Argentina 2026"
   },
   "common": {
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "That route does not exist. Agenda, speakers, and the rest of the site live on the home page as sections (#agenda, #speakers, …).",
+    "notFoundHome": "Back to home"
   },
   "a11y": {
     "skipToContent": "Skip to content"

@@ -41,9 +41,11 @@ npm run validate:data  # Zod validation for src/data/*.json
 - **Trigger:** merge to `main` runs the Deploy workflow and publishes `dist/`.
 - **SPA routing:** deploy copies `index.html` to `404.html` for client-side routes.
 
-## Pre-launch search blocking
+## Search indexing
 
-`public/robots.txt` (`Disallow: /`) and a `noindex` meta tag in `index.html` discourage search indexing while the site is under construction. Remove both in issue [#14](https://github.com/pcastelo/kcd-argentina/issues/14) (`seo-metadata`) before public launch.
+The live site allows crawlers: `public/robots.txt` uses `Allow: /` and points to `https://kcdargentina.ar/sitemap.xml`. Locale pages set titles, descriptions, and Open Graph tags via `react-helmet-async` (issue [#14](https://github.com/pcastelo/kcd-argentina/issues/14)).
+
+**Note:** GitHub Pages still returns HTTP 404 for deep SPA paths (e.g. `/es`) while serving `404.html` so the app loads. That soft-404 is a known Pages limitation; consider a Cloudflare response override if search indexing of `/es` and `/en` needs a true 200.
 
 ## Stack
 

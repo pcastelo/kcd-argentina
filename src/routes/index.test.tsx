@@ -8,6 +8,7 @@ import i18n from '@/lib/i18n'
 import { HomePage } from '@/pages/HomePage'
 import { HashRedirectPage } from '@/pages/HashRedirectPage'
 import { LocationPage } from '@/pages/LocationPage'
+import { NotFoundPage } from '@/pages/NotFoundPage'
 
 describe('locale routes', () => {
   it('redirects root to /es', async () => {
@@ -224,6 +225,44 @@ describe('locale routes', () => {
     await waitFor(() => {
       expect(router.state.location.pathname).toBe('/es')
       expect(router.state.location.hash).toBe('#conduct')
+    })
+  })
+
+  it('renders branded not-found for unknown locale paths like /es/agenda', async () => {
+    await i18n.changeLanguage('es')
+
+    const router = createMemoryRouter(
+      [
+        {
+          element: <RootLayout />,
+          children: [
+            {
+              path: ':locale',
+              element: <LocaleLayout />,
+              children: [
+                { index: true, element: <HomePage /> },
+                { path: '*', element: <NotFoundPage /> },
+              ],
+            },
+          ],
+        },
+      ],
+      { initialEntries: ['/es/agenda'] },
+    )
+
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('heading', { name: i18n.t('common.notFoundTitle') }),
+      ).toBeInTheDocument()
+      expect(
+        screen.getByRole('link', { name: i18n.t('common.notFoundHome') }),
+      ).toHaveAttribute('href', '/es')
     })
   })
 })
