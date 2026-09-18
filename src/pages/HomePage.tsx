@@ -1,11 +1,14 @@
 import { useTranslation } from 'react-i18next'
+import { useLocation } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Countdown } from '@/components/Countdown'
+import { SEOHead } from '@/components/SEOHead'
+import { useLocale } from '@/hooks/useLocale'
 import { brandAssets } from '@/lib/brand'
 import { getEvent } from '@/lib/event'
 import { formatEventDate, formatEventTimeRange } from '@/lib/formatEventDate'
-import { localePath, type Locale } from '@/lib/locale'
+import { localePath } from '@/lib/locale'
 import { CodeOfConductSection } from '@/sections/CodeOfConductSection'
 import { AgendaSection } from '@/sections/AgendaSection'
 import { LocationSection } from '@/sections/LocationSection'
@@ -14,10 +17,12 @@ import { SpeakersSection } from '@/sections/SpeakersSection'
 import { SponsorsSection } from '@/sections/SponsorsSection'
 
 export function HomePage() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
+  const { hash } = useLocation()
+  const locale = useLocale()
   const event = getEvent()
-  const localeTag = i18n.language === 'en' ? 'en-US' : 'es-AR'
-  const locale: Locale = i18n.language === 'en' ? 'en' : 'es'
+  const localeTag = locale === 'en' ? 'en-US' : 'es-AR'
+  const isLocationSection = hash === '#local'
   const eventDate = formatEventDate(event.dateStart, event.timezone, localeTag)
   const eventHours = formatEventTimeRange(
     event.dateStart,
@@ -35,6 +40,14 @@ export function HomePage() {
 
   return (
     <>
+      <SEOHead
+        titleKey={isLocationSection ? 'seo.locationTitle' : 'seo.homeTitle'}
+        descriptionKey={
+          isLocationSection ? 'seo.locationDescription' : 'seo.homeDescription'
+        }
+        path={isLocationSection ? `/${locale}/location` : `/${locale}`}
+        locale={locale}
+      />
       <section
         id="home"
         className="relative flex min-h-[calc(100dvh-4.5rem)] scroll-mt-8 items-center overflow-hidden bg-bg"

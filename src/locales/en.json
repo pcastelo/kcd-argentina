@@ -2,6 +2,13 @@
   "app": {
     "name": "KCD Argentina 2026"
   },
+  "seo": {
+    "homeTitle": "KCD Argentina 2026 — Kubernetes Community Days Buenos Aires",
+    "homeDescription": "Kubernetes Community Days Argentina — October 3, 2026 at Plaza Galicia, Buenos Aires. Talks, workshops and keynotes on Cloud Native.",
+    "locationTitle": "Location | KCD Argentina 2026",
+    "locationDescription": "How to get to KCD Argentina 2026 at Plaza Galicia, Chacarita, Buenos Aires.",
+    "ogSiteName": "KCD Argentina 2026"
+  },
   "common": {
     "comingSoon": "Coming soon"
   },

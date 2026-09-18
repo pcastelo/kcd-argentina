@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from '@testing-library/react'
+import { HelmetProvider } from 'react-helmet-async'
 import { createMemoryRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
 import { LocaleLayout } from '@/layouts/LocaleLayout'
@@ -33,7 +34,11 @@ describe('locale routes', () => {
       { initialEntries: ['/'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(router.state.location.pathname).toBe('/es')
@@ -63,7 +68,11 @@ describe('locale routes', () => {
       { initialEntries: ['/es'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(
@@ -94,7 +103,11 @@ describe('locale routes', () => {
       { initialEntries: ['/en'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(
@@ -132,7 +145,11 @@ describe('locale routes', () => {
       { initialEntries: ['/es/location'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(router.state.location.pathname).toBe('/es')
@@ -163,7 +180,11 @@ describe('locale routes', () => {
       { initialEntries: ['/es/organizers'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(router.state.location.pathname).toBe('/es')
@@ -194,7 +215,11 @@ describe('locale routes', () => {
       { initialEntries: ['/es/code-of-conduct'] },
     )
 
-    render(<RouterProvider router={router} />)
+    render(
+      <HelmetProvider>
+        <RouterProvider router={router} />
+      </HelmetProvider>,
+    )
 
     await waitFor(() => {
       expect(router.state.location.pathname).toBe('/es')
