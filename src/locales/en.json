@@ -17,6 +17,8 @@
     "tagline": "Growing Cloud Native Together",
     "contact": "Contact",
     "social": "Social",
+    "followUs": "Follow us",
+    "socialAriaLabel": "Follow us on {{platform}} (opens in new tab)",
     "cncf": "CNCF Supported Event",
     "organizers": "Organizers",
     "conduct": "Code of Conduct",

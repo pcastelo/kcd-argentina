@@ -41,4 +41,37 @@ describe('eventSchema', () => {
     })
     expect(result.success).toBe(true)
   })
+
+  it('accepts valid socialLinks', () => {
+    const result = eventSchema.safeParse({
+      ...eventData,
+      socialLinks: [
+        { platform: 'instagram', url: 'https://www.instagram.com/kcd.argentina/' },
+        { platform: 'linkedin', url: 'https://www.linkedin.com/company/cncf-buenos-aires/' },
+      ],
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts missing socialLinks (optional)', () => {
+    const { socialLinks: _removed, ...withoutSocial } = eventData as Record<string, unknown>
+    const result = eventSchema.safeParse(withoutSocial)
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects invalid platform in socialLinks', () => {
+    const result = eventSchema.safeParse({
+      ...eventData,
+      socialLinks: [{ platform: 'tiktok', url: 'https://tiktok.com/@kcd' }],
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects invalid URL in socialLinks', () => {
+    const result = eventSchema.safeParse({
+      ...eventData,
+      socialLinks: [{ platform: 'instagram', url: 'not-a-url' }],
+    })
+    expect(result.success).toBe(false)
+  })
 })
