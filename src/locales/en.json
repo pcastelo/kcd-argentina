@@ -101,6 +101,13 @@
       "sala-1": "Main Room",
       "sala-2": "Room 2",
       "sala-3": "Workshops"
+    },
+    "detail": {
+      "close": "Close",
+      "closeAriaLabel": "Close session detail",
+      "noAbstract": "Details coming soon",
+      "speakersHeading": "Speakers",
+      "viewProfile": "View {{name}}'s profile"
     }
   },
   "speakers": {

@@ -101,6 +101,13 @@
       "sala-1": "Sala Principal",
       "sala-2": "Sala 2",
       "sala-3": "Workshops"
+    },
+    "detail": {
+      "close": "Cerrar",
+      "closeAriaLabel": "Cerrar detalle de sesión",
+      "noAbstract": "Detalle próximamente",
+      "speakersHeading": "Speakers",
+      "viewProfile": "Ver perfil de {{name}}"
     }
   },
   "speakers": {

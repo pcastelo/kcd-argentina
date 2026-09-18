@@ -30,6 +30,10 @@ export type AgendaDisplaySession = Session & {
   isWorkshopContinuation?: boolean
 }
 
+export function isSessionDetailEligible(type: SessionType): boolean {
+  return type === 'talk' || type === 'workshop' || type === 'keynote'
+}
+
 export type AgendaTimeSlot = {
   startTime: string
   endTime: string
