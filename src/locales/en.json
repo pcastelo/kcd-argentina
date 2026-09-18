@@ -40,6 +40,7 @@
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
+    "heroPlace": "Buenos Aires • Argentina",
     "heroSubtitle": "The Cloud Native community meets in Buenos Aires",
     "eventMetaLabel": "Event details",
     "ctaTickets": "Get your tickets",

@@ -40,6 +40,7 @@
   "home": {
     "tagline": "Kubernetes Community Days Argentina — {{city}}",
     "venueDate": "{{venue}} | {{date}}",
+    "heroPlace": "Buenos Aires • Argentina",
     "heroSubtitle": "La comunidad Cloud Native se reúne en Buenos Aires",
     "eventMetaLabel": "Detalles del evento",
     "ctaTickets": "Obtené tus entradas",

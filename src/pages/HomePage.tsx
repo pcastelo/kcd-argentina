@@ -69,10 +69,13 @@ export function HomePage() {
           <img
             src={brandAssets.logoDark}
             alt=""
-            className="h-auto w-full max-w-[18rem] sm:max-w-[22rem] md:max-w-[28rem]"
-            width={597}
-            height={283}
+            className="h-auto w-full max-w-[17.25rem] sm:max-w-[21.1rem] md:max-w-[26.9rem]"
+            width={1024}
+            height={329}
           />
+          <p className="mt-5 font-poppins text-sm font-semibold uppercase tracking-[0.22em] text-primary sm:mt-6 sm:text-base">
+            {t('home.heroPlace')}
+          </p>
           <h1 className="sr-only">{event.title}</h1>
           <p className="mt-8 max-w-3xl text-xl font-medium leading-snug text-text sm:mt-10 sm:text-2xl md:text-3xl">
             {t('home.heroSubtitle')}

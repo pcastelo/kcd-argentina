@@ -1,10 +1,10 @@
-/** Brand assets under `public/images/`. Icon SVG: official `KCD 2026.svg` (hexagon, no text). */
+/** Brand assets under `public/images/`. */
 export const brandAssets = {
   logoDark: '/images/kcd-logo-buenos-aires-2026.png',
-  icon: '/images/kcd-icon.svg',
+  icon: '/images/kcd-icon.png',
   iconPng: '/images/kcd-icon.png',
 } as const
 
 export function getBrandIconSrc(): string {
-  return brandAssets.icon
+  return brandAssets.iconPng
 }
