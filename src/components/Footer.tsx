@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { getEvent } from '@/lib/event'
 import { Container } from '@/components/Container'
 import { DEFAULT_LOCALE, isValidLocale, localePath } from '@/lib/locale'
-import { InstagramIcon, LinkedInIcon, LinktreeIcon, MeetupIcon } from '@/components/icons'
+import { CncfIcon, InstagramIcon, LinkedInIcon, LinktreeIcon, MeetupIcon } from '@/components/icons'
 
 const externalLinkClasses =
   'text-primary hover:text-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary rounded-sm'
@@ -19,6 +19,16 @@ const PLATFORM_ICONS: Record<string, ComponentType<SVGProps<SVGSVGElement>>> = {
   instagram: InstagramIcon,
   linkedin: LinkedInIcon,
   meetup: MeetupIcon,
+  cncf: CncfIcon,
+}
+
+const PLATFORM_LABELS: Record<string, string> = {
+  instagram: 'Instagram',
+  linkedin: 'LinkedIn',
+  meetup: 'Meetup',
+  cncf: 'CNCF Community',
+  twitter: 'Twitter',
+  youtube: 'YouTube',
 }
 
 export function Footer() {
@@ -79,7 +89,10 @@ export function Footer() {
                   rel="noopener noreferrer"
                   target="_blank"
                   aria-label={t('footer.socialAriaLabel', {
-                    platform: link.platform.charAt(0).toUpperCase() + link.platform.slice(1),
+                    platform:
+                      PLATFORM_LABELS[link.platform] ??
+                      link.platform.charAt(0).toUpperCase() +
+                        link.platform.slice(1),
                   })}
                 >
                   <Icon className="h-5 w-5" />

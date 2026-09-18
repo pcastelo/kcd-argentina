@@ -14,7 +14,7 @@ export const venueSchema = z.object({
 })
 
 export const socialLinkSchema = z.object({
-  platform: z.enum(['instagram', 'linkedin', 'twitter', 'meetup', 'youtube']),
+  platform: z.enum(['instagram', 'linkedin', 'twitter', 'meetup', 'youtube', 'cncf']),
   url: z.url(),
 })
 

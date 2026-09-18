@@ -19,6 +19,6 @@
   "socialLinks": [
     { "platform": "instagram", "url": "https://www.instagram.com/kcd.argentina/" },
     { "platform": "linkedin", "url": "https://www.linkedin.com/company/cncf-buenos-aires/" },
-    { "platform": "meetup", "url": "https://www.meetup.com/kubernetes-community-argentina/" }
+    { "platform": "cncf", "url": "https://community2.cncf.io/events/details/cncf-kcd-argentina-presents-kcd-argentina-2026/" }
   ]
 }

@@ -29,7 +29,10 @@ const eventWithSocial: Event = {
   socialLinks: [
     { platform: 'instagram', url: 'https://www.instagram.com/kcd.argentina/' },
     { platform: 'linkedin', url: 'https://www.linkedin.com/company/cncf-buenos-aires/' },
-    { platform: 'meetup', url: 'https://www.meetup.com/kubernetes-community-argentina/' },
+    {
+      platform: 'cncf',
+      url: 'https://community2.cncf.io/events/details/cncf-kcd-argentina-presents-kcd-argentina-2026/',
+    },
   ],
 }
 
@@ -98,14 +101,14 @@ describe('Footer', () => {
     )
     expect(linkedinLink).toHaveAttribute('target', '_blank')
 
-    const meetupLink = screen.getByRole('link', {
-      name: /Meetup/i,
+    const cncfLink = screen.getByRole('link', {
+      name: /CNCF Community/i,
     })
-    expect(meetupLink).toHaveAttribute(
+    expect(cncfLink).toHaveAttribute(
       'href',
-      'https://www.meetup.com/kubernetes-community-argentina/',
+      'https://community2.cncf.io/events/details/cncf-kcd-argentina-presents-kcd-argentina-2026/',
     )
-    expect(meetupLink).toHaveAttribute('target', '_blank')
+    expect(cncfLink).toHaveAttribute('target', '_blank')
 
     const linktreeLink = screen.getByRole('link', { name: 'Linktree' })
     expect(linktreeLink).toHaveAttribute(
