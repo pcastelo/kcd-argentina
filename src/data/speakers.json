@@ -56,8 +56,8 @@
     "slug": "enzo-venturi",
     "name": "Enzo Venturi",
     "title": "CNCF Ambassador",
-    "bio": "I am a CNCF Ambassador, organizer of Kubernetes Community Days Lima, and Platform Engineer focused on Kubernetes, Linux, networking, and Go. I help people learn about cloud native technologies through community events, talks, and local initiatives in Peru. In my work, I help teams build secure and automated platforms on Kubernetes, and I enjoy digging into low-level topics such as the Linux kernel, networking, eBPF, observability, and how cloud native systems really work under the hood.",
-    "photo": "https://cdn.sessionize.com/image/3d33-400o400o1-MS2nUpTdHT1HqwumKsqbMb.jpg",
+    "bio": "“Linux, Networking and Go”. Es una forma poco convencional de presentarme, pero bastante cercana a quien soy. Son los dominios que concentran mi interés por entender cómo funcionan los sistemas y qué ocurre por debajo de sus abstracciones. Esa curiosidad también se extiende a la comunidad, donde participo como CNCF Ambassador y organizador de CNCG en Perú, además de haber sido parte de KCD Lima. En el ámbito profesional, trabajo como Platform Engineer.",
+    "photo": "https://cdn.sessionize.com/image/ccfd-400o400o1-BvUcgix3zefddtk88nAiBV.jpg",
     "social": {
       "linkedin": "https://linkedin.com/in/nzv"
     },
