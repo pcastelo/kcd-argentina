@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
@@ -242,6 +242,14 @@ export function AgendaSection() {
   const [roomFilter, setRoomFilter] = useState<AgendaRoomFilter>('sala-1')
   const [selectedSession, setSelectedSession] =
     useState<AgendaDisplaySession | null>(null)
+  const dialogActivatorRef = useRef<HTMLElement | null>(null)
+
+  function openSessionDetail(session: AgendaDisplaySession) {
+    const active = document.activeElement
+    dialogActivatorRef.current =
+      active instanceof HTMLElement ? active : null
+    setSelectedSession(session)
+  }
 
   const timeline = useMemo(() => getAgendaTimelineSessions(sessions), [sessions])
   const counts = useMemo(() => countTimelineByRoom(timeline), [timeline])
@@ -323,7 +331,7 @@ export function AgendaSection() {
               showRoom={roomFilter === 'all' && session.room !== 'plenario'}
               onSelect={
                 isSessionDetailEligible(session.type)
-                  ? setSelectedSession
+                  ? openSessionDetail
                   : undefined
               }
             />
@@ -343,6 +351,7 @@ export function AgendaSection() {
             typeLabel={t(`agenda.types.${selectedSession.type}`)}
             timezone={event.timezone}
             locale={locale}
+            returnFocusTo={dialogActivatorRef.current}
             onClose={() => setSelectedSession(null)}
           />
         ) : null}

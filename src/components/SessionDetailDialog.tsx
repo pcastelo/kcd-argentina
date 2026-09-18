@@ -20,6 +20,8 @@ export type SessionDetailDialogProps = {
   timezone: string
   locale: string
   onClose: () => void
+  /** Element that opened the dialog; focused after close (incl. jsdom). */
+  returnFocusTo?: HTMLElement | null
 }
 
 export function SessionDetailDialog({
@@ -31,9 +33,11 @@ export function SessionDetailDialog({
   timezone,
   locale,
   onClose,
+  returnFocusTo,
 }: SessionDetailDialogProps) {
   const { t } = useTranslation()
   const dialogRef = useRef<HTMLDialogElement>(null)
+  const closedRef = useRef(false)
   const titleId = useId()
   const duration = getSessionDurationMinutes(session)
   const timeRange = formatAgendaTimeRange(
@@ -52,6 +56,7 @@ export function SessionDetailDialog({
     }
 
     if (open) {
+      closedRef.current = false
       if (!dialog.open) {
         dialog.showModal()
       }
@@ -60,15 +65,33 @@ export function SessionDetailDialog({
     }
   }, [open])
 
+  function handleDialogClose() {
+    if (closedRef.current) {
+      return
+    }
+    closedRef.current = true
+    returnFocusTo?.focus()
+    onClose()
+  }
+
+  function requestClose() {
+    const dialog = dialogRef.current
+    if (dialog?.open) {
+      dialog.close()
+    }
+    // jsdom may omit the `close` event — always finish the close path.
+    handleDialogClose()
+  }
+
   return (
     <dialog
       ref={dialogRef}
       aria-labelledby={titleId}
       className="fixed inset-0 m-auto max-h-[min(90vh,42rem)] w-[min(100%-1rem,48rem)] overflow-hidden rounded-xl border border-[#1c1c1c] bg-[#1e1e1e] p-0 font-mono text-sm text-[#e6edf3] shadow-[0_12px_40px_rgba(0,0,0,0.55)] open:flex open:flex-col backdrop:bg-black/70"
-      onClose={onClose}
+      onClose={handleDialogClose}
       onCancel={(event) => {
         event.preventDefault()
-        onClose()
+        requestClose()
       }}
     >
       <div className="flex shrink-0 items-stretch border-b border-[#0f0f0f] bg-[#242424]">
@@ -101,7 +124,7 @@ export function SessionDetailDialog({
           </span>
           <button
             type="button"
-            onClick={onClose}
+            onClick={requestClose}
             aria-label={t('agenda.detail.closeAriaLabel')}
             className="flex h-8 w-8 items-center justify-center rounded-md text-[#c0bfbc] hover:bg-[#c01c28] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#51a2da]"
           >

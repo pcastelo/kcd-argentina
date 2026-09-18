@@ -8,7 +8,8 @@ type ButtonVariant = 'primary' | 'ghost'
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary: 'bg-primary text-white hover:bg-primary/90',
-  ghost: 'bg-transparent border border-border text-text hover:bg-surface',
+  ghost:
+    'bg-transparent border border-text-muted/55 text-text hover:border-text-muted hover:bg-surface/80',
 }
 
 const baseClasses =
