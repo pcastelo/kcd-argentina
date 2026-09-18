@@ -5,14 +5,13 @@ import { buildSitemap } from './generate-sitemap.mjs'
 import site from '../src/data/site.json'
 
 describe('generate-sitemap', () => {
-  it('lists home and location locales with hreflang alternates', () => {
+  it('lists locale home URLs with hreflang alternates (no hash-section paths)', () => {
     const xml = buildSitemap()
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8"?>')
     expect(xml).toContain(`${site.origin}/es`)
     expect(xml).toContain(`${site.origin}/en`)
-    expect(xml).toContain(`${site.origin}/es/location`)
-    expect(xml).toContain(`${site.origin}/en/location`)
+    expect(xml).not.toContain('/location')
     expect(xml).toContain('hreflang="es-AR"')
     expect(xml).toContain('hreflang="en-US"')
     expect(xml).toContain('hreflang="x-default"')
