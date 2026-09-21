@@ -66,20 +66,6 @@
     ]
   },
   {
-    "slug": "etienne-bernard",
-    "name": "Etienne Bernard",
-    "title": "Co-founder & CEO of NuMind (YC S22), building specialized LLMs for document extraction.",
-    "bio": "Etienne Bernard is the Co-founder and CEO of NuMind, a YC  company building specialized language models for reliable information extraction from complex documents. NuMind develops document extraction models capable of extracting structured data and content from messy, complex documents. Etienne holds a PhD in Physics from ENS and MIT, previously led the Machine Learning group at Wolfram Research, and authored Introduction to Machine Learning. His research has received over 1,000 citations on Google Scholar.\n\nHe has spoken at 100+ events, including ML Prague, DevTalks Romania (as a keynote speaker), SXSW, Adopt AI, OSDC Boston, WeAreDevelopers Berlin, and NYC Enterprise AI. He has also been a guest lecturer several times at Harvard and MIT. His current work focuses on specialized Small Language Models that help enterprises achieve more accurate, private, and cost-efficient document AI than general-purpose LLMs.",
-    "photo": "https://cdn.sessionize.com/image/56e5-400o400o1-sdh3RPGmKJau82qVFEbkdN.png",
-    "social": {
-      "linkedin": "https://www.linkedin.com/in/etiennebcp/",
-      "twitter": "https://x.com/etiennebcp"
-    },
-    "sessionSlugs": [
-      "enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac"
-    ]
-  },
-  {
     "slug": "federico-bongiovanni",
     "name": "Federico Bongiovanni",
     "title": "Senior Engineering Manager, GKE, Google Cloud",

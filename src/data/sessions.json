@@ -263,25 +263,6 @@
     "track": "Platform Engineer"
   },
   {
-    "id": "2026-10-03-1415-sala-2-enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac",
-    "slug": "enterprise-document-extraction-in-production-how-and-why-axa-integrated-nuextrac",
-    "title": "Enterprise Document Extraction in Production: How and Why AXA Integrated NuExtract.",
-    "speakerSlugs": [
-      "etienne-bernard"
-    ],
-    "room": "sala-2",
-    "startTime": "2026-10-03T14:15:00-03:00",
-    "endTime": "2026-10-03T14:45:00-03:00",
-    "durationMinutes": 30,
-    "type": "talk",
-    "language": "en",
-    "speakerNames": [
-      "Etienne Bernard"
-    ],
-    "abstract": "Enterprises with high document volumes want to automate workflows, but fast and  accurate information extraction remains difficult at scale. General-purpose LLMs are powerful, but they are expensive, hard to deploy privately, and unreliable when organizations need clean, structured outputs from complex documents.\n\nIn this session, Etienne will share what Numind built, how Numind built it, and why AXA chose this path. The session will cover the  challenges of extracting structured information from enterprise documents, and how specialized small language models can provide a more accurate, efficient, and private alternative to general-purpose models.\n\nYou will learn how NuExtract3, a 4B open-source multimodal SLM, supports document-to-JSON extraction, OCR to Markdown, and enterprise-ready information extraction workflows. Etienne will discuss the architecture, implementation choices, lessons learned from the production deployment at AXA, and the business reasons for adopting specialized AI for document intelligence.\n\nThe session will be especially relevant for developers, AI leaders, and decision makers in insurance, banking, finance, and healthcare who are evaluating how to move document AI from prototype to production. By the end, you will understand how specialized SLMs can reduce cost, improve privacy, and make information extraction more reliable for high-stakes enterprise workflows.",
-    "track": "AI/GenAI/ML"
-  },
-  {
     "id": "2026-10-03-1445-sala-1-innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
     "slug": "innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
     "title": "InnerSource in the AI Era: Scaling Innovation with Open Source Culture",
