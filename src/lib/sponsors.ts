@@ -30,13 +30,13 @@ export const SPONSOR_TIER_LAYOUT: Record<SponsorTier, SponsorTierLayout> = {
     listClassName: 'flex flex-wrap items-center justify-center gap-8',
   },
   platinum: {
-    logoClassName: 'max-h-14 w-auto max-w-[12rem] sm:max-h-16 sm:max-w-[14rem]',
-    cardClassName: 'min-h-24 min-w-[12rem] px-6 py-5',
+    logoClassName: 'max-h-14 w-auto max-w-full sm:max-h-16',
+    cardClassName: 'h-24 w-[12.5rem] px-6 py-5 sm:w-[14rem]',
     listClassName: 'flex flex-wrap items-center justify-center gap-6',
   },
   gold: {
-    logoClassName: 'max-h-12 w-auto max-w-[11rem] sm:max-h-14 sm:max-w-[12rem]',
-    cardClassName: 'min-h-20 min-w-[11rem] px-5 py-4',
+    logoClassName: 'max-h-12 w-auto max-w-full sm:max-h-14',
+    cardClassName: 'h-20 w-[11.5rem] px-5 py-4 sm:w-[12.5rem]',
     listClassName: 'flex flex-wrap items-center justify-center gap-5',
   },
   light: {
@@ -50,8 +50,8 @@ export const SPONSOR_TIER_LAYOUT: Record<SponsorTier, SponsorTierLayout> = {
     listClassName: 'flex flex-wrap items-center justify-center gap-5',
   },
   community: {
-    logoClassName: 'max-h-11 w-auto max-w-[11rem] sm:max-h-12 sm:max-w-[13rem]',
-    cardClassName: 'min-h-[4.5rem] min-w-[10rem] px-3 py-2',
+    logoClassName: 'max-h-11 w-auto max-w-full sm:max-h-12',
+    cardClassName: 'h-[4.5rem] w-[10rem] px-3 py-2 sm:w-[11rem]',
     listClassName: 'flex flex-wrap items-center justify-center gap-4',
   },
   venue: {
