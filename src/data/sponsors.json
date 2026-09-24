@@ -40,6 +40,22 @@
     "order": 2
   },
   {
+    "slug": "coroot",
+    "name": "Coroot",
+    "tier": "gold",
+    "logo": "/sponsors/coroot.png",
+    "url": "https://coroot.com/",
+    "order": 3
+  },
+  {
+    "slug": "finnegans",
+    "name": "Finnegans",
+    "tier": "gold",
+    "logo": "/sponsors/finnegans.svg",
+    "url": "https://finneg.com/es",
+    "order": 4
+  },
+  {
     "slug": "aws-sbg-undav",
     "name": "AWS Student Builder Group UNDAV",
     "tier": "community",
