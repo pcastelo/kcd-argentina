@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - main
+  # GITHUB_TOKEN pushes from Sync Sessionize do not trigger push events.
+  # workflow_run runs in a new workflow after sync finishes so Pages deploys
+  # from the updated main tip (not the pre-sync SHA).
+  workflow_run:
+    workflows:
+      - Sync Sessionize
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -16,10 +24,17 @@ concurrency:
 
 jobs:
   build:
+    if: >
+      github.event_name == 'push' ||
+      github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # workflow_run's default SHA is the sync workflow head (pre-push).
+          # Always build the current main tip after Sessionize sync.
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
