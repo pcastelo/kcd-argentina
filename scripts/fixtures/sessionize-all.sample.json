@@ -23,6 +23,11 @@
           "id": 482496,
           "name": "Panel",
           "sort": 4
+        },
+        {
+          "id": 513183,
+          "name": "Keynote",
+          "sort": 5
         }
       ],
       "sort": 0,

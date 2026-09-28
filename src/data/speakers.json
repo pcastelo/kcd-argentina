@@ -186,7 +186,9 @@
   {
     "slug": "marcos-lilljedahl",
     "name": "Marcos Lilljedahl",
-    "photo": "https://cdn.sessionize.com/image/47ed-400o400o1-aUffhuA9tVMTSJ1UN1hajw.jpg",
+    "title": "Software Engineer @ Dagger",
+    "bio": "Dad, Docker Captain, OSS lover, helmsman and wine drinker. \n\nFather of a joyful kid and wannabe surfer. I like listening to jazz music and tinker with some fun projects when possible.\nAvid open source contributor.",
+    "photo": "https://cdn.sessionize.com/image/dc15-400o400o1-GxdWRRxoRtkueAUz7vGQjm.jpg",
     "sessionSlugs": [
       "after-throughput-staying-relevant-in-the-software-factory-era"
     ]

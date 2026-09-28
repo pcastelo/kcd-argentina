@@ -130,7 +130,12 @@ export function mapSessionType(session, categoryMap, room) {
   }
 
   const format = getCategoryValue(categoryMap, session, 'Session format')
-  if (fold(format) === 'workshop' || room === 'sala-3') {
+  const formatFolded = fold(format)
+
+  if (formatFolded === 'keynote') {
+    return 'keynote'
+  }
+  if (formatFolded === 'workshop' || room === 'sala-3') {
     return 'workshop'
   }
 
