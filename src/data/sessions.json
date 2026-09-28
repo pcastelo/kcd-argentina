@@ -173,6 +173,25 @@
     "track": "AI/GenAI/ML"
   },
   {
+    "id": "2026-10-03-1230-sala-3-one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
+    "slug": "one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
+    "title": "One Playbook, Many Maturities Standardizing SRE Across Client Environments That Started From Scratch",
+    "speakerSlugs": [
+      "vaideesh-jeyakumar-thirukumara"
+    ],
+    "room": "sala-3",
+    "startTime": "2026-10-03T12:30:00-03:00",
+    "endTime": "2026-10-03T12:40:00-03:00",
+    "durationMinutes": 10,
+    "type": "workshop",
+    "language": "en",
+    "speakerNames": [
+      "Vaideesh Jeyakumar Thirukumara"
+    ],
+    "abstract": "When you're responsible for SRE across multiple client environments on OpenShift, you rarely get a blank slate every team arrives with different tooling, different incident habits, and a different idea of what \"reliable\" even means. In this talk, I'll share how we built a common SRE foundation SLOs, incident response, on call rotation, and observability practices across environments ranging from almost no monitoring to fairly mature setups. The hardest part wasn't the technical design it was getting teams with very different maturity levels to actually adopt shared practices without feeling like a rigid mandate was being imposed on them. I'll walk through what we standardized, what we deliberately left flexible, and how we built buy-in across teams that didn't report to each other. If you're trying to bring SRE discipline into a multi-team or multi-client setup, this talk is for you.",
+    "track": "Operaciones+Rendimiento"
+  },
+  {
     "id": "2026-10-03-1300-plenario-almuerzo",
     "slug": "almuerzo",
     "title": "Almuerzo",
@@ -233,8 +252,8 @@
     ],
     "room": "sala-3",
     "startTime": "2026-10-03T13:45:00-03:00",
-    "endTime": "2026-10-03T14:45:00-03:00",
-    "durationMinutes": 60,
+    "endTime": "2026-10-03T15:15:00-03:00",
+    "durationMinutes": 90,
     "type": "workshop",
     "language": "es",
     "speakerNames": [
@@ -303,25 +322,6 @@
     ],
     "abstract": "En el ecosistema actual de Kubernetes, gestionar un solo cluster es solo el principio. El verdadero reto surge cuando debemos escalar nuestras aplicaciones a múltiples regiones, nubes o entornos de borde. ¿Cómo mantenemos la coherencia sin volvernos locos?\nEn esta sesión, desglosaremos las dos arquitecturas predominantes para despliegues multicluster con Argo CD: los modelos Push y Pull. Analizaremos en profundidad:\n\nArquitectura Centralizada (Push): Cómo un único \"Hub\" de Argo CD puede orquestar despliegues en clusters remotos y cuáles son sus límites de escalabilidad y seguridad.\n\nArquitectura Distribuida (Pull): El enfoque de \"instala y olvida\", donde cada cluster es autónomo, mejorando la resiliencia pero desafiando la visibilidad centralizada.\n\nA través de casos de uso prácticos, compararemos latencias, gestión de permisos (RBAC) y la complejidad operativa de cada modelo. No se trata de cuál es mejor, sino de cuál es el adecuado para tu infraestructura",
     "track": "Platform Engineer"
-  },
-  {
-    "id": "2026-10-03-1445-sala-3-one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
-    "slug": "one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
-    "title": "One Playbook, Many Maturities Standardizing SRE Across Client Environments That Started From Scratch",
-    "speakerSlugs": [
-      "vaideesh-jeyakumar-thirukumara"
-    ],
-    "room": "sala-3",
-    "startTime": "2026-10-03T14:45:00-03:00",
-    "endTime": "2026-10-03T14:55:00-03:00",
-    "durationMinutes": 10,
-    "type": "workshop",
-    "language": "en",
-    "speakerNames": [
-      "Vaideesh Jeyakumar Thirukumara"
-    ],
-    "abstract": "When you're responsible for SRE across multiple client environments on OpenShift, you rarely get a blank slate every team arrives with different tooling, different incident habits, and a different idea of what \"reliable\" even means. In this talk, I'll share how we built a common SRE foundation SLOs, incident response, on call rotation, and observability practices across environments ranging from almost no monitoring to fairly mature setups. The hardest part wasn't the technical design it was getting teams with very different maturity levels to actually adopt shared practices without feeling like a rigid mandate was being imposed on them. I'll walk through what we standardized, what we deliberately left flexible, and how we built buy-in across teams that didn't report to each other. If you're trying to bring SRE discipline into a multi-team or multi-client setup, this talk is for you.",
-    "track": "Operaciones+Rendimiento"
   },
   {
     "id": "2026-10-03-1515-plenario-coffee-break",
@@ -393,15 +393,21 @@
     "track": "Cloud Native Experience"
   },
   {
-    "id": "2026-10-03-1700-plenario-keynote-de-cierre",
-    "slug": "keynote-de-cierre",
-    "title": "Keynote de Cierre",
-    "speakerSlugs": [],
-    "room": "plenario",
-    "startTime": "2026-10-03T17:00:00-03:00",
-    "endTime": "2026-10-03T17:45:00-03:00",
+    "id": "2026-10-03-1645-sala-1-after-throughput-staying-relevant-in-the-software-factory-era",
+    "slug": "after-throughput-staying-relevant-in-the-software-factory-era",
+    "title": "After Throughput: Staying Relevant in the Software Factory Era",
+    "speakerSlugs": [
+      "marcos-lilljedahl"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T16:45:00-03:00",
+    "endTime": "2026-10-03T17:30:00-03:00",
     "durationMinutes": 45,
-    "type": "keynote",
-    "language": "es"
+    "type": "talk",
+    "language": "en",
+    "speakerNames": [
+      "Marcos Lilljedahl"
+    ],
+    "abstract": "“Software factory” is the phrase of 2026: signals in, agents through the SDLC, software out, monitoring back into the loop. Elite teams are absorbing that volume. Median teams are not. The discussion on the ground is no longer “will AI write the code?” It is “who owns review, judgment, and the definition of done when no human will read every line?” We will map what people are actually arguing about,  bottlenecks that moved, quality that has to live in the harness, domain expertise that still gets paid and leave with a reallocation of professional energy: from typing to taste, from diffs to constraints, from features to feedback loops."
   }
 ]
