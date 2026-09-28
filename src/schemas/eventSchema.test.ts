@@ -12,9 +12,10 @@ describe('eventSchema', () => {
     const result = eventSchema.safeParse(eventData)
     expect(result.success).toBe(true)
     if (result.success) {
-      expect(result.data.venue.mapUrl).toBe(
-        'https://www.google.com/maps/place/Plaza+Galicia/@-34.5846,-58.4574,17z',
+      expect(result.data.venue.mapUrl).toContain(
+        '0x95bcb513b5c3e79f:0xdfdbacf6d4e5908b',
       )
+      expect(result.data.venue.mapUrl).toContain('Plaza+Galicia')
       expect(result.data.venue.mapEmbedUrl).toContain('maps.google.com')
       expect(result.data.venue.image).toBe('/images/venue-plaza-galicia.jpg')
     }

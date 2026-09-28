@@ -40,7 +40,7 @@ describe('LocationSection', () => {
       }),
     ).toHaveAttribute(
       'href',
-      'https://www.google.com/maps/place/Plaza+Galicia/@-34.5846,-58.4574,17z',
+      'https://www.google.com/maps/place/Plaza+Galicia/@-34.5902575,-58.4482252,17z/data=!3m1!4b1!4m6!3m5!1s0x95bcb513b5c3e79f:0xdfdbacf6d4e5908b!8m2!3d-34.5902575!4d-58.4482252!16s%2Fg%2F11q419kzdb',
     )
   })
 
