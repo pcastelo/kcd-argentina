@@ -6,6 +6,7 @@ export const sessionTypeSchema = z.enum([
   'reception',
   'keynote',
   'talk',
+  'lightning',
   'workshop',
   'break',
   'lunch',
