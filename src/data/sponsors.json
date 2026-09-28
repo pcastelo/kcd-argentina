@@ -112,6 +112,14 @@
     "order": 6
   },
   {
+    "slug": "aws-security-ug",
+    "name": "AWS Security UG Argentina",
+    "tier": "community",
+    "logo": "/sponsors/aws-security-ug.png",
+    "url": "https://www.meetup.com/aws-security-usergroup-argentina/",
+    "order": 7
+  },
+  {
     "slug": "banco-galicia",
     "name": "Banco Galicia",
     "tier": "venue",
