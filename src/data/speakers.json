@@ -70,7 +70,7 @@
     "bio": "I'm a passionate professional about business, entrepreneurship, technology, continue improving of human and technical skills to me and teams that I worked.\nI'm acquired experience and knowledge in differents roles and practices that I like share and still learning from others. I was fortunate to work in the largest companies in our region and the globe. Argentine Telecom, Globant, Mercadolibre, Amazon Web Services\nMy mainly skill topics are SaaS, Platform engineering, SRE, Dev(Sec)Ops, Agile, Lean and Cloud Architecture.\nI'm a football fan, animal lover, MMA practitioner and father of two beautiful childs.",
     "photo": "https://cdn.sessionize.com/image/7fb7-400o400o1-pCFYK9246RHkU7qMEGrUik.jpg",
     "sessionSlugs": [
-      "ai-security-construyendo-soluciones-en-equipo"
+      "el-copiloto-indiscreto-escape-room-de-seguridad-para-ia-en-kubernetes"
     ]
   },
   {
@@ -289,6 +289,17 @@
     },
     "sessionSlugs": [
       "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura"
+    ]
+  },
+  {
+    "slug": "rodrigo-martin-elissamburu",
+    "name": "Rodrigo Martin Elissamburu",
+    "title": "Leader @AWS UG Security AR",
+    "company": "Cloud Solution Architect @Banco Galicia",
+    "bio": "Aquitecto de soluciones AWS, inquieto por conocer como funcionan las cosas, impulsor de comunidades",
+    "photo": "https://cdn.sessionize.com/image/7bdd-400o400o1-VFWEVY4UufkBbbtjFtf5MS.jpg",
+    "sessionSlugs": [
+      "el-copiloto-indiscreto-escape-room-de-seguridad-para-ia-en-kubernetes"
     ]
   },
   {
