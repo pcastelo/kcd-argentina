@@ -56,6 +56,14 @@
     "order": 4
   },
   {
+    "slug": "nullplatform",
+    "name": "nullplatform",
+    "tier": "gold",
+    "logo": "/sponsors/nullplatform.svg",
+    "url": "https://www.nullplatform.com/",
+    "order": 5
+  },
+  {
     "slug": "aws-sbg-undav",
     "name": "AWS Student Builder Group UNDAV",
     "tier": "community",
