@@ -104,6 +104,14 @@
     "order": 5
   },
   {
+    "slug": "nerdearla",
+    "name": "Nerdearla",
+    "tier": "community",
+    "logo": "/sponsors/nerdearla.webp",
+    "url": "https://nerdearla.com/",
+    "order": 6
+  },
+  {
     "slug": "banco-galicia",
     "name": "Banco Galicia",
     "tier": "venue",
