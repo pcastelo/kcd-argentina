@@ -42,6 +42,20 @@ describe('sessionize-api', () => {
     expect(mapSessionType(keynoteSession, categoryMap, 'sala-1')).toBe('keynote')
   })
 
+  it('maps Lightning talk format even when scheduled in sala-3', () => {
+    const categoryMap = buildCategoryMap(fixture.categories)
+    const lightningSession = {
+      title:
+        'One Playbook, Many Maturities Standardizing SRE Across Client Environments That Started From Scratch',
+      isServiceSession: false,
+      categoryItems: [482493],
+    }
+
+    expect(mapSessionType(lightningSession, categoryMap, 'sala-3')).toBe(
+      'lightning',
+    )
+  })
+
   it('maps content rooms and workshop type', () => {
     const talk = fixture.sessions.find((session) => session.roomId === 85833)
     const workshop = fixture.sessions.find((session) => session.roomId === 85835)

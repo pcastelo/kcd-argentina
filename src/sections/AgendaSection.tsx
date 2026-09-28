@@ -34,6 +34,8 @@ function sessionTypeBadgeClass(type: SessionType): string {
       return 'bg-accent/20 text-accent'
     case 'talk':
       return 'bg-secondary/20 text-secondary'
+    case 'lightning':
+      return 'bg-secondary/15 text-secondary'
     default:
       return 'bg-surface text-text-muted'
   }

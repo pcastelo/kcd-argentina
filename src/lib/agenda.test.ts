@@ -185,8 +185,9 @@ describe('agenda lib', () => {
     }
   })
 
-  it('marks talk, workshop, and keynote as detail-eligible', () => {
+  it('marks talk, lightning, workshop, and keynote as detail-eligible', () => {
     expect(isSessionDetailEligible('talk')).toBe(true)
+    expect(isSessionDetailEligible('lightning')).toBe(true)
     expect(isSessionDetailEligible('workshop')).toBe(true)
     expect(isSessionDetailEligible('keynote')).toBe(true)
   })

@@ -31,7 +31,12 @@ export type AgendaDisplaySession = Session & {
 }
 
 export function isSessionDetailEligible(type: SessionType): boolean {
-  return type === 'talk' || type === 'workshop' || type === 'keynote'
+  return (
+    type === 'talk' ||
+    type === 'lightning' ||
+    type === 'workshop' ||
+    type === 'keynote'
+  )
 }
 
 export type AgendaTimeSlot = {

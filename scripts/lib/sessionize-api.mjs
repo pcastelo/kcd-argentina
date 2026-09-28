@@ -132,10 +132,18 @@ export function mapSessionType(session, categoryMap, room) {
   const format = getCategoryValue(categoryMap, session, 'Session format')
   const formatFolded = fold(format)
 
+  // Session format from Sessionize wins over room heuristics (e.g. a Lightning
+  // talk scheduled in Sala 3 must not become workshop).
   if (formatFolded === 'keynote') {
     return 'keynote'
   }
-  if (formatFolded === 'workshop' || room === 'sala-3') {
+  if (formatFolded === 'lightning talk' || formatFolded === 'lightning') {
+    return 'lightning'
+  }
+  if (formatFolded === 'workshop') {
+    return 'workshop'
+  }
+  if (room === 'sala-3') {
     return 'workshop'
   }
 
