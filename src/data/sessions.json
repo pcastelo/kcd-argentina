@@ -403,7 +403,7 @@
     "startTime": "2026-10-03T16:45:00-03:00",
     "endTime": "2026-10-03T17:30:00-03:00",
     "durationMinutes": 45,
-    "type": "talk",
+    "type": "keynote",
     "language": "en",
     "speakerNames": [
       "Marcos Lilljedahl"

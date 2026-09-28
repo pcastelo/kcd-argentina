@@ -31,6 +31,17 @@ describe('sessionize-api', () => {
     expect(mapServiceSessionType(service.title)).toBe('reception')
   })
 
+  it('maps Session format Keynote to keynote type', () => {
+    const categoryMap = buildCategoryMap(fixture.categories)
+    const keynoteSession = {
+      title: 'After Throughput: Staying Relevant in the Software Factory Era',
+      isServiceSession: false,
+      categoryItems: [513183],
+    }
+
+    expect(mapSessionType(keynoteSession, categoryMap, 'sala-1')).toBe('keynote')
+  })
+
   it('maps content rooms and workshop type', () => {
     const talk = fixture.sessions.find((session) => session.roomId === 85833)
     const workshop = fixture.sessions.find((session) => session.roomId === 85835)
