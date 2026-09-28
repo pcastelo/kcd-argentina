@@ -1,5 +1,16 @@
 [
   {
+    "slug": "agustin-celentano",
+    "name": "Agustin Celentano",
+    "title": "Director of Engineering",
+    "company": "nullplatform",
+    "bio": "For over a decade, I've operated as a results-driven engineering leader who thrives on scaling both teams and technology. My passion is building resilient engineering cultures from the ground up, where I mentor top talent to achieve new levels of autonomy and impact. By championing pragmatic processes and a strong customer focus, I consistently enhance developer productivity to rapidly ship high-impact products that capture market share and drive business growth.",
+    "photo": "https://cdn.sessionize.com/image/829e-400o400o1-4sXnupmHEK58MWj3Jf6LYb.png",
+    "sessionSlugs": [
+      "adp-como-gobernar-miles-de-agentes-y-aumentar-la-productividad-sin-perder-el-con"
+    ]
+  },
+  {
     "slug": "axel-labruna",
     "name": "Axel Labruna",
     "title": "DevSecOps & Cloud Manager - Solution Architect",
@@ -53,6 +64,16 @@
     ]
   },
   {
+    "slug": "eduardo-spotti",
+    "name": "Eduardo Spotti",
+    "title": "Founder & CEO @Crubyt - Ambassador @CNCF @DevOpsInstitute - Leader @KCDArgentina  @AWS UG Security - Author @The Ultimate AI Guide for linux engineers",
+    "bio": "I'm a passionate professional about business, entrepreneurship, technology, continue improving of human and technical skills to me and teams that I worked.\nI'm acquired experience and knowledge in differents roles and practices that I like share and still learning from others. I was fortunate to work in the largest companies in our region and the globe. Argentine Telecom, Globant, Mercadolibre, Amazon Web Services\nMy mainly skill topics are SaaS, Platform engineering, SRE, Dev(Sec)Ops, Agile, Lean and Cloud Architecture.\nI'm a football fan, animal lover, MMA practitioner and father of two beautiful childs.",
+    "photo": "https://cdn.sessionize.com/image/7fb7-400o400o1-pCFYK9246RHkU7qMEGrUik.jpg",
+    "sessionSlugs": [
+      "ai-security-construyendo-soluciones-en-equipo"
+    ]
+  },
+  {
     "slug": "enzo-venturi",
     "name": "Enzo Venturi",
     "title": "CNCF Ambassador",
@@ -63,6 +84,17 @@
     },
     "sessionSlugs": [
       "stop-babysitting-gpus-and-learn-crossplane"
+    ]
+  },
+  {
+    "slug": "esteban-miccio",
+    "name": "Esteban Miccio",
+    "title": "Infrastructure Engineer",
+    "company": "Laravel",
+    "bio": "Esteban Miccio is a Platform Engineer at Laravel, where he helps build and run the infrastructure behind the tools developers use every day. He has been writing software since 2002, and his career has taken him from application development to solution architecture, site reliability, and platform engineering. Before Laravel, he led platform development at Bytewax, a data streaming company, where he built Waxctl, a Go CLI for deploying dataflows across cloud providers and Kubernetes, along with APIs in Rust and Go and custom Kubernetes Operators. He's an AWS Certified Solutions Architect based in Argentina, and he cares about infrastructure as code, observability, and developer experience.",
+    "photo": "https://cdn.sessionize.com/image/0184-400o400o1-7h6AwTcVaymaMx1FvrJGri.png",
+    "sessionSlugs": [
+      "building-a-kubernetes-operator-for-valkey-lessons-from-running-it-in-production"
     ]
   },
   {

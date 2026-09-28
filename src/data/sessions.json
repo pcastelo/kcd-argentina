@@ -24,6 +24,24 @@
     "language": "es"
   },
   {
+    "id": "2026-10-03-1030-sala-1-building-a-kubernetes-operator-for-valkey-lessons-from-running-it-in-production",
+    "slug": "building-a-kubernetes-operator-for-valkey-lessons-from-running-it-in-production",
+    "title": "Building a Kubernetes Operator for Valkey: Lessons from Running It in Production",
+    "speakerSlugs": [
+      "esteban-miccio"
+    ],
+    "room": "sala-1",
+    "startTime": "2026-10-03T10:30:00-03:00",
+    "endTime": "2026-10-03T11:00:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "en",
+    "speakerNames": [
+      "Esteban Miccio"
+    ],
+    "abstract": "Valkey is fast becoming the go-to open-source alternative for caching and session storage — but running it reliably on Kubernetes at scale is a different problem than running it on a single box. In this talk I'll walk through the three ways to deploy Valkey on K8s — manual manifests, Helm charts, and a custom operator — and share why we ultimately built our own operator to manage failover, scaling, and lifecycle automation for Valkey clusters powering caching and sessions at Laravel Cloud.\n\nI'll cover the operator pattern itself (CRDs, controllers, reconciliation loops), the specific challenges Valkey's replication and persistence model created for us, the tradeoffs we hit along the way, and what we'd do differently starting over. Attendees will leave with a practical understanding of when a Helm chart is enough and when you actually need an operator — plus an open invitation to contribute to the Valkey Kubernetes operator project, which is still very much a work in progress."
+  },
+  {
     "id": "2026-10-03-1030-sala-2-control-plane-data-plane-gobernanza-de-ia-al-estilo-cloud-native",
     "slug": "control-plane-data-plane-gobernanza-de-ia-al-estilo-cloud-native",
     "title": "Control Plane, Data Plane: Gobernanza de IA al estilo cloud-native",
@@ -85,6 +103,25 @@
     "track": "App Development"
   },
   {
+    "id": "2026-10-03-1100-sala-3-one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
+    "slug": "one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
+    "title": "One Playbook, Many Maturities Standardizing SRE Across Client Environments That Started From Scratch",
+    "speakerSlugs": [
+      "vaideesh-jeyakumar-thirukumara"
+    ],
+    "room": "sala-3",
+    "startTime": "2026-10-03T11:00:00-03:00",
+    "endTime": "2026-10-03T11:10:00-03:00",
+    "durationMinutes": 10,
+    "type": "workshop",
+    "language": "en",
+    "speakerNames": [
+      "Vaideesh Jeyakumar Thirukumara"
+    ],
+    "abstract": "When you're responsible for SRE across multiple client environments on OpenShift, you rarely get a blank slate every team arrives with different tooling, different incident habits, and a different idea of what \"reliable\" even means. In this talk, I'll share how we built a common SRE foundation SLOs, incident response, on call rotation, and observability practices across environments ranging from almost no monitoring to fairly mature setups. The hardest part wasn't the technical design it was getting teams with very different maturity levels to actually adopt shared practices without feeling like a rigid mandate was being imposed on them. I'll walk through what we standardized, what we deliberately left flexible, and how we built buy-in across teams that didn't report to each other. If you're trying to bring SRE discipline into a multi-team or multi-client setup, this talk is for you.",
+    "track": "Operaciones+Rendimiento"
+  },
+  {
     "id": "2026-10-03-1130-plenario-coffee-break",
     "slug": "coffee-break",
     "title": "Coffee Break",
@@ -135,6 +172,23 @@
     "track": "Cloud Native Experience"
   },
   {
+    "id": "2026-10-03-1200-sala-3-ai-security-construyendo-soluciones-en-equipo",
+    "slug": "ai-security-construyendo-soluciones-en-equipo",
+    "title": "AI Security - Construyendo soluciones en equipo",
+    "speakerSlugs": [
+      "eduardo-spotti"
+    ],
+    "room": "sala-3",
+    "startTime": "2026-10-03T12:00:00-03:00",
+    "endTime": "2026-10-03T13:00:00-03:00",
+    "durationMinutes": 60,
+    "type": "workshop",
+    "language": "es",
+    "speakerNames": [
+      "Eduardo Spotti"
+    ]
+  },
+  {
     "id": "2026-10-03-1230-sala-1-one-does-not-simply-resolve-an-incident",
     "slug": "one-does-not-simply-resolve-an-incident",
     "title": "One Does Not Simply Resolve an Incident",
@@ -171,25 +225,6 @@
     ],
     "abstract": "The AI infrastructure landscape is fragmented. You don't need magic; you need a control plane. This session explores using Crossplane patterns to manage heterogeneous GPU fleets across hyperscalers and neoclouds. Using ModelPlane v0.1 as an early-stage case study, we’ll show how decoupling model intent from cluster realization actually works. Learn to replace bespoke \"vibe-coded\" scripts with rigorous, auditable XRDs. We'll look at the brutal economics of idle GPU costs, cold-start latency math, and why declarative infrastructure is the only sustainable path for AI platform engineering. No vendor hype, just reality.\n\nhttps://modelplane.ai/blog/open-control-plane-for-inference",
     "track": "AI/GenAI/ML"
-  },
-  {
-    "id": "2026-10-03-1230-sala-3-one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
-    "slug": "one-playbook-many-maturities-standardizing-sre-across-client-environments-that-s",
-    "title": "One Playbook, Many Maturities Standardizing SRE Across Client Environments That Started From Scratch",
-    "speakerSlugs": [
-      "vaideesh-jeyakumar-thirukumara"
-    ],
-    "room": "sala-3",
-    "startTime": "2026-10-03T12:30:00-03:00",
-    "endTime": "2026-10-03T12:40:00-03:00",
-    "durationMinutes": 10,
-    "type": "workshop",
-    "language": "en",
-    "speakerNames": [
-      "Vaideesh Jeyakumar Thirukumara"
-    ],
-    "abstract": "When you're responsible for SRE across multiple client environments on OpenShift, you rarely get a blank slate every team arrives with different tooling, different incident habits, and a different idea of what \"reliable\" even means. In this talk, I'll share how we built a common SRE foundation SLOs, incident response, on call rotation, and observability practices across environments ranging from almost no monitoring to fairly mature setups. The hardest part wasn't the technical design it was getting teams with very different maturity levels to actually adopt shared practices without feeling like a rigid mandate was being imposed on them. I'll walk through what we standardized, what we deliberately left flexible, and how we built buy-in across teams that didn't report to each other. If you're trying to bring SRE discipline into a multi-team or multi-client setup, this talk is for you.",
-    "track": "Operaciones+Rendimiento"
   },
   {
     "id": "2026-10-03-1300-plenario-almuerzo",
@@ -336,6 +371,30 @@
     "language": "es"
   },
   {
+    "id": "2026-10-03-1515-plenario-galicia-tbd",
+    "slug": "galicia-tbd",
+    "title": "Galicia TBD",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T15:15:00-03:00",
+    "endTime": "2026-10-03T15:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "transition",
+    "language": "es"
+  },
+  {
+    "id": "2026-10-03-1545-plenario-rh-tbd",
+    "slug": "rh-tbd",
+    "title": "RH TBD",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T15:45:00-03:00",
+    "endTime": "2026-10-03T16:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "transition",
+    "language": "es"
+  },
+  {
     "id": "2026-10-03-1545-sala-2-del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
     "slug": "del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
     "title": "Del Código al Runtime: Seguridad Cloud Native con Checkov, Trivy, Kyverno y Falco",
@@ -391,6 +450,23 @@
     ],
     "abstract": "La gestión de infraestructuras heterogéneas on-premise y en la nube suele generar fricción operativa. Esta charla técnica demuestra cómo unificar el ciclo de vida de los clusters utilizando Cluster API (CAPI) y su proveedor para Proxmox (CAPMOX). Exploraremos casos prácticos de despliegue de clusters de Kubernetes mixtos (con worker nodes de Linux y Windows) para soportar cargas de trabajo diversas de forma nativa. Finalmente, veremos cómo integrar todo el aprovisionamiento y la configuración bajo un modelo GitOps, transformando operaciones manuales complejas en flujos de trabajo declarativos, auditables y escalables que aportan valor directo al negocio.",
     "track": "Cloud Native Experience"
+  },
+  {
+    "id": "2026-10-03-1615-sala-2-adp-como-gobernar-miles-de-agentes-y-aumentar-la-productividad-sin-perder-el-con",
+    "slug": "adp-como-gobernar-miles-de-agentes-y-aumentar-la-productividad-sin-perder-el-con",
+    "title": "ADP: Cómo gobernar miles de agentes y aumentar la productividad sin perder el control",
+    "speakerSlugs": [
+      "agustin-celentano"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T16:15:00-03:00",
+    "endTime": "2026-10-03T16:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "es",
+    "speakerNames": [
+      "Agustin Celentano"
+    ]
   },
   {
     "id": "2026-10-03-1645-sala-1-after-throughput-staying-relevant-in-the-software-factory-era",
