@@ -320,6 +320,18 @@
     "track": "Platform Engineer"
   },
   {
+    "id": "2026-10-03-1415-plenario-galicia-tbd",
+    "slug": "galicia-tbd",
+    "title": "Galicia TBD",
+    "speakerSlugs": [],
+    "room": "plenario",
+    "startTime": "2026-10-03T14:15:00-03:00",
+    "endTime": "2026-10-03T14:45:00-03:00",
+    "durationMinutes": 30,
+    "type": "transition",
+    "language": "es"
+  },
+  {
     "id": "2026-10-03-1445-sala-1-innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
     "slug": "innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
     "title": "InnerSource in the AI Era: Scaling Innovation with Open Source Culture",
@@ -371,18 +383,6 @@
     "endTime": "2026-10-03T15:45:00-03:00",
     "durationMinutes": 30,
     "type": "break",
-    "language": "es"
-  },
-  {
-    "id": "2026-10-03-1515-plenario-galicia-tbd",
-    "slug": "galicia-tbd",
-    "title": "Galicia TBD",
-    "speakerSlugs": [],
-    "room": "plenario",
-    "startTime": "2026-10-03T15:15:00-03:00",
-    "endTime": "2026-10-03T15:45:00-03:00",
-    "durationMinutes": 30,
-    "type": "transition",
     "language": "es"
   },
   {
