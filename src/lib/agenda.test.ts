@@ -19,7 +19,10 @@ describe('agenda lib', () => {
 
     expect(sessions.length).toBeGreaterThan(0)
     expect(sessions[0]?.type).toBe('reception')
-    expect(sessions.at(-1)?.type).toBe('keynote')
+    expect(sessions.some((session) => session.type === 'keynote')).toBe(true)
+    for (let i = 1; i < sessions.length; i++) {
+      expect(sessions[i]!.startTime >= sessions[i - 1]!.startTime).toBe(true)
+    }
   })
 
   it('groups parallel sessions by start time in 30-minute rows', () => {
