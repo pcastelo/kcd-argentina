@@ -150,6 +150,16 @@
     ]
   },
   {
+    "slug": "inti-maria-tidball",
+    "name": "Inti María Tidball",
+    "title": "DevOps Engineer & Tinkerer",
+    "bio": "DevSecOps engineer working with large and mid-size clients at Mikroways. Maker and homelab tinkerer running Proxmox on the side. Contributes to university research in haptics, IoT, and architecture design",
+    "photo": "https://cdn.sessionize.com/image/4218-400o400o1-S4gWk8KLqHh2CP2Jbzvk7n.png",
+    "sessionSlugs": [
+      "ingress-nginx-retires-migrating-a-multi-tenant-saas-to-gateway-api-with-envoy-ga"
+    ]
+  },
+  {
     "slug": "jack-torpoco",
     "name": "Jack Torpoco",
     "title": "Solution Architect IBERIA / CTO TyC IASolutions",
@@ -187,6 +197,16 @@
     },
     "sessionSlugs": [
       "como-platform-engineering-habilita-velocidad-compliance-y-self-service"
+    ]
+  },
+  {
+    "slug": "lucas-di-cunzolo",
+    "name": "Lucas Di Cunzolo",
+    "title": "Technical Leader",
+    "bio": "DevOps Engineer y docente de la UNLP. Mi carrera inició en el laboratorio CeSPI.",
+    "photo": "https://cdn.sessionize.com/image/eb68-400o400o1-STVQPF4HQd5ocHoYfdt2UR.jpg",
+    "sessionSlugs": [
+      "ingress-nginx-retires-migrating-a-multi-tenant-saas-to-gateway-api-with-envoy-ga"
     ]
   },
   {

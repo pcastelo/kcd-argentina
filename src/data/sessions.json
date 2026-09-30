@@ -320,16 +320,25 @@
     "track": "Platform Engineer"
   },
   {
-    "id": "2026-10-03-1415-plenario-galicia-tbd",
-    "slug": "galicia-tbd",
-    "title": "Galicia TBD",
-    "speakerSlugs": [],
-    "room": "plenario",
+    "id": "2026-10-03-1415-sala-2-argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
+    "slug": "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
+    "title": "Argo CD Multicluster: Estrategias Push vs. Pull para escalar tu infraestructura",
+    "speakerSlugs": [
+      "rodrigo-alvarez",
+      "pablo-castelo"
+    ],
+    "room": "sala-2",
     "startTime": "2026-10-03T14:15:00-03:00",
     "endTime": "2026-10-03T14:45:00-03:00",
     "durationMinutes": 30,
-    "type": "transition",
-    "language": "es"
+    "type": "talk",
+    "language": "es",
+    "speakerNames": [
+      "Rodrigo Alvarez",
+      "Pablo Castelo"
+    ],
+    "abstract": "En el ecosistema actual de Kubernetes, gestionar un solo cluster es solo el principio. El verdadero reto surge cuando debemos escalar nuestras aplicaciones a múltiples regiones, nubes o entornos de borde. ¿Cómo mantenemos la coherencia sin volvernos locos?\nEn esta sesión, desglosaremos las dos arquitecturas predominantes para despliegues multicluster con Argo CD: los modelos Push y Pull. Analizaremos en profundidad:\n\nArquitectura Centralizada (Push): Cómo un único \"Hub\" de Argo CD puede orquestar despliegues en clusters remotos y cuáles son sus límites de escalabilidad y seguridad.\n\nArquitectura Distribuida (Pull): El enfoque de \"instala y olvida\", donde cada cluster es autónomo, mejorando la resiliencia pero desafiando la visibilidad centralizada.\n\nA través de casos de uso prácticos, compararemos latencias, gestión de permisos (RBAC) y la complejidad operativa de cada modelo. No se trata de cuál es mejor, sino de cuál es el adecuado para tu infraestructura",
+    "track": "Platform Engineer"
   },
   {
     "id": "2026-10-03-1445-sala-1-innersource-in-the-ai-era-scaling-innovation-with-open-source-culture",
@@ -353,25 +362,16 @@
     "track": "Business"
   },
   {
-    "id": "2026-10-03-1445-sala-2-argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
-    "slug": "argo-cd-multicluster-estrategias-push-vs-pull-para-escalar-tu-infraestructura",
-    "title": "Argo CD Multicluster: Estrategias Push vs. Pull para escalar tu infraestructura",
-    "speakerSlugs": [
-      "rodrigo-alvarez",
-      "pablo-castelo"
-    ],
-    "room": "sala-2",
+    "id": "2026-10-03-1445-plenario-galicia-tbd",
+    "slug": "galicia-tbd",
+    "title": "Galicia TBD",
+    "speakerSlugs": [],
+    "room": "plenario",
     "startTime": "2026-10-03T14:45:00-03:00",
     "endTime": "2026-10-03T15:15:00-03:00",
     "durationMinutes": 30,
-    "type": "talk",
-    "language": "es",
-    "speakerNames": [
-      "Rodrigo Alvarez",
-      "Pablo Castelo"
-    ],
-    "abstract": "En el ecosistema actual de Kubernetes, gestionar un solo cluster es solo el principio. El verdadero reto surge cuando debemos escalar nuestras aplicaciones a múltiples regiones, nubes o entornos de borde. ¿Cómo mantenemos la coherencia sin volvernos locos?\nEn esta sesión, desglosaremos las dos arquitecturas predominantes para despliegues multicluster con Argo CD: los modelos Push y Pull. Analizaremos en profundidad:\n\nArquitectura Centralizada (Push): Cómo un único \"Hub\" de Argo CD puede orquestar despliegues en clusters remotos y cuáles son sus límites de escalabilidad y seguridad.\n\nArquitectura Distribuida (Pull): El enfoque de \"instala y olvida\", donde cada cluster es autónomo, mejorando la resiliencia pero desafiando la visibilidad centralizada.\n\nA través de casos de uso prácticos, compararemos latencias, gestión de permisos (RBAC) y la complejidad operativa de cada modelo. No se trata de cuál es mejor, sino de cuál es el adecuado para tu infraestructura",
-    "track": "Platform Engineer"
+    "type": "transition",
+    "language": "es"
   },
   {
     "id": "2026-10-03-1515-plenario-coffee-break",
@@ -386,25 +386,13 @@
     "language": "es"
   },
   {
-    "id": "2026-10-03-1545-plenario-rh-tbd",
-    "slug": "rh-tbd",
-    "title": "RH TBD",
-    "speakerSlugs": [],
-    "room": "plenario",
-    "startTime": "2026-10-03T15:45:00-03:00",
-    "endTime": "2026-10-03T16:15:00-03:00",
-    "durationMinutes": 30,
-    "type": "transition",
-    "language": "es"
-  },
-  {
-    "id": "2026-10-03-1545-sala-2-del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
+    "id": "2026-10-03-1545-sala-1-del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
     "slug": "del-codigo-al-runtime-seguridad-cloud-native-con-checkov-trivy-kyverno-y-falco",
     "title": "Del Código al Runtime: Seguridad Cloud Native con Checkov, Trivy, Kyverno y Falco",
     "speakerSlugs": [
       "miguel-de-los-santos"
     ],
-    "room": "sala-2",
+    "room": "sala-1",
     "startTime": "2026-10-03T15:45:00-03:00",
     "endTime": "2026-10-03T16:15:00-03:00",
     "durationMinutes": 30,
@@ -415,6 +403,27 @@
     ],
     "abstract": "Security is often treated as a scattered collection of tools, but effective protection requires architectural alignment. In this session, we turn the 4C Model (Cloud, Cluster, Container, Code) into a practical blueprint for securing Kubernetes end-to-end. We will demonstrate how to shift security left with Infrastructure-as-Code scanning using Checkov, analyze container supply-chain risk with Trivy, enforce policy with Kyverno, and detect runtime threats at the syscall level with Falco. By connecting prevention, enforcement, and detection into a cohesive strategy, attendees will leave with a clear, implementable roadmap to secure Kubernetes from CI/CD pipelines to the running kernel.",
     "track": "Security"
+  },
+  {
+    "id": "2026-10-03-1545-sala-2-ingress-nginx-retires-migrating-a-multi-tenant-saas-to-gateway-api-with-envoy-ga",
+    "slug": "ingress-nginx-retires-migrating-a-multi-tenant-saas-to-gateway-api-with-envoy-ga",
+    "title": "ingress-nginx Retires: Migrating a Multi-Tenant SaaS to Gateway API with Envoy Gateway",
+    "speakerSlugs": [
+      "inti-maria-tidball",
+      "lucas-di-cunzolo"
+    ],
+    "room": "sala-2",
+    "startTime": "2026-10-03T15:45:00-03:00",
+    "endTime": "2026-10-03T16:15:00-03:00",
+    "durationMinutes": 30,
+    "type": "talk",
+    "language": "en",
+    "speakerNames": [
+      "Inti María Tidball",
+      "Lucas Di Cunzolo"
+    ],
+    "abstract": "For years, Ingress-NGINX was the standard way we exposed services from our Kubernetes clusters. In March 2026, Kubernetes retired the project. Existing deployments continue to run, but the controller no longer has an official release and maintenance path, which gave us the trigger to rethink our edge architecture.\n\nThis talk tells the story of migrating a multi-tenant education SaaS with hundreds of customer sites, each exposed through one of two URL models: a shared domain such as www.eduhub.com/riverside-academy, or the customer's own riverside-academy.com. We migrated the routing layer to Gateway API with Envoy Gateway while keeping the customer-facing behavior unchanged.\n\nFor the implementation, we chose Envoy Gateway: a CNCF project built around Kubernetes Gateway API and Envoy Proxy, which gave us a strong open-source foundation without replacing our declarative Kubernetes workflow with another proprietary API\n\nGateway API is the modern Kubernetes API for traffic management and the direction we chose for moving beyond Ingress-NGINX. The migration exposed several places where we had become dependent on NGINX-specific configuration. Per-customer routing implemented through server-snippets was replaced with declarative HTTPRoutes. CORS workarounds implemented through Ingress annotations moved to Envoy Gateway's policy model, giving us a centralized way to manage security behavior across customer domains. Not every NGINX-specific configuration had a direct Gateway API equivalent, so part of the work was separating actual routing requirements from controller-specific implementation details.\n\n\nThe migration runs on GitOps with ArgoCD and Helmfile: the same Helm chart, depending on a value, renders either Ingress or Gateway/HTTPRoute. ingress-nginx and Envoy Gateway coexisted in the cluster pre-cutover. \n\nWe ran both controllers side by side: Ingress-NGINX continued to reconcile our existing Ingress resources, while Envoy Gateway reconciled the new Gateway API resources through its GatewayClass\n\nBefore cutover, we built automated comparison tests for redirects, hostname/path matching, CORS behavior, and TLS across representative tenant configurations. \n\nThe final cutover was deliberately boring, where one GitOps change switched every customer domain from the Ingress-based rendering to Gateway API inside a single maintenance window, with rollback through the same Helm value. \n\nCustomer certificates are issued by cert-manager via Let's Encrypt, with automatic renewal and expiration alerting. TLS terminates at Envoy Gateway, with cert-manager managing the certificates, so our AWS load-balancer layer remains an NLB rather than terminating TLS at the edge. Cert-manager's Gateway API support graduated to beta in 1.15, so we were ready to go.\n\nWhat you'll take away: a framework for deciding whether your own Ingress needs this move, and our own learning moments.",
+    "track": "Platform Engineer"
   },
   {
     "id": "2026-10-03-1545-sala-3-ai-writes-code-who-designs-the-architecture",
