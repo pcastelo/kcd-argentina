@@ -469,7 +469,8 @@
     "language": "es",
     "speakerNames": [
       "Agustin Celentano"
-    ]
+    ],
+    "abstract": "AI coding agents are often treated as faster developers, but running them at scale takes architectural governance. In this session, we turn the Agentic Development Platform (ADP) model (Context, Execution, Control) into a practical blueprint for governing thousands of agents. We will show how agents learn your corporate standards, templates and services before they write any code. They request infrastructure from a curated menu and never touch a credential, and they follow policies written in natural language that work as a feedback loop, not a gate. Day 2 detectors then turn security, cost and compliance gaps into action items you can execute. By connecting context, execution and control, attendees will leave with a clear checklist they can apply to take agents from the terminal to mission-critical production."
   },
   {
     "id": "2026-10-03-1645-sala-1-after-throughput-staying-relevant-in-the-software-factory-era",
