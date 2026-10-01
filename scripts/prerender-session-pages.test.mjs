@@ -11,7 +11,7 @@ import {
 describe('pre-rendered permalink pages (build artifact)', () => {
   const distDir = join(process.cwd(), 'dist')
 
-  it('every permalink has a 1200x630 JPEG social card when dist exists', async () => {
+  it('every permalink has a 2400x1260 PNG social card when dist exists', async () => {
     if (!existsSync(join(distDir, 'index.html'))) {
       return
     }
@@ -20,7 +20,7 @@ describe('pre-rendered permalink pages (build artifact)', () => {
       for (const locale of ['es', 'en']) {
         const file = join(distDir, sessionCardPath(locale, session.slug).slice(1))
         const { format, width, height } = await sharp(file).metadata()
-        expect({ format, width, height }).toEqual({ format: 'jpeg', width: 1200, height: 630 })
+        expect({ format, width, height }).toEqual({ format: 'png', width: 2400, height: 1260 })
       }
     }
   })

@@ -11,4 +11,5 @@ export type SessionCardInput = {
 
 export const CARD_WIDTH: number
 export const CARD_HEIGHT: number
+export const RENDER_SCALE: number
 export function renderSessionCard(card: SessionCardInput): Promise<Buffer>

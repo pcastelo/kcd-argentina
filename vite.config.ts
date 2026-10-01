@@ -11,7 +11,7 @@ import { renderSessionHtml } from './scripts/prerender-session-pages.mjs'
 const rootDir = path.dirname(fileURLToPath(import.meta.url))
 
 const SESSION_PERMALINK = /^\/(es|en)\/agenda\/([^/?#]+)\/?(?:[?#].*)?$/
-const SESSION_CARD = /^\/og\/sessions\/(es|en)\/([^/?#]+)\.jpg(?:[?#].*)?$/
+const SESSION_CARD = /^\/og\/sessions\/(es|en)\/([^/?#]+)\.png(?:[?#].*)?$/
 const SESSION_CARD_GALLERY = /^\/og\/sessions\/?(?:[?#].*)?$/
 
 /** Origin the request came in on (localhost, tailnet, …) for absolute dev URLs. */
@@ -71,7 +71,7 @@ function sessionPermalinkDevMeta(): Plugin {
             const { renderSessionCard } = await import(
               './scripts/lib/session-card.mjs'
             )
-            res.setHeader('Content-Type', 'image/jpeg')
+            res.setHeader('Content-Type', 'image/png')
             res.setHeader('Cache-Control', 'no-cache')
             res.end(
               await renderSessionCard(buildSessionCardData(session, locale)),

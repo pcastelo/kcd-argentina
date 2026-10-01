@@ -10,6 +10,7 @@ const require = createRequire(import.meta.url)
 
 export const CARD_WIDTH = 1200
 export const CARD_HEIGHT = 630
+const RENDER_SCALE = 2
 
 const COLORS = {
   bg: '#010409',
@@ -264,5 +265,8 @@ export async function renderSessionCard(card) {
   )
 
   const svg = await satori(tree, { width: CARD_WIDTH, height: CARD_HEIGHT, fonts: assets.fonts })
-  return sharp(Buffer.from(svg)).jpeg({ quality: 84, mozjpeg: true }).toBuffer()
+  return sharp(Buffer.from(svg))
+    .resize(CARD_WIDTH * RENDER_SCALE, CARD_HEIGHT * RENDER_SCALE)
+    .png({ compressionLevel: 9 })
+    .toBuffer()
 }
