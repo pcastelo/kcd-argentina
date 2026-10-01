@@ -50,6 +50,8 @@ export function renderSessionHtml(indexHtml, meta, siteName) {
     ['meta', { property: 'og:url', content: meta.url }],
     ['meta', { property: 'og:image', content: meta.image }],
     ['meta', { property: 'og:image:alt', content: meta.imageAlt }],
+    ['meta', { property: 'og:image:width', content: '2400' }],
+    ['meta', { property: 'og:image:height', content: '1260' }],
     ['meta', { property: 'og:locale', content: ogLocale(meta.locale) }],
     ['meta', { name: 'twitter:card', content: meta.twitterCard }],
     ['meta', { name: 'twitter:title', content: meta.title }],

@@ -54,7 +54,7 @@ export function sessionPermalinkPath(locale: Locale, slug: string): string {
 
 /** Generated 1200x630 social card (scripts/lib/session-card.mjs). */
 export function sessionCardPath(locale: Locale, slug: string): string {
-  return `/og/sessions/${locale}/${slug}.jpg`
+  return `/og/sessions/${locale}/${slug}.png`
 }
 
 /** Sessions that get their own permalink (same set that opens the detail dialog). */

@@ -49,7 +49,7 @@ describe('session permalinks (full app)', () => {
     await waitFor(() => expect(document.title).toBe(expected.title))
     expect(meta('meta[property="og:image"]')).toBe(expected.image)
     expect(expected.image).toBe(
-      `https://kcdargentina.ar/og/sessions/en/${session.slug}.jpg`,
+      `https://kcdargentina.ar/og/sessions/en/${session.slug}.png`,
     )
     expect(meta('meta[property="og:description"]')).toContain('October 3, 2026')
     expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute(
