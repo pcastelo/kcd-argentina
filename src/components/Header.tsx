@@ -17,7 +17,7 @@ const navItems = [
 const focusRingClasses =
   'rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary'
 
-const linkClasses = `text-text-muted hover:text-text ${focusRingClasses}`
+const linkClasses = `font-semibold text-text-muted hover:text-text ${focusRingClasses}`
 
 function isNavItemCurrent(
   hash: string | undefined,
