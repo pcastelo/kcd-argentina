@@ -43,7 +43,7 @@ function ogLocale(locale) {
 export function renderSessionHtml(indexHtml, meta, siteName) {
   const tags = [
     ['meta', { name: 'description', content: meta.description }],
-    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:type', content: 'article' }],
     ['meta', { property: 'og:site_name', content: siteName }],
     ['meta', { property: 'og:title', content: meta.title }],
     ['meta', { property: 'og:description', content: meta.description }],
