@@ -1,4 +1,5 @@
 import sessionsData from '@/data/sessions.json'
+import { isSessionDetailEligible } from '@/lib/sessionMeta'
 import { getSpeakers } from '@/lib/speakers'
 import {
   type Room,
@@ -30,14 +31,7 @@ export type AgendaDisplaySession = Session & {
   isWorkshopContinuation?: boolean
 }
 
-export function isSessionDetailEligible(type: SessionType): boolean {
-  return (
-    type === 'talk' ||
-    type === 'lightning' ||
-    type === 'workshop' ||
-    type === 'keynote'
-  )
-}
+export { isSessionDetailEligible }
 
 export type AgendaTimeSlot = {
   startTime: string

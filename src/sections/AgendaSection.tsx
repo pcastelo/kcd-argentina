@@ -1,11 +1,13 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { Section } from '@/components/Section'
 import { SectionHeader } from '@/components/SectionHeader'
 import { SessionDetailDialog } from '@/components/SessionDetailDialog'
 import { getEvent } from '@/lib/event'
+import { useLocale } from '@/hooks/useLocale'
 import {
   type AgendaDisplaySession,
   type AgendaRoomFilter,
@@ -24,6 +26,8 @@ import {
   formatAgendaClockTime,
   formatAgendaTimeRange,
 } from '@/lib/formatAgendaTime'
+import { absoluteUrl } from '@/lib/seo'
+import { sessionPermalinkPath } from '@/lib/sessionMeta'
 import type { SessionType, Speaker } from '@/schemas/collectionSchemas'
 
 function sessionTypeBadgeClass(type: SessionType): string {
@@ -241,19 +245,44 @@ export function AgendaSection() {
     () => new Map(speakers.map((speaker: Speaker) => [speaker.slug, speaker])),
     [speakers],
   )
+  const routeLocale = useLocale()
+  const navigate = useNavigate()
+  const { sessionSlug } = useParams<{ sessionSlug?: string }>()
   const [roomFilter, setRoomFilter] = useState<AgendaRoomFilter>('sala-1')
-  const [selectedSession, setSelectedSession] =
-    useState<AgendaDisplaySession | null>(null)
   const dialogActivatorRef = useRef<HTMLElement | null>(null)
 
   function openSessionDetail(session: AgendaDisplaySession) {
     const active = document.activeElement
     dialogActivatorRef.current =
       active instanceof HTMLElement ? active : null
-    setSelectedSession(session)
+    navigate(sessionPermalinkPath(routeLocale, session.slug), {
+      preventScrollReset: true,
+    })
+  }
+
+  function closeSessionDetail() {
+    navigate(`/${routeLocale}`, { preventScrollReset: true })
   }
 
   const timeline = useMemo(() => getAgendaTimelineSessions(sessions), [sessions])
+  // Permalinks (/:locale/agenda/:slug) drive which session detail is open.
+  const selectedSession = useMemo(
+    () =>
+      timeline.find(
+        (session) =>
+          session.slug === sessionSlug && isSessionDetailEligible(session.type),
+      ) ?? null,
+    [timeline, sessionSlug],
+  )
+
+  // Landing directly on a permalink: park the page on the agenda behind the dialog.
+  const initialSlugRef = useRef(sessionSlug)
+  useEffect(() => {
+    if (initialSlugRef.current) {
+      document.getElementById('agenda')?.scrollIntoView?.({ block: 'start' })
+    }
+  }, [])
+
   const counts = useMemo(() => countTimelineByRoom(timeline), [timeline])
   const filteredTimeline = useMemo(
     () => filterTimelineByRoom(timeline, roomFilter),
@@ -353,8 +382,11 @@ export function AgendaSection() {
             typeLabel={t(`agenda.types.${selectedSession.type}`)}
             timezone={event.timezone}
             locale={locale}
+            permalink={absoluteUrl(
+              sessionPermalinkPath(routeLocale, selectedSession.slug),
+            )}
             returnFocusTo={dialogActivatorRef.current}
-            onClose={() => setSelectedSession(null)}
+            onClose={closeSessionDetail}
           />
         ) : null}
       </Container>

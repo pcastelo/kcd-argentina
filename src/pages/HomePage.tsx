@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { Countdown } from '@/components/Countdown'
@@ -9,6 +9,7 @@ import { brandAssets } from '@/lib/brand'
 import { getEvent } from '@/lib/event'
 import { formatEventDate, formatEventTimeRange } from '@/lib/formatEventDate'
 import { localePath } from '@/lib/locale'
+import { buildSessionMeta, findPermalinkSession } from '@/lib/sessionMeta'
 import { CodeOfConductSection } from '@/sections/CodeOfConductSection'
 import { AgendaSection } from '@/sections/AgendaSection'
 import { LocationSection } from '@/sections/LocationSection'
@@ -20,7 +21,12 @@ import { SponsorsSection } from '@/sections/SponsorsSection'
 export function HomePage() {
   const { t } = useTranslation()
   const { hash } = useLocation()
+  const { sessionSlug } = useParams<{ sessionSlug?: string }>()
   const locale = useLocale()
+  const permalinkSession = findPermalinkSession(sessionSlug)
+  const sessionMeta = permalinkSession
+    ? buildSessionMeta(permalinkSession, locale)
+    : null
   const event = getEvent()
   const localeTag = locale === 'en' ? 'en-US' : 'es-AR'
   const isLocationSection = hash === '#local'
@@ -41,14 +47,26 @@ export function HomePage() {
 
   return (
     <>
-      <SEOHead
-        titleKey={isLocationSection ? 'seo.locationTitle' : 'seo.homeTitle'}
-        descriptionKey={
-          isLocationSection ? 'seo.locationDescription' : 'seo.homeDescription'
-        }
-        path={isLocationSection ? `/${locale}/location` : `/${locale}`}
-        locale={locale}
-      />
+      {sessionMeta ? (
+        <SEOHead
+          title={sessionMeta.title}
+          description={sessionMeta.description}
+          path={sessionMeta.path}
+          locale={locale}
+          image={sessionMeta.image}
+          imageAlt={sessionMeta.imageAlt}
+          twitterCard={sessionMeta.twitterCard}
+        />
+      ) : (
+        <SEOHead
+          titleKey={isLocationSection ? 'seo.locationTitle' : 'seo.homeTitle'}
+          descriptionKey={
+            isLocationSection ? 'seo.locationDescription' : 'seo.homeDescription'
+          }
+          path={isLocationSection ? `/${locale}/location` : `/${locale}`}
+          locale={locale}
+        />
+      )}
       <section
         id="home"
         className="relative flex min-h-[calc(100dvh-4.5rem)] scroll-mt-8 items-center overflow-hidden bg-bg"
