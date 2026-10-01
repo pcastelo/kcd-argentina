@@ -12,16 +12,22 @@
     "language": "es"
   },
   {
-    "id": "2026-10-03-1000-plenario-keynote-de-apertura",
-    "slug": "keynote-de-apertura",
-    "title": "Keynote de Apertura",
-    "speakerSlugs": [],
-    "room": "plenario",
+    "id": "2026-10-03-1000-sala-1-humanicemos-el-resultado",
+    "slug": "humanicemos-el-resultado",
+    "title": "Humanicemos el resultado",
+    "speakerSlugs": [
+      "eduardo-spotti"
+    ],
+    "room": "sala-1",
     "startTime": "2026-10-03T10:00:00-03:00",
     "endTime": "2026-10-03T10:30:00-03:00",
     "durationMinutes": 30,
     "type": "keynote",
-    "language": "es"
+    "language": "es",
+    "speakerNames": [
+      "Eduardo Spotti"
+    ],
+    "abstract": "Una reflexión de por que necesitamos seguir aprendiendo en épocas de IA y sobre como evolucionamos los profesionales cloud native junto a ella."
   },
   {
     "id": "2026-10-03-1030-sala-1-building-a-kubernetes-operator-for-valkey-lessons-from-running-it-in-production",
