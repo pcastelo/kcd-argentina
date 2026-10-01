@@ -183,7 +183,8 @@
     "title": "El Copiloto Indiscreto: Escape Room de Seguridad para IA en Kubernetes",
     "speakerSlugs": [
       "eduardo-spotti",
-      "rodrigo-martin-elissamburu"
+      "rodrigo-martin-elissamburu",
+      "martin-juan-javier-ferrini"
     ],
     "room": "sala-3",
     "startTime": "2026-10-03T12:00:00-03:00",
@@ -193,7 +194,8 @@
     "language": "es",
     "speakerNames": [
       "Eduardo Spotti",
-      "Rodrigo Martin Elissamburu"
+      "Rodrigo Martin Elissamburu",
+      "Martin Juan Javier Ferrini"
     ],
     "abstract": "¿Qué pasa cuando la prisa por innovar con Inteligencia Artificial deja puertas traseras abiertas en la infraestructura? \nEn este workshop interactivo por equipos, te enfrentarás a un escenario clásico de producción: un asistente de IA desplegado sobre AWS que maneja información confidencial pero opera bajo supuestos de confianza demasiado optimistas.\nTu misión será identificar los puntos ciegos de la arquitectura y armar la mejor baraja defensiva gestionando un presupuesto estricto. Cuando el incidente se desate, veremos qué controles resisten, cuáles fallan y cómo reaccionar bajo presión para contener el impacto. Una experiencia práctica y colaborativa pensada para aprender arquitectura segura de GenAI jugando y debatiendo en comunidad"
   },

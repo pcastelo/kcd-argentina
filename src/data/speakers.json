@@ -247,6 +247,16 @@
     ]
   },
   {
+    "slug": "martin-juan-javier-ferrini",
+    "name": "Martin Juan Javier Ferrini",
+    "title": "ProServ Manager en Cloudhesive",
+    "bio": "+2 décadas trabajando en infraestructuras On-Premise y Cloud.\nDocente Universitario.\nApasionado por la tecnología y la seguridad informática.\nFamiliero (5 hijos).\nArgentino.",
+    "photo": "https://cdn.sessionize.com/image/7597-400o400o1-7niuZFmnRJhLf4kGseGCEX.jpg",
+    "sessionSlugs": [
+      "el-copiloto-indiscreto-escape-room-de-seguridad-para-ia-en-kubernetes"
+    ]
+  },
+  {
     "slug": "matias-mospan",
     "name": "Matias Mospan",
     "title": "Solutions Architect@Matech UY",
