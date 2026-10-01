@@ -119,4 +119,48 @@ describe('SessionDetailDialog', () => {
     )
     expect(link).toHaveAttribute('target', '_blank')
   })
+
+  it('shows copy-link button when permalink is provided', async () => {
+    await i18n.changeLanguage('es')
+    renderDialog({ permalink: 'https://kcdargentina.ar/es/agenda/demo-talk' })
+
+    const copyBtn = screen.getByRole('button', {
+      name: i18n.t('agenda.detail.copyLink'),
+    })
+    expect(copyBtn).toBeInTheDocument()
+    expect(
+      screen.getByRole('link', {
+        name: 'https://kcdargentina.ar/es/agenda/demo-talk',
+      }),
+    ).toHaveAttribute('href', 'https://kcdargentina.ar/es/agenda/demo-talk')
+  })
+
+  it('copies permalink to clipboard and shows feedback', async () => {
+    await i18n.changeLanguage('es')
+    const writeText = vi.fn().mockResolvedValue(undefined)
+    Object.assign(navigator, { clipboard: { writeText } })
+
+    renderDialog({ permalink: 'https://kcdargentina.ar/es/agenda/demo-talk' })
+
+    const copyBtn = screen.getByRole('button', {
+      name: i18n.t('agenda.detail.copyLink'),
+    })
+    fireEvent.click(copyBtn)
+
+    expect(writeText).toHaveBeenCalledWith(
+      'https://kcdargentina.ar/es/agenda/demo-talk',
+    )
+    await screen.findByText(i18n.t('agenda.detail.linkCopied'))
+  })
+
+  it('does not show copy button when permalink is absent', async () => {
+    await i18n.changeLanguage('es')
+    renderDialog()
+
+    expect(
+      screen.queryByRole('button', {
+        name: i18n.t('agenda.detail.copyLink'),
+      }),
+    ).not.toBeInTheDocument()
+  })
 })

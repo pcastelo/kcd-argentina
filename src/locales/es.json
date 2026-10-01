@@ -123,7 +123,9 @@
       "closeAriaLabel": "Cerrar detalle de sesión",
       "noAbstract": "Detalle próximamente",
       "speakersHeading": "Speakers",
-      "viewProfile": "Ver perfil de {{name}}"
+      "viewProfile": "Ver perfil de {{name}}",
+      "copyLink": "Copiar enlace",
+      "linkCopied": "¡Copiado!"
     }
   },
   "speakers": {
