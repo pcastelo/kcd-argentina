@@ -1,6 +1,7 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
+import { loadSessionMeta } from './prerender-session-pages.mjs'
 
 const rootDir = dirname(fileURLToPath(import.meta.url))
 const site = JSON.parse(
@@ -9,8 +10,8 @@ const site = JSON.parse(
 
 const SITE_ORIGIN = site.origin
 
-/** Locale home routes only — SPA hash sections are not separate URLs. */
-const ROUTE_PAIRS = [['/es', '/en']]
+/** Locale home routes — SPA hash sections are not separate URLs. */
+const HOME_ROUTE_PAIRS = [['/es', '/en']]
 
 function url(path) {
   return `${SITE_ORIGIN}${path}`
@@ -31,8 +32,17 @@ ${alternateLinks(esPath, enPath)}
   </url>`
 }
 
-export function buildSitemap() {
-  const entries = ROUTE_PAIRS.flatMap(([esPath, enPath]) => [
+/** Session permalinks are pre-rendered with their own OG tags; list them too. */
+export async function sessionRoutePairs() {
+  const { getPermalinkSessions, sessionPermalinkPath } = await loadSessionMeta()
+  return getPermalinkSessions().map((session) => [
+    sessionPermalinkPath('es', session.slug),
+    sessionPermalinkPath('en', session.slug),
+  ])
+}
+
+export function buildSitemap(extraRoutePairs = []) {
+  const entries = [...HOME_ROUTE_PAIRS, ...extraRoutePairs].flatMap(([esPath, enPath]) => [
     urlEntry(esPath, esPath, enPath),
     urlEntry(enPath, esPath, enPath),
   ])
@@ -54,6 +64,6 @@ const isMain =
 if (isMain) {
   const outPath = join(rootDir, '..', 'dist', 'sitemap.xml')
   mkdirSync(dirname(outPath), { recursive: true })
-  writeFileSync(outPath, buildSitemap(), 'utf8')
+  writeFileSync(outPath, buildSitemap(await sessionRoutePairs()), 'utf8')
   console.log(`Wrote ${outPath}`)
 }

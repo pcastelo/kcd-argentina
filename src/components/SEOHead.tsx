@@ -4,24 +4,33 @@ import { useTranslation } from 'react-i18next'
 import { absoluteUrl, ogImageUrl, ogLocale } from '@/lib/seo'
 
 type SEOHeadProps = {
-  titleKey: string
-  descriptionKey: string
   path: string
   locale: 'es' | 'en'
-}
+  image?: string
+  imageAlt?: string
+  twitterCard?: 'summary' | 'summary_large_image'
+} & (
+  | { titleKey: string; descriptionKey: string; title?: never; description?: never }
+  | { title: string; description: string; titleKey?: never; descriptionKey?: never }
+)
 
 export function SEOHead({
   titleKey,
   descriptionKey,
   path,
   locale,
+  image = ogImageUrl(),
+  imageAlt,
+  twitterCard = 'summary_large_image',
+  ...props
 }: SEOHeadProps) {
   const { t } = useTranslation()
   // Force lng from the route locale so first paint does not wait on i18n.changeLanguage.
-  const title = t(titleKey, { lng: locale })
-  const description = t(descriptionKey, { lng: locale })
+  const title = titleKey ? t(titleKey, { lng: locale }) : props.title!
+  const description = descriptionKey
+    ? t(descriptionKey, { lng: locale })
+    : props.description!
   const canonical = absoluteUrl(path)
-  const image = ogImageUrl()
   const siteName = t('seo.ogSiteName', { lng: locale })
 
   // Remove no-JS fallback tags from index.html so Helmet can own locale-specific meta.
@@ -43,9 +52,10 @@ export function SEOHead({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
+      {imageAlt ? <meta property="og:image:alt" content={imageAlt} /> : null}
       <meta property="og:locale" content={ogLocale(locale)} />
 
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />

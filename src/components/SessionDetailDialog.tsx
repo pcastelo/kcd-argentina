@@ -19,6 +19,8 @@ export type SessionDetailDialogProps = {
   typeLabel: string
   timezone: string
   locale: string
+  /** Absolute shareable URL for this session. */
+  permalink?: string
   onClose: () => void
   /** Element that opened the dialog; focused after close (incl. jsdom). */
   returnFocusTo?: HTMLElement | null
@@ -32,6 +34,7 @@ export function SessionDetailDialog({
   typeLabel,
   timezone,
   locale,
+  permalink,
   onClose,
   returnFocusTo,
 }: SessionDetailDialogProps) {
@@ -187,6 +190,18 @@ export function SessionDetailDialog({
               {t('agenda.durationMinutes', { count: duration })}
             </span>
           </p>
+          {permalink ? (
+            <p className="flex min-w-0 gap-x-1">
+              <span className="text-[#ff7b72]">link</span>
+              <span className="text-[#e6edf3]">:</span>
+              <a
+                href={permalink}
+                className="truncate text-[#a5d6ff] underline decoration-[#a5d6ff]/40 hover:decoration-[#a5d6ff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#51a2da]"
+              >
+                {permalink}
+              </a>
+            </p>
+          ) : null}
           <p className="text-[#8b949e]">---</p>
 
           <p className="mt-3 whitespace-pre-line text-[#e6edf3]">

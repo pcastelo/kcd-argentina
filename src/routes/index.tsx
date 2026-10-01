@@ -23,6 +23,10 @@ export const router = createBrowserRouter([
             element: <HomePage />,
           },
           {
+            path: 'agenda/:sessionSlug',
+            element: <HomePage />,
+          },
+          {
             path: 'location',
             element: <LocationPage />,
           },
