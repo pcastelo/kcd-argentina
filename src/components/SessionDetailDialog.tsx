@@ -1,4 +1,4 @@
-import { useEffect, useId, useRef } from 'react'
+import { useCallback, useEffect, useId, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LinkedInIcon } from '@/components/icons'
 import {
@@ -51,6 +51,18 @@ export function SessionDetailDialog({
   )
   const startClock = formatAgendaClockTime(session.startTime, timezone, locale)
   const filePath = `talks/${session.slug}.md`
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyLink = useCallback(async () => {
+    if (!permalink) return
+    try {
+      await navigator.clipboard.writeText(permalink)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      // Fallback: clipboard API unavailable (HTTP, older browsers)
+    }
+  }, [permalink])
 
   useEffect(() => {
     const dialog = dialogRef.current
@@ -191,7 +203,7 @@ export function SessionDetailDialog({
             </span>
           </p>
           {permalink ? (
-            <p className="flex min-w-0 gap-x-1">
+            <p className="flex min-w-0 items-center gap-x-1">
               <span className="text-[#ff7b72]">link</span>
               <span className="text-[#e6edf3]">:</span>
               <a
@@ -200,6 +212,20 @@ export function SessionDetailDialog({
               >
                 {permalink}
               </a>
+              <button
+                type="button"
+                onClick={handleCopyLink}
+                aria-label={t('agenda.detail.copyLink')}
+                className="ml-1 inline-flex shrink-0 items-center gap-1 rounded border border-[#3a3a3a] bg-[#2d2d2d] px-2 py-0.5 text-[11px] text-[#8b949e] hover:border-[#51a2da] hover:text-[#e6edf3] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#51a2da]"
+              >
+                <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <rect x="5.5" y="5.5" width="8" height="8" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+                  <path d="M10.5 5.5V3.5a1.5 1.5 0 0 0-1.5-1.5H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5h2" stroke="currentColor" strokeWidth="1.3" />
+                </svg>
+                <span aria-live="polite">
+                  {copied ? t('agenda.detail.linkCopied') : t('agenda.detail.copyLink')}
+                </span>
+              </button>
             </p>
           ) : null}
           <p className="text-[#8b949e]">---</p>
