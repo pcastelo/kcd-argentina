@@ -11,6 +11,16 @@
     ]
   },
   {
+    "slug": "andres-benjamin-dominguez",
+    "name": "Andrés Benjamín Dominguez",
+    "title": "Cloud Architect @Banco Galicia",
+    "bio": "-",
+    "photo": "https://cdn.sessionize.com/image/656c-400o400o1-PAyyZiBVsuf9s3sQq3D1V9.jpg",
+    "sessionSlugs": [
+      "de-cuidar-cajas-a-disenar-el-aire-el-choque-de-dos-mundos-en-la-ingenieria-banca"
+    ]
+  },
+  {
     "slug": "axel-labruna",
     "name": "Axel Labruna",
     "title": "DevSecOps & Cloud Manager - Solution Architect",

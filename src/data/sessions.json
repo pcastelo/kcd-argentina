@@ -374,7 +374,8 @@
     "slug": "de-cuidar-cajas-a-disenar-el-aire-el-choque-de-dos-mundos-en-la-ingenieria-banca",
     "title": "De cuidar cajas a diseñar el aire: El choque de dos mundos en la ingeniería bancaria",
     "speakerSlugs": [
-      "rodrigo-martin-elissamburu"
+      "rodrigo-martin-elissamburu",
+      "andres-benjamin-dominguez"
     ],
     "room": "sala-2",
     "startTime": "2026-10-03T14:45:00-03:00",
@@ -383,7 +384,8 @@
     "type": "talk",
     "language": "es",
     "speakerNames": [
-      "Rodrigo Martin Elissamburu"
+      "Rodrigo Martin Elissamburu",
+      "Andrés Benjamín Dominguez"
     ],
     "abstract": "Migrar un banco a la nube no es un desafío de código, es un choque cultural. Durante décadas, la estabilidad financiera dependió de cuidar \"cajas\" físicas. ¿Qué pasa cuando esa infraestructura se vuelve invisible y el negocio exige la velocidad de una startup? En esta charla exploraremos la fricción entre el talento que llega queriendo desplegar rápido y los guardianes históricos, para quienes un error cuesta millones y reputación. Veremos cómo la arquitectura actúa como mediadora: desde romper el mito de que \"sobrepensar\" está mal y evitar la trampa de copiar el mundo físico en la nube, hasta sobrevivir a las vedas operativas. Un viaje sobre cómo dejamos de administrar fierros para diseñar en el aire."
   },
