@@ -120,6 +120,14 @@
     "order": 7
   },
   {
+    "slug": "cloud-native-cdmx",
+    "name": "Cloud Native CDMX",
+    "tier": "community",
+    "logo": "/sponsors/cloud-native-cdmx.png",
+    "url": "https://linktr.ee/cncgcdmx",
+    "order": 8
+  },
+  {
     "slug": "banco-galicia",
     "name": "Banco Galicia",
     "tier": "venue",
